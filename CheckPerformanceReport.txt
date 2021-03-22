@@ -1,0 +1,4924 @@
+<Project> 	Compilation Difference 	Execution Difference 
+[Details]:
+[Compiler]: Compilation (Execution) ms
+ ---------------------------------------------------------
+
+
+
+
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <maskCheckSequence.kt> : 	 Compilation: 142.0%	 Execution: 11.0%
+[Details]:
+		JVM : 66 (107) ms
+		JVM -Xuse-ir: 160 (119) ms
+------------------
+
+2. <streamBackwardCompatibility.kt> : 	 Compilation: 100.0%	 Execution: 0.0%
+[Details]:
+		JVM : 2 (0) ms
+		JVM -Xuse-ir: 1 (0) ms
+------------------
+
+3. <stepToSmallerLastThenStepToSmallerLast4.kt> : 	 Compilation: 75.0%	 Execution: 2.0%
+[Details]:
+		JVM : 273 (165) ms
+		JVM -Xuse-ir: 478 (161) ms
+------------------
+
+4. <redundantSafeCall_1_4.kt> : 	 Compilation: 72.0%	 Execution: 2.0%
+[Details]:
+		JVM : 59 (105) ms
+		JVM -Xuse-ir: 102 (108) ms
+------------------
+
+5. <inlineStringConstInsideWhen.kt> : 	 Compilation: 69.0%	 Execution: 25.0%
+[Details]:
+		JVM : 1451 (135) ms
+		JVM -Xuse-ir: 857 (108) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <argumentOrderInSuperCall.kt> : 	Execution: 35.0%	Compilation: 28.0%
+[Details]:
+		JVM : 177 (131) ms
+		JVM -Xuse-ir: 227 (97) ms
+------------------
+2. <entryClassConstructorWithVarargs.kt> : 	Execution: 34.0%	Compilation: 28.0%
+[Details]:
+		JVM : 132 (118) ms
+		JVM -Xuse-ir: 169 (88) ms
+------------------
+3. <jvmDefaultAll1.kt> : 	Execution: 32.0%	Compilation: 22.0%
+[Details]:
+		JVM : 176 (94) ms
+		JVM -Xuse-ir: 216 (125) ms
+------------------
+4. <boxedEqPrimitiveByte.kt> : 	Execution: 31.0%	Compilation: 16.0%
+[Details]:
+		JVM : 255 (116) ms
+		JVM -Xuse-ir: 297 (88) ms
+------------------
+5. <reversedEmptyBackSequence1.kt> : 	Execution: 27.0%	Compilation: 35.0%
+[Details]:
+		JVM : 237 (95) ms
+		JVM -Xuse-ir: 320 (121) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt38680.kt> : 	 Compilation: 101.0%	 Execution: 9.0%
+[Details]:
+		JVM : 115 (96) ms
+		JVM -Xuse-ir: 232 (88) ms
+------------------
+
+2. <zeroCompareInDoWhile.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 68 (5008) ms
+		JVM -Xuse-ir: 116 (5018) ms
+------------------
+
+3. <importNestedClass.kt> : 	 Compilation: 68.0%	 Execution: 3.0%
+[Details]:
+		JVM : 104 (90) ms
+		JVM -Xuse-ir: 175 (87) ms
+------------------
+
+4. <parameterlessPrimary.kt> : 	 Compilation: 58.0%	 Execution: 5.0%
+[Details]:
+		JVM : 73 (107) ms
+		JVM -Xuse-ir: 116 (113) ms
+------------------
+
+5. <kt37986.kt> : 	 Compilation: 54.0%	 Execution: 5.0%
+[Details]:
+		JVM : 131 (93) ms
+		JVM -Xuse-ir: 202 (98) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <stepToSmallerLastThenStepToSameLast10.kt> : 	Execution: 35.0%	Compilation: 43.0%
+[Details]:
+		JVM : 150 (149) ms
+		JVM -Xuse-ir: 215 (202) ms
+------------------
+2. <underscoreParameters1.kt> : 	Execution: 31.0%	Compilation: 23.0%
+[Details]:
+		JVM : 138 (93) ms
+		JVM -Xuse-ir: 170 (122) ms
+------------------
+3. <recursiveSuspend.kt> : 	Execution: 31.0%	Compilation: 17.0%
+[Details]:
+		JVM : 635 (100) ms
+		JVM -Xuse-ir: 540 (131) ms
+------------------
+4. <protectedStatic.kt> : 	Execution: 31.0%	Compilation: 23.0%
+[Details]:
+		JVM : 132 (122) ms
+		JVM -Xuse-ir: 163 (93) ms
+------------------
+5. <kt471.kt> : 	Execution: 30.0%	Compilation: 26.0%
+[Details]:
+		JVM : 197 (98) ms
+		JVM -Xuse-ir: 250 (128) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <noInline2.kt>(bug) : 	 Compilation: 800.0%	 Execution: 0.0%
+[Details]:
+		JVM : 1 (0) ms
+		JVM -Xuse-ir: 9 (0) ms
+------------------
+
+2. <dontGenerateOnExtensionReceiver.kt> : 	 Compilation: 87.0%	 Execution: 7.0%
+[Details]:
+		JVM : 48 (116) ms
+		JVM -Xuse-ir: 90 (108) ms
+------------------
+
+3. <nullCheckAfterExclExcl_1_4.kt> : 	 Compilation: 78.0%	 Execution: 12.0%
+[Details]:
+		JVM : 56 (106) ms
+		JVM -Xuse-ir: 100 (119) ms
+------------------
+
+4. <conjunctionInWhile.kt> : 	 Compilation: 76.0%	 Execution: 43.0%
+[Details]:
+		JVM : 56 (122) ms
+		JVM -Xuse-ir: 99 (85) ms
+------------------
+
+5. <zeroCompareInWhile.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 61 (5009) ms
+		JVM -Xuse-ir: 107 (5007) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <conjunctionInWhile.kt> : 	Execution: 43.0%	Compilation: 76.0%
+[Details]:
+		JVM : 56 (122) ms
+		JVM -Xuse-ir: 99 (85) ms
+------------------
+2. <UIntArraySortExample.kt> : 	Execution: 35.0%	Compilation: 13.0%
+[Details]:
+		JVM : 264 (90) ms
+		JVM -Xuse-ir: 300 (122) ms
+------------------
+3. <finallyInFinally0.kt> : 	Execution: 29.0%	Compilation: 2.0%
+[Details]:
+		JVM : 256 (118) ms
+		JVM -Xuse-ir: 263 (91) ms
+------------------
+4. <equalsHashCode1.kt> : 	Execution: 25.0%	Compilation: 22.0%
+[Details]:
+		JVM : 122 (104) ms
+		JVM -Xuse-ir: 150 (130) ms
+------------------
+5. <progressionMinValueToMinValue0.kt> : 	Execution: 22.0%	Compilation: 29.0%
+[Details]:
+		JVM : 200 (131) ms
+		JVM -Xuse-ir: 258 (107) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inlineClassInGeneratedToString.kt> : 	 Compilation: 69.0%	 Execution: 28.0%
+[Details]:
+		JVM : 84 (112) ms
+		JVM -Xuse-ir: 142 (144) ms
+------------------
+
+2. <subtypingOfIntersectionIltInsideFlexible.kt> : 	 Compilation: 54.0%	 Execution: 13.0%
+[Details]:
+		JVM : 118 (178) ms
+		JVM -Xuse-ir: 182 (202) ms
+------------------
+
+3. <coroutineToString_1_2.kt> : 	 Compilation: 53.0%	 Execution: 0.0%
+[Details]:
+		JVM : 249 (0) ms
+		JVM -Xuse-ir: 383 (0) ms
+------------------
+
+4. <kt15971_2.kt> : 	 Compilation: 51.0%	 Execution: 26.0%
+[Details]:
+		JVM : 109 (90) ms
+		JVM -Xuse-ir: 165 (114) ms
+------------------
+
+5. <MultiDeclForComponentMemberExtensionsInExtensionFunction8.kt> : 	 Compilation: 46.0%	 Execution: 37.0%
+[Details]:
+		JVM : 151 (147) ms
+		JVM -Xuse-ir: 221 (107) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <compoundAssignmentToObjectFromCall.kt> : 	Execution: 101.0%	Compilation: 0.0%
+[Details]:
+		JVM : 261 (322) ms
+		JVM -Xuse-ir: 259 (160) ms
+------------------
+2. <funImportedFromObject.kt> : 	Execution: 74.0%	Compilation: 24.0%
+[Details]:
+		JVM : 95 (100) ms
+		JVM -Xuse-ir: 118 (174) ms
+------------------
+3. <valInWhen.kt> : 	Execution: 56.0%	Compilation: 15.0%
+[Details]:
+		JVM : 116 (152) ms
+		JVM -Xuse-ir: 134 (97) ms
+------------------
+4. <maxMinBy1.kt> : 	Execution: 53.0%	Compilation: 4.0%
+[Details]:
+		JVM : 268 (158) ms
+		JVM -Xuse-ir: 256 (243) ms
+------------------
+5. <kt26345.kt> : 	Execution: 40.0%	Compilation: 14.0%
+[Details]:
+		JVM : 143 (258) ms
+		JVM -Xuse-ir: 164 (184) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <captureInlineClassInstanceInObject.kt> : 	 Compilation: 102.0%	 Execution: 0.0%
+[Details]:
+		JVM : 284 (135) ms
+		JVM -Xuse-ir: 140 (135) ms
+------------------
+
+2. <ifThenElse1.kt> : 	 Compilation: 80.0%	 Execution: 0.0%
+[Details]:
+		JVM : 51 (112) ms
+		JVM -Xuse-ir: 92 (112) ms
+------------------
+
+3. <negateVarChain.kt> : 	 Compilation: 75.0%	 Execution: 16.0%
+[Details]:
+		JVM : 57 (130) ms
+		JVM -Xuse-ir: 100 (112) ms
+------------------
+
+4. <genericVararg2ndConstructor.kt> : 	 Compilation: 68.0%	 Execution: 11.0%
+[Details]:
+		JVM : 253 (135) ms
+		JVM -Xuse-ir: 150 (150) ms
+------------------
+
+5. <redundantGotoRemoving.kt> : 	 Compilation: 68.0%	 Execution: 3.0%
+[Details]:
+		JVM : 60 (116) ms
+		JVM -Xuse-ir: 101 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <boxUnboxInsideCoroutine_NAny0.kt> : 	Execution: 47.0%	Compilation: 5.0%
+[Details]:
+		JVM : 442 (111) ms
+		JVM -Xuse-ir: 467 (164) ms
+------------------
+2. <argumentOrderInObjectSuperCall.kt> : 	Execution: 38.0%	Compilation: 16.0%
+[Details]:
+		JVM : 128 (94) ms
+		JVM -Xuse-ir: 149 (130) ms
+------------------
+3. <covariantOverrideSuspendFun1.kt> : 	Execution: 33.0%	Compilation: 4.0%
+[Details]:
+		JVM : 376 (103) ms
+		JVM -Xuse-ir: 392 (137) ms
+------------------
+4. <kt5393_property.kt> : 	Execution: 33.0%	Compilation: 34.0%
+[Details]:
+		JVM : 105 (124) ms
+		JVM -Xuse-ir: 141 (93) ms
+------------------
+5. <forEachIndexedInListOfUInts.kt> : 	Execution: 33.0%	Compilation: 14.0%
+[Details]:
+		JVM : 136 (147) ms
+		JVM -Xuse-ir: 156 (110) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <nullCompareInDoWhile.kt> : 	 Compilation: 115.0%	 Execution: 4.0%
+[Details]:
+		JVM : 53 (110) ms
+		JVM -Xuse-ir: 114 (115) ms
+------------------
+
+2. <samAdapterForJavaInterfaceWithNullability.kt> : 	 Compilation: 87.0%	 Execution: 18.0%
+[Details]:
+		JVM : 77 (122) ms
+		JVM -Xuse-ir: 144 (145) ms
+------------------
+
+3. <fieldSetter.kt> : 	 Compilation: 74.0%	 Execution: 7.0%
+[Details]:
+		JVM : 55 (123) ms
+		JVM -Xuse-ir: 96 (114) ms
+------------------
+
+4. <inlineConstInsideComparison.kt> : 	 Compilation: 73.0%	 Execution: 4.0%
+[Details]:
+		JVM : 56 (129) ms
+		JVM -Xuse-ir: 97 (123) ms
+------------------
+
+5. <arrayListGet.kt> : 	 Compilation: 69.0%	 Execution: 3.0%
+[Details]:
+		JVM : 85 (118) ms
+		JVM -Xuse-ir: 144 (114) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <longUntil.kt> : 	Execution: 42.0%	Compilation: 2.0%
+[Details]:
+		JVM : 3473 (170) ms
+		JVM -Xuse-ir: 3560 (119) ms
+------------------
+2. <innerClassesInheritance.kt> : 	Execution: 38.0%	Compilation: 10.0%
+[Details]:
+		JVM : 206 (130) ms
+		JVM -Xuse-ir: 227 (94) ms
+------------------
+3. <lessFloat.kt> : 	Execution: 37.0%	Compilation: 40.0%
+[Details]:
+		JVM : 120 (129) ms
+		JVM -Xuse-ir: 169 (94) ms
+------------------
+4. <mergeLvt.kt> : 	Execution: 34.0%	Compilation: 13.0%
+[Details]:
+		JVM : 144 (153) ms
+		JVM -Xuse-ir: 164 (114) ms
+------------------
+5. <inEnum.kt> : 	Execution: 31.0%	Compilation: 20.0%
+[Details]:
+		JVM : 115 (97) ms
+		JVM -Xuse-ir: 138 (128) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <propertyReference2.kt> : 	 Compilation: 149.0%	 Execution: 1.0%
+[Details]:
+		JVM : 97 (101) ms
+		JVM -Xuse-ir: 242 (100) ms
+------------------
+
+2. <dontGenerateOnVarargsString.kt> : 	 Compilation: 119.0%	 Execution: 19.0%
+[Details]:
+		JVM : 47 (105) ms
+		JVM -Xuse-ir: 103 (88) ms
+------------------
+
+3. <nullCompareInIf.kt> : 	 Compilation: 74.0%	 Execution: 9.0%
+[Details]:
+		JVM : 54 (124) ms
+		JVM -Xuse-ir: 94 (113) ms
+------------------
+
+4. <kt2288.kt> : 	 Compilation: 68.0%	 Execution: 1.0%
+[Details]:
+		JVM : 94 (90) ms
+		JVM -Xuse-ir: 158 (89) ms
+------------------
+
+5. <returnInsideTwoLambdas.kt> : 	 Compilation: 53.0%	 Execution: 3.0%
+[Details]:
+		JVM : 189 (89) ms
+		JVM -Xuse-ir: 123 (92) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <classMemberFromCompanionObject.kt> : 	Execution: 49.0%	Compilation: 20.0%
+[Details]:
+		JVM : 109 (142) ms
+		JVM -Xuse-ir: 131 (95) ms
+------------------
+2. <topLevel3.kt> : 	Execution: 34.0%	Compilation: 15.0%
+[Details]:
+		JVM : 119 (124) ms
+		JVM -Xuse-ir: 137 (92) ms
+------------------
+3. <partMembersInline.kt> : 	Execution: 32.0%	Compilation: 32.0%
+[Details]:
+		JVM : 88 (112) ms
+		JVM -Xuse-ir: 117 (148) ms
+------------------
+4. <convention.kt> : 	Execution: 32.0%	Compilation: 33.0%
+[Details]:
+		JVM : 122 (123) ms
+		JVM -Xuse-ir: 163 (93) ms
+------------------
+5. <kt6485.kt> : 	Execution: 31.0%	Compilation: 10.0%
+[Details]:
+		JVM : 150 (190) ms
+		JVM -Xuse-ir: 165 (145) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <localExtendsInner.kt> : 	 Compilation: 188.0%	 Execution: 2.0%
+[Details]:
+		JVM : 108 (94) ms
+		JVM -Xuse-ir: 312 (92) ms
+------------------
+
+2. <10.kt> : 	 Compilation: 89.0%	 Execution: 1.0%
+[Details]:
+		JVM : 46 (113) ms
+		JVM -Xuse-ir: 87 (115) ms
+------------------
+
+3. <noObjectCastAfterReification.kt> : 	 Compilation: 80.0%	 Execution: 21.0%
+[Details]:
+		JVM : 52 (111) ms
+		JVM -Xuse-ir: 94 (91) ms
+------------------
+
+4. <negatedZeroCompareInWhile.kt> : 	 Compilation: 73.0%	 Execution: 0.0%
+[Details]:
+		JVM : 67 (5007) ms
+		JVM -Xuse-ir: 116 (5010) ms
+------------------
+
+5. <toPrivateCompanionVal.kt> : 	 Compilation: 62.0%	 Execution: 0.0%
+[Details]:
+		JVM : 190 (87) ms
+		JVM -Xuse-ir: 117 (87) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <jvmAssertInlineFunctionAssertionsDisabled.kt> : 	Execution: 52.0%	Compilation: 5.0%
+[Details]:
+		JVM : 149 (145) ms
+		JVM -Xuse-ir: 141 (95) ms
+------------------
+2. <overflowZeroToMinValue2.kt> : 	Execution: 42.0%	Compilation: 30.0%
+[Details]:
+		JVM : 242 (153) ms
+		JVM -Xuse-ir: 315 (107) ms
+------------------
+3. <kt421370.kt> : 	Execution: 35.0%	Compilation: 31.0%
+[Details]:
+		JVM : 80 (115) ms
+		JVM -Xuse-ir: 105 (156) ms
+------------------
+4. <deepInnerHierarchy.kt> : 	Execution: 29.0%	Compilation: 24.0%
+[Details]:
+		JVM : 117 (124) ms
+		JVM -Xuse-ir: 146 (96) ms
+------------------
+5. <transitiveChain.kt> : 	Execution: 26.0%	Compilation: 27.0%
+[Details]:
+		JVM : 116 (92) ms
+		JVM -Xuse-ir: 148 (116) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <initializersOrder.kt> : 	 Compilation: 112.0%	 Execution: 3.0%
+[Details]:
+		JVM : 110 (127) ms
+		JVM -Xuse-ir: 234 (123) ms
+------------------
+
+2. <kt3430.kt> : 	 Compilation: 104.0%	 Execution: 2.0%
+[Details]:
+		JVM : 97 (90) ms
+		JVM -Xuse-ir: 198 (92) ms
+------------------
+
+3. <defaultArgs9.kt> : 	 Compilation: 49.0%	 Execution: 9.0%
+[Details]:
+		JVM : 73 (121) ms
+		JVM -Xuse-ir: 109 (111) ms
+------------------
+
+4. <nestedConstructorFromClass.kt> : 	 Compilation: 46.0%	 Execution: 26.0%
+[Details]:
+		JVM : 187 (114) ms
+		JVM -Xuse-ir: 128 (90) ms
+------------------
+
+5. <nullCleanup.kt> : 	 Compilation: 46.0%	 Execution: 1.0%
+[Details]:
+		JVM : 84 (114) ms
+		JVM -Xuse-ir: 123 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt19434.kt> : 	Execution: 40.0%	Compilation: 14.0%
+[Details]:
+		JVM : 161 (119) ms
+		JVM -Xuse-ir: 184 (167) ms
+------------------
+2. <defaultParam.kt> : 	Execution: 40.0%	Compilation: 16.0%
+[Details]:
+		JVM : 171 (99) ms
+		JVM -Xuse-ir: 199 (139) ms
+------------------
+3. <entrySetSOE.kt> : 	Execution: 36.0%	Compilation: 13.0%
+[Details]:
+		JVM : 220 (91) ms
+		JVM -Xuse-ir: 249 (124) ms
+------------------
+4. <packageQualifiedMethod.kt> : 	Execution: 32.0%	Compilation: 21.0%
+[Details]:
+		JVM : 91 (88) ms
+		JVM -Xuse-ir: 111 (117) ms
+------------------
+5. <withNonNullMetadataParameter.kt> : 	Execution: 32.0%	Compilation: 20.0%
+[Details]:
+		JVM : 204 (122) ms
+		JVM -Xuse-ir: 245 (92) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <javaPrimitiveTypeIC.kt> : 	 Compilation: 132.0%	 Execution: 1.0%
+[Details]:
+		JVM : 131 (151) ms
+		JVM -Xuse-ir: 305 (149) ms
+------------------
+
+2. <defaultParameterValuesOfInlineClassTypeBoxing.kt> : 	 Compilation: 113.0%	 Execution: 1.0%
+[Details]:
+		JVM : 120 (89) ms
+		JVM -Xuse-ir: 256 (90) ms
+------------------
+
+3. <doNotStoreNullsForCapturedVars.kt> : 	 Compilation: 76.0%	 Execution: 12.0%
+[Details]:
+		JVM : 52 (108) ms
+		JVM -Xuse-ir: 92 (121) ms
+------------------
+
+4. <noAssertionsForInlineClassesBasedOnNullableTypes.kt> : 	 Compilation: 56.0%	 Execution: 0.0%
+[Details]:
+		JVM : 74 (110) ms
+		JVM -Xuse-ir: 116 (110) ms
+------------------
+
+5. <inlineClasses0.kt> : 	 Compilation: 53.0%	 Execution: 0.0%
+[Details]:
+		JVM : 113 (390) ms
+		JVM -Xuse-ir: 174 (387) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <bridgeInInterface0.kt> : 	Execution: 27.0%	Compilation: 14.0%
+[Details]:
+		JVM : 152 (130) ms
+		JVM -Xuse-ir: 174 (166) ms
+------------------
+2. <delegation3.kt> : 	Execution: 25.0%	Compilation: 16.0%
+[Details]:
+		JVM : 125 (92) ms
+		JVM -Xuse-ir: 146 (115) ms
+------------------
+3. <transformedConstructorWithNestedInline1.kt> : 	Execution: 25.0%	Compilation: 15.0%
+[Details]:
+		JVM : 126 (105) ms
+		JVM -Xuse-ir: 145 (132) ms
+------------------
+4. <diamondFunction.kt> : 	Execution: 23.0%	Compilation: 15.0%
+[Details]:
+		JVM : 114 (125) ms
+		JVM -Xuse-ir: 132 (101) ms
+------------------
+5. <openRange2.kt> : 	Execution: 21.0%	Compilation: 34.0%
+[Details]:
+		JVM : 168 (137) ms
+		JVM -Xuse-ir: 226 (113) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <classCompanion.kt> : 	 Compilation: 129.0%	 Execution: 15.0%
+[Details]:
+		JVM : 292 (89) ms
+		JVM -Xuse-ir: 127 (103) ms
+------------------
+
+2. <kt26435.kt> : 	 Compilation: 108.0%	 Execution: 2.0%
+[Details]:
+		JVM : 132 (95) ms
+		JVM -Xuse-ir: 275 (93) ms
+------------------
+
+3. <annotationRetentionPolicyClass.kt> : 	 Compilation: 82.0%	 Execution: 4.0%
+[Details]:
+		JVM : 87 (112) ms
+		JVM -Xuse-ir: 159 (117) ms
+------------------
+
+4. <intConstantNullableSafeCall.kt> : 	 Compilation: 77.0%	 Execution: 0.0%
+[Details]:
+		JVM : 54 (125) ms
+		JVM -Xuse-ir: 96 (124) ms
+------------------
+
+5. <noEmptyArray.kt> : 	 Compilation: 58.0%	 Execution: 10.0%
+[Details]:
+		JVM : 86 (124) ms
+		JVM -Xuse-ir: 136 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt16790.kt> : 	Execution: 41.0%	Compilation: 27.0%
+[Details]:
+		JVM : 111 (133) ms
+		JVM -Xuse-ir: 142 (94) ms
+------------------
+2. <boxUnboxInsideCoroutine_suspendFunType1.kt> : 	Execution: 37.0%	Compilation: 18.0%
+[Details]:
+		JVM : 339 (147) ms
+		JVM -Xuse-ir: 402 (107) ms
+------------------
+3. <kt247.kt> : 	Execution: 32.0%	Compilation: 9.0%
+[Details]:
+		JVM : 128 (123) ms
+		JVM -Xuse-ir: 140 (93) ms
+------------------
+4. <openRange0.kt> : 	Execution: 32.0%	Compilation: 34.0%
+[Details]:
+		JVM : 174 (158) ms
+		JVM -Xuse-ir: 234 (119) ms
+------------------
+5. <jvmStaticDeprecatedProperty.kt> : 	Execution: 30.0%	Compilation: 30.0%
+[Details]:
+		JVM : 91 (122) ms
+		JVM -Xuse-ir: 119 (159) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt208440.kt> : 	 Compilation: 112.0%	 Execution: 21.0%
+[Details]:
+		JVM : 333 (98) ms
+		JVM -Xuse-ir: 157 (119) ms
+------------------
+
+2. <short1.kt> : 	 Compilation: 80.0%	 Execution: 29.0%
+[Details]:
+		JVM : 52 (112) ms
+		JVM -Xuse-ir: 94 (145) ms
+------------------
+
+3. <expression3.kt> : 	 Compilation: 78.0%	 Execution: 10.0%
+[Details]:
+		JVM : 56 (118) ms
+		JVM -Xuse-ir: 100 (107) ms
+------------------
+
+4. <floatingPoints.kt> : 	 Compilation: 78.0%	 Execution: 1.0%
+[Details]:
+		JVM : 65 (118) ms
+		JVM -Xuse-ir: 116 (116) ms
+------------------
+
+5. <nonNullableStringPlus.kt> : 	 Compilation: 67.0%	 Execution: 18.0%
+[Details]:
+		JVM : 64 (136) ms
+		JVM -Xuse-ir: 107 (115) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <functionLiteralInTopLevel0.kt> : 	Execution: 47.0%	Compilation: 6.0%
+[Details]:
+		JVM : 129 (137) ms
+		JVM -Xuse-ir: 138 (93) ms
+------------------
+2. <genericOverrideSuspendFun_Any_NullableInlineClassUpperBound0.kt> : 	Execution: 35.0%	Compilation: 19.0%
+[Details]:
+		JVM : 331 (144) ms
+		JVM -Xuse-ir: 396 (106) ms
+------------------
+3. <short1.kt> : 	Execution: 29.0%	Compilation: 80.0%
+[Details]:
+		JVM : 52 (112) ms
+		JVM -Xuse-ir: 94 (145) ms
+------------------
+4. <kt242.kt> : 	Execution: 25.0%	Compilation: 9.0%
+[Details]:
+		JVM : 106 (115) ms
+		JVM -Xuse-ir: 116 (92) ms
+------------------
+5. <unboxInlineClassAfterSafeCall.kt> : 	Execution: 24.0%	Compilation: 34.0%
+[Details]:
+		JVM : 84 (113) ms
+		JVM -Xuse-ir: 113 (141) ms
+------------------
+PROJECTS FAILED TO COMPILE
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <noSmap.kt> : 	 Compilation: 222.0%	 Execution: 0.0%
+[Details]:
+		JVM : 58 (0) ms
+		JVM -Xuse-ir: 18 (0) ms
+------------------
+
+2. <mangledSuperCalls.kt> : 	 Compilation: 133.0%	 Execution: 5.0%
+[Details]:
+		JVM : 104 (98) ms
+		JVM -Xuse-ir: 243 (93) ms
+------------------
+
+3. <kt18689.kt> : 	 Compilation: 59.0%	 Execution: 5.0%
+[Details]:
+		JVM : 97 (95) ms
+		JVM -Xuse-ir: 155 (90) ms
+------------------
+
+4. <inlineClassInStringTemplate0.kt> : 	 Compilation: 56.0%	 Execution: 4.0%
+[Details]:
+		JVM : 125 (124) ms
+		JVM -Xuse-ir: 195 (129) ms
+------------------
+
+5. <overridingMethodsAreCalledByInlineClass.kt> : 	 Compilation: 44.0%	 Execution: 27.0%
+[Details]:
+		JVM : 79 (142) ms
+		JVM -Xuse-ir: 114 (111) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <withoutInline.kt> : 	Execution: 96.0%	Compilation: 10.0%
+[Details]:
+		JVM : 137 (109) ms
+		JVM -Xuse-ir: 151 (214) ms
+------------------
+2. <inferenceFlexibleTToNullable.kt> : 	Execution: 52.0%	Compilation: 4.0%
+[Details]:
+		JVM : 155 (143) ms
+		JVM -Xuse-ir: 162 (94) ms
+------------------
+3. <safeCallOnLong.kt> : 	Execution: 40.0%	Compilation: 8.0%
+[Details]:
+		JVM : 129 (93) ms
+		JVM -Xuse-ir: 119 (131) ms
+------------------
+4. <loadFromBooleanArray1.kt> : 	Execution: 37.0%	Compilation: 8.0%
+[Details]:
+		JVM : 335 (144) ms
+		JVM -Xuse-ir: 365 (105) ms
+------------------
+5. <unsafeNullCheckWithPrimitive.kt> : 	Execution: 33.0%	Compilation: 19.0%
+[Details]:
+		JVM : 117 (155) ms
+		JVM -Xuse-ir: 140 (116) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <nullabilityAnnotationsOnInlineClassMembers.kt> : 	 Compilation: 157.0%	 Execution: 20.0%
+[Details]:
+		JVM : 94 (125) ms
+		JVM -Xuse-ir: 242 (151) ms
+------------------
+
+2. <secondaryConstructor2.kt> : 	 Compilation: 109.0%	 Execution: 1.0%
+[Details]:
+		JVM : 96 (94) ms
+		JVM -Xuse-ir: 201 (93) ms
+------------------
+
+3. <forInIterableWithIndexNoIndexVarCheckSideEffects.kt> : 	 Compilation: 94.0%	 Execution: 10.0%
+[Details]:
+		JVM : 150 (106) ms
+		JVM -Xuse-ir: 292 (117) ms
+------------------
+
+4. <dontGenerateOnMainExtension.kt> : 	 Compilation: 91.0%	 Execution: 0.0%
+[Details]:
+		JVM : 47 (103) ms
+		JVM -Xuse-ir: 90 (103) ms
+------------------
+
+5. <negateConstantCompare0.kt> : 	 Compilation: 85.0%	 Execution: 4.0%
+[Details]:
+		JVM : 94 (96) ms
+		JVM -Xuse-ir: 174 (92) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inlineReified.kt> : 	Execution: 104.0%	Compilation: 15.0%
+[Details]:
+		JVM : 85 (227) ms
+		JVM -Xuse-ir: 98 (111) ms
+------------------
+2. <primitiveEqObjectInt.kt> : 	Execution: 93.0%	Compilation: 18.0%
+[Details]:
+		JVM : 132 (182) ms
+		JVM -Xuse-ir: 156 (94) ms
+------------------
+3. <lazy1.kt> : 	Execution: 79.0%	Compilation: 2.0%
+[Details]:
+		JVM : 149 (172) ms
+		JVM -Xuse-ir: 153 (96) ms
+------------------
+4. <treeMapBridge.kt> : 	Execution: 54.0%	Compilation: 6.0%
+[Details]:
+		JVM : 248 (154) ms
+		JVM -Xuse-ir: 233 (100) ms
+------------------
+5. <nullableDoubleEquals1.kt> : 	Execution: 47.0%	Compilation: 20.0%
+[Details]:
+		JVM : 110 (93) ms
+		JVM -Xuse-ir: 132 (137) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <forInReversedUntil0.kt> : 	 Compilation: 131.0%	 Execution: 5.0%
+[Details]:
+		JVM : 133 (126) ms
+		JVM -Xuse-ir: 308 (133) ms
+------------------
+
+2. <noBoxingInDefaultWhenWithSpecialCases.kt> : 	 Compilation: 117.0%	 Execution: 4.0%
+[Details]:
+		JVM : 56 (107) ms
+		JVM -Xuse-ir: 122 (112) ms
+------------------
+
+3. <simple50.kt> : 	 Compilation: 72.0%	 Execution: 10.0%
+[Details]:
+		JVM : 59 (115) ms
+		JVM -Xuse-ir: 102 (127) ms
+------------------
+
+4. <localPrimaryDefaults.kt> : 	 Compilation: 61.0%	 Execution: 8.0%
+[Details]:
+		JVM : 83 (106) ms
+		JVM -Xuse-ir: 134 (115) ms
+------------------
+
+5. <capturedInInlineOnlyAssign.kt> : 	 Compilation: 48.0%	 Execution: 3.0%
+[Details]:
+		JVM : 91 (97) ms
+		JVM -Xuse-ir: 135 (94) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <jvmCrossinlineLambdaDeclarationSite.kt> : 	Execution: 51.0%	Compilation: 2.0%
+[Details]:
+		JVM : 328 (96) ms
+		JVM -Xuse-ir: 336 (145) ms
+------------------
+2. <kt31908.kt> : 	Execution: 40.0%	Compilation: 16.0%
+[Details]:
+		JVM : 119 (132) ms
+		JVM -Xuse-ir: 139 (94) ms
+------------------
+3. <clashingDefaultConstructors.kt> : 	Execution: 38.0%	Compilation: 27.0%
+[Details]:
+		JVM : 122 (162) ms
+		JVM -Xuse-ir: 155 (117) ms
+------------------
+4. <effectivePrivate.kt> : 	Execution: 37.0%	Compilation: 18.0%
+[Details]:
+		JVM : 103 (93) ms
+		JVM -Xuse-ir: 122 (128) ms
+------------------
+5. <inUntilMaxValue.kt> : 	Execution: 31.0%	Compilation: 31.0%
+[Details]:
+		JVM : 146 (93) ms
+		JVM -Xuse-ir: 192 (122) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <boxNullableValueOfInlineClassWithPrimitiveUnderlyingType.kt> : 	 Compilation: 62.0%	 Execution: 0.0%
+[Details]:
+		JVM : 94 (0) ms
+		JVM -Xuse-ir: 153 (0) ms
+------------------
+
+2. <noPrivateMemberInJavaInterface.kt> : 	 Compilation: 51.0%	 Execution: 3.0%
+[Details]:
+		JVM : 79 (115) ms
+		JVM -Xuse-ir: 120 (111) ms
+------------------
+
+3. <forInObjectArrayWithIndex0.kt> : 	 Compilation: 42.0%	 Execution: 5.0%
+[Details]:
+		JVM : 258 (93) ms
+		JVM -Xuse-ir: 181 (98) ms
+------------------
+
+4. <stepOne6.kt> : 	 Compilation: 38.0%	 Execution: 1.0%
+[Details]:
+		JVM : 142 (143) ms
+		JVM -Xuse-ir: 197 (145) ms
+------------------
+
+5. <inlineClassBoxingOnAssignment.kt> : 	 Compilation: 37.0%	 Execution: 29.0%
+[Details]:
+		JVM : 98 (113) ms
+		JVM -Xuse-ir: 135 (146) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <coercionToUnitWithLastLambdaExpression.kt> : 	Execution: 44.0%	Compilation: 15.0%
+[Details]:
+		JVM : 119 (95) ms
+		JVM -Xuse-ir: 138 (137) ms
+------------------
+2. <illegalStepNegative11.kt> : 	Execution: 43.0%	Compilation: 26.0%
+[Details]:
+		JVM : 127 (186) ms
+		JVM -Xuse-ir: 161 (130) ms
+------------------
+3. <privateClassPropertyAccessors.kt> : 	Execution: 36.0%	Compilation: 11.0%
+[Details]:
+		JVM : 111 (158) ms
+		JVM -Xuse-ir: 124 (116) ms
+------------------
+4. <innerClassLabeledSuper2.kt> : 	Execution: 34.0%	Compilation: 15.0%
+[Details]:
+		JVM : 119 (94) ms
+		JVM -Xuse-ir: 138 (126) ms
+------------------
+5. <nestedGeneric.kt> : 	Execution: 33.0%	Compilation: 20.0%
+[Details]:
+		JVM : 108 (98) ms
+		JVM -Xuse-ir: 130 (131) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <javaArrayOfInheritedNotNullWithIndex.kt> : 	 Compilation: 195.0%	 Execution: 5.0%
+[Details]:
+		JVM : 132 (93) ms
+		JVM -Xuse-ir: 390 (88) ms
+------------------
+
+2. <binary.kt> : 	 Compilation: 98.0%	 Execution: 4.0%
+[Details]:
+		JVM : 120 (93) ms
+		JVM -Xuse-ir: 238 (89) ms
+------------------
+
+3. <doNotAppendEmptyString.kt> : 	 Compilation: 91.0%	 Execution: 2.0%
+[Details]:
+		JVM : 46 (119) ms
+		JVM -Xuse-ir: 88 (116) ms
+------------------
+
+4. <kt15235.kt> : 	 Compilation: 88.0%	 Execution: 5.0%
+[Details]:
+		JVM : 51 (116) ms
+		JVM -Xuse-ir: 96 (110) ms
+------------------
+
+5. <unitAsSafeAny.kt> : 	 Compilation: 87.0%	 Execution: 4.0%
+[Details]:
+		JVM : 56 (93) ms
+		JVM -Xuse-ir: 105 (97) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <stepThenReversed5.kt> : 	Execution: 27.0%	Compilation: 34.0%
+[Details]:
+		JVM : 150 (191) ms
+		JVM -Xuse-ir: 202 (150) ms
+------------------
+2. <companionObjectInEnum.kt> : 	Execution: 27.0%	Compilation: 20.0%
+[Details]:
+		JVM : 119 (93) ms
+		JVM -Xuse-ir: 143 (119) ms
+------------------
+3. <interfaceHashCode1.kt> : 	Execution: 27.0%	Compilation: 86.0%
+[Details]:
+		JVM : 53 (112) ms
+		JVM -Xuse-ir: 99 (143) ms
+------------------
+4. <objectOuterDiffersFromInnerOuter.kt> : 	Execution: 26.0%	Compilation: 24.0%
+[Details]:
+		JVM : 100 (93) ms
+		JVM -Xuse-ir: 124 (118) ms
+------------------
+5. <delegationToArrayList.kt> : 	Execution: 24.0%	Compilation: 13.0%
+[Details]:
+		JVM : 236 (100) ms
+		JVM -Xuse-ir: 268 (124) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <suspendMain_before.kt> : 	 Compilation: 118.0%	 Execution: 1.0%
+[Details]:
+		JVM : 48 (115) ms
+		JVM -Xuse-ir: 105 (117) ms
+------------------
+
+2. <when0.kt> : 	 Compilation: 109.0%	 Execution: 2.0%
+[Details]:
+		JVM : 260 (94) ms
+		JVM -Xuse-ir: 124 (92) ms
+------------------
+
+3. <ifTrue.kt> : 	 Compilation: 88.0%	 Execution: 1.0%
+[Details]:
+		JVM : 50 (113) ms
+		JVM -Xuse-ir: 94 (111) ms
+------------------
+
+4. <ifConsts1.kt> : 	 Compilation: 71.0%	 Execution: 33.0%
+[Details]:
+		JVM : 59 (150) ms
+		JVM -Xuse-ir: 101 (112) ms
+------------------
+
+5. <kt15862_2.kt> : 	 Compilation: 70.0%	 Execution: 8.0%
+[Details]:
+		JVM : 77 (122) ms
+		JVM -Xuse-ir: 131 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <33Parameters1.kt> : 	Execution: 35.0%	Compilation: 19.0%
+[Details]:
+		JVM : 226 (95) ms
+		JVM -Xuse-ir: 269 (129) ms
+------------------
+2. <ifConsts1.kt> : 	Execution: 33.0%	Compilation: 71.0%
+[Details]:
+		JVM : 59 (150) ms
+		JVM -Xuse-ir: 101 (112) ms
+------------------
+3. <functionWithBigArity.kt> : 	Execution: 31.0%	Compilation: 16.0%
+[Details]:
+		JVM : 121 (100) ms
+		JVM -Xuse-ir: 141 (131) ms
+------------------
+4. <stubForAbstractFunWithCovariantOverride.kt> : 	Execution: 30.0%	Compilation: 21.0%
+[Details]:
+		JVM : 128 (149) ms
+		JVM -Xuse-ir: 155 (114) ms
+------------------
+5. <innerObjectRetransformation0.kt> : 	Execution: 23.0%	Compilation: 9.0%
+[Details]:
+		JVM : 370 (105) ms
+		JVM -Xuse-ir: 404 (130) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <reversedThenStep13.kt> : 	 Compilation: 129.0%	 Execution: 5.0%
+[Details]:
+		JVM : 110 (100) ms
+		JVM -Xuse-ir: 252 (95) ms
+------------------
+
+2. <negateConst.kt> : 	 Compilation: 114.0%	 Execution: 1.0%
+[Details]:
+		JVM : 49 (109) ms
+		JVM -Xuse-ir: 105 (111) ms
+------------------
+
+3. <kt26658.kt> : 	 Compilation: 54.0%	 Execution: 1.0%
+[Details]:
+		JVM : 661 (144) ms
+		JVM -Xuse-ir: 428 (146) ms
+------------------
+
+4. <insideElvis.kt> : 	 Compilation: 50.0%	 Execution: 0.0%
+[Details]:
+		JVM : 99 (0) ms
+		JVM -Xuse-ir: 149 (0) ms
+------------------
+
+5. <samWrapperForNullableInitialization.kt> : 	 Compilation: 49.0%	 Execution: 0.0%
+[Details]:
+		JVM : 102 (113) ms
+		JVM -Xuse-ir: 152 (113) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <severalInTry.kt> : 	Execution: 39.0%	Compilation: 13.0%
+[Details]:
+		JVM : 184 (94) ms
+		JVM -Xuse-ir: 209 (131) ms
+------------------
+2. <byMiddleInterface.kt> : 	Execution: 27.0%	Compilation: 9.0%
+[Details]:
+		JVM : 119 (119) ms
+		JVM -Xuse-ir: 130 (93) ms
+------------------
+3. <prefixIncrementOnClassSmartCast.kt> : 	Execution: 27.0%	Compilation: 16.0%
+[Details]:
+		JVM : 99 (124) ms
+		JVM -Xuse-ir: 115 (97) ms
+------------------
+4. <nonLocalReturnFromOuterLambda1.kt> : 	Execution: 27.0%	Compilation: 15.0%
+[Details]:
+		JVM : 124 (96) ms
+		JVM -Xuse-ir: 143 (122) ms
+------------------
+5. <safeCall_2.kt> : 	Execution: 25.0%	Compilation: 9.0%
+[Details]:
+		JVM : 121 (117) ms
+		JVM -Xuse-ir: 133 (93) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <rangeExpression.kt> : 	 Compilation: 141.0%	 Execution: 35.0%
+[Details]:
+		JVM : 370 (133) ms
+		JVM -Xuse-ir: 153 (98) ms
+------------------
+
+2. <kt18689_4.kt> : 	 Compilation: 137.0%	 Execution: 3.0%
+[Details]:
+		JVM : 98 (111) ms
+		JVM -Xuse-ir: 233 (115) ms
+------------------
+
+3. <edgeCases1.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 54 (111) ms
+		JVM -Xuse-ir: 95 (110) ms
+------------------
+
+4. <kt2246.kt> : 	 Compilation: 75.0%	 Execution: 16.0%
+[Details]:
+		JVM : 87 (107) ms
+		JVM -Xuse-ir: 153 (92) ms
+------------------
+
+5. <ifUnitEqualsNullInline.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 57 (116) ms
+		JVM -Xuse-ir: 100 (116) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <explicitCompareCall0.kt> : 	Execution: 43.0%	Compilation: 5.0%
+[Details]:
+		JVM : 146 (94) ms
+		JVM -Xuse-ir: 138 (135) ms
+------------------
+2. <rangeExpression.kt> : 	Execution: 35.0%	Compilation: 141.0%
+[Details]:
+		JVM : 370 (133) ms
+		JVM -Xuse-ir: 153 (98) ms
+------------------
+3. <kt21787.kt> : 	Execution: 34.0%	Compilation: 28.0%
+[Details]:
+		JVM : 131 (134) ms
+		JVM -Xuse-ir: 168 (100) ms
+------------------
+4. <suspendInStringTemplate.kt> : 	Execution: 30.0%	Compilation: 8.0%
+[Details]:
+		JVM : 296 (127) ms
+		JVM -Xuse-ir: 322 (97) ms
+------------------
+5. <jaggedArray.kt> : 	Execution: 29.0%	Compilation: 5.0%
+[Details]:
+		JVM : 160 (119) ms
+		JVM -Xuse-ir: 152 (92) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt2384.kt> : 	 Compilation: 85.0%	 Execution: 5.0%
+[Details]:
+		JVM : 99 (95) ms
+		JVM -Xuse-ir: 184 (100) ms
+------------------
+
+2. <boundFunctionReference0.kt> : 	 Compilation: 60.0%	 Execution: 0.0%
+[Details]:
+		JVM : 103 (96) ms
+		JVM -Xuse-ir: 165 (96) ms
+------------------
+
+3. <stepToSameLastThenStepToSmallerLast8.kt> : 	 Compilation: 56.0%	 Execution: 0.0%
+[Details]:
+		JVM : 143 (146) ms
+		JVM -Xuse-ir: 224 (145) ms
+------------------
+
+4. <progressionMinValueToMinValue2.kt> : 	 Compilation: 51.0%	 Execution: 1.0%
+[Details]:
+		JVM : 156 (103) ms
+		JVM -Xuse-ir: 236 (101) ms
+------------------
+
+5. <explicitEqualsOnDouble.kt> : 	 Compilation: 48.0%	 Execution: 10.0%
+[Details]:
+		JVM : 100 (91) ms
+		JVM -Xuse-ir: 148 (101) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt171100.kt> : 	Execution: 33.0%	Compilation: 19.0%
+[Details]:
+		JVM : 107 (123) ms
+		JVM -Xuse-ir: 128 (92) ms
+------------------
+2. <varargs3.kt> : 	Execution: 31.0%	Compilation: 32.0%
+[Details]:
+		JVM : 116 (125) ms
+		JVM -Xuse-ir: 154 (95) ms
+------------------
+3. <kt27113.kt> : 	Execution: 31.0%	Compilation: 5.0%
+[Details]:
+		JVM : 145 (125) ms
+		JVM -Xuse-ir: 153 (95) ms
+------------------
+4. <protectedSuperField.kt> : 	Execution: 30.0%	Compilation: 18.0%
+[Details]:
+		JVM : 100 (95) ms
+		JVM -Xuse-ir: 118 (124) ms
+------------------
+5. <collectionByDelegation3WithFullJdk.kt> : 	Execution: 27.0%	Compilation: 16.0%
+[Details]:
+		JVM : 228 (141) ms
+		JVM -Xuse-ir: 266 (111) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <innerClassMethodInEnumEntryClass2.kt> : 	 Compilation: 132.0%	 Execution: 7.0%
+[Details]:
+		JVM : 110 (91) ms
+		JVM -Xuse-ir: 256 (98) ms
+------------------
+
+2. <illegalStepZero6.kt> : 	 Compilation: 100.0%	 Execution: 10.0%
+[Details]:
+		JVM : 118 (128) ms
+		JVM -Xuse-ir: 236 (142) ms
+------------------
+
+3. <ifThenElseEmpty.kt> : 	 Compilation: 87.0%	 Execution: 2.0%
+[Details]:
+		JVM : 47 (114) ms
+		JVM -Xuse-ir: 88 (117) ms
+------------------
+
+4. <subjectValInIntWhenHasLocalVariableSlot.kt> : 	 Compilation: 72.0%	 Execution: 2.0%
+[Details]:
+		JVM : 59 (111) ms
+		JVM -Xuse-ir: 102 (114) ms
+------------------
+
+5. <whenStatementVar.kt> : 	 Compilation: 66.0%	 Execution: 3.0%
+[Details]:
+		JVM : 63 (110) ms
+		JVM -Xuse-ir: 105 (114) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <boxUnboxInsideCoroutine_Long1.kt> : 	Execution: 27.0%	Compilation: 10.0%
+[Details]:
+		JVM : 366 (104) ms
+		JVM -Xuse-ir: 403 (133) ms
+------------------
+2. <duplicatingItemsSameHashCode1.kt> : 	Execution: 20.0%	Compilation: 16.0%
+[Details]:
+		JVM : 97 (113) ms
+		JVM -Xuse-ir: 113 (136) ms
+------------------
+3. <boxedEqPrimitiveBoolean.kt> : 	Execution: 20.0%	Compilation: 2.0%
+[Details]:
+		JVM : 133 (113) ms
+		JVM -Xuse-ir: 136 (94) ms
+------------------
+4. <lambdasWithExtensionFunctionType.kt> : 	Execution: 18.0%	Compilation: 23.0%
+[Details]:
+		JVM : 213 (140) ms
+		JVM -Xuse-ir: 263 (118) ms
+------------------
+5. <kt22649.kt> : 	Execution: 17.0%	Compilation: 38.0%
+[Details]:
+		JVM : 103 (106) ms
+		JVM -Xuse-ir: 143 (90) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <oneFile.kt>(bug) : 	 Compilation: 1084.0%	 Execution: 0.0%
+[Details]:
+		JVM : 19 (0) ms
+		JVM -Xuse-ir: 225 (0) ms
+------------------
+
+2. <accessorExceptionPublic.kt> : 	 Compilation: 131.0%	 Execution: 1.0%
+[Details]:
+		JVM : 105 (89) ms
+		JVM -Xuse-ir: 243 (90) ms
+------------------
+
+3. <protectedPrimaryDefaults.kt> : 	 Compilation: 51.0%	 Execution: 5.0%
+[Details]:
+		JVM : 70 (120) ms
+		JVM -Xuse-ir: 106 (114) ms
+------------------
+
+4. <withSecondaryConstructor.kt> : 	 Compilation: 44.0%	 Execution: 1.0%
+[Details]:
+		JVM : 98 (92) ms
+		JVM -Xuse-ir: 142 (91) ms
+------------------
+
+5. <reversedThenStepThenReversed10.kt> : 	 Compilation: 40.0%	 Execution: 15.0%
+[Details]:
+		JVM : 170 (171) ms
+		JVM -Xuse-ir: 239 (148) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <bridge.kt> : 	Execution: 64.0%	Compilation: 15.0%
+[Details]:
+		JVM : 116 (151) ms
+		JVM -Xuse-ir: 134 (92) ms
+------------------
+2. <MultiDeclForComponentExtensionsValCaptured5.kt> : 	Execution: 35.0%	Compilation: 30.0%
+[Details]:
+		JVM : 125 (125) ms
+		JVM -Xuse-ir: 163 (92) ms
+------------------
+3. <abstractClass.kt> : 	Execution: 29.0%	Compilation: 23.0%
+[Details]:
+		JVM : 105 (123) ms
+		JVM -Xuse-ir: 130 (95) ms
+------------------
+4. <innerAndExternalNested.kt> : 	Execution: 27.0%	Compilation: 9.0%
+[Details]:
+		JVM : 302 (96) ms
+		JVM -Xuse-ir: 330 (122) ms
+------------------
+5. <forInRangeToIntMaxValue0.kt> : 	Execution: 22.0%	Compilation: 27.0%
+[Details]:
+		JVM : 114 (96) ms
+		JVM -Xuse-ir: 145 (118) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inlineIfFalse.kt> : 	 Compilation: 83.0%	 Execution: 1.0%
+[Details]:
+		JVM : 54 (114) ms
+		JVM -Xuse-ir: 99 (112) ms
+------------------
+
+2. <lambdas.kt> : 	 Compilation: 80.0%	 Execution: 0.0%
+[Details]:
+		JVM : 55 (114) ms
+		JVM -Xuse-ir: 99 (113) ms
+------------------
+
+3. <negatedNonZeroCompareInWhile.kt> : 	 Compilation: 80.0%	 Execution: 0.0%
+[Details]:
+		JVM : 66 (5007) ms
+		JVM -Xuse-ir: 119 (5013) ms
+------------------
+
+4. <negatedNullCompareInWhile.kt> : 	 Compilation: 67.0%	 Execution: 2.0%
+[Details]:
+		JVM : 56 (112) ms
+		JVM -Xuse-ir: 94 (115) ms
+------------------
+
+5. <concatDynamicIndyDataClass.kt> : 	 Compilation: 59.0%	 Execution: 10.0%
+[Details]:
+		JVM : 83 (110) ms
+		JVM -Xuse-ir: 132 (121) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <propertyInClassAccessor.kt> : 	Execution: 32.0%	Compilation: 54.0%
+[Details]:
+		JVM : 109 (115) ms
+		JVM -Xuse-ir: 168 (87) ms
+------------------
+2. <kt17572_nested.kt> : 	Execution: 23.0%	Compilation: 7.0%
+[Details]:
+		JVM : 106 (114) ms
+		JVM -Xuse-ir: 114 (92) ms
+------------------
+3. <whenArgumentIsEvaluatedOnlyOnce.kt> : 	Execution: 21.0%	Compilation: 18.0%
+[Details]:
+		JVM : 108 (113) ms
+		JVM -Xuse-ir: 128 (93) ms
+------------------
+4. <kt870.kt> : 	Execution: 18.0%	Compilation: 19.0%
+[Details]:
+		JVM : 100 (111) ms
+		JVM -Xuse-ir: 119 (94) ms
+------------------
+5. <customMutableListIterator.kt> : 	Execution: 17.0%	Compilation: 10.0%
+[Details]:
+		JVM : 218 (134) ms
+		JVM -Xuse-ir: 240 (114) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <genericProperty1.kt> : 	 Compilation: 147.0%	 Execution: 2.0%
+[Details]:
+		JVM : 98 (431) ms
+		JVM -Xuse-ir: 243 (443) ms
+------------------
+
+2. <kt889.kt> : 	 Compilation: 82.0%	 Execution: 2.0%
+[Details]:
+		JVM : 109 (92) ms
+		JVM -Xuse-ir: 199 (90) ms
+------------------
+
+3. <nullableAnyToReal0.kt> : 	 Compilation: 53.0%	 Execution: 10.0%
+[Details]:
+		JVM : 103 (97) ms
+		JVM -Xuse-ir: 158 (88) ms
+------------------
+
+4. <classWithTwoDefaultArgs.kt> : 	 Compilation: 53.0%	 Execution: 10.0%
+[Details]:
+		JVM : 75 (111) ms
+		JVM -Xuse-ir: 115 (123) ms
+------------------
+
+5. <internalClass.kt> : 	 Compilation: 51.0%	 Execution: 0.0%
+[Details]:
+		JVM : 70 (112) ms
+		JVM -Xuse-ir: 106 (111) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <varValueConflictsWithTable0.kt> : 	Execution: 35.0%	Compilation: 11.0%
+[Details]:
+		JVM : 313 (103) ms
+		JVM -Xuse-ir: 349 (140) ms
+------------------
+2. <kt37370.kt> : 	Execution: 26.0%	Compilation: 23.0%
+[Details]:
+		JVM : 139 (95) ms
+		JVM -Xuse-ir: 171 (120) ms
+------------------
+3. <forInSequenceWithIndexNoIndexVar1.kt> : 	Execution: 20.0%	Compilation: 14.0%
+[Details]:
+		JVM : 138 (136) ms
+		JVM -Xuse-ir: 158 (113) ms
+------------------
+4. <forInArrayListIndices1.kt> : 	Execution: 19.0%	Compilation: 33.0%
+[Details]:
+		JVM : 126 (109) ms
+		JVM -Xuse-ir: 168 (91) ms
+------------------
+5. <inlineClassExtensionFun.kt> : 	Execution: 19.0%	Compilation: 21.0%
+[Details]:
+		JVM : 131 (102) ms
+		JVM -Xuse-ir: 159 (122) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <mappedClassIsEqualToClassLiteral.kt> : 	 Compilation: 112.0%	 Execution: 7.0%
+[Details]:
+		JVM : 105 (182) ms
+		JVM -Xuse-ir: 223 (170) ms
+------------------
+
+2. <probeCoroutineSuspended.kt> : 	 Compilation: 92.0%	 Execution: 5.0%
+[Details]:
+		JVM : 65 (121) ms
+		JVM -Xuse-ir: 125 (115) ms
+------------------
+
+3. <maskAndArgumentElimination.kt> : 	 Compilation: 62.0%	 Execution: 1.0%
+[Details]:
+		JVM : 90 (89) ms
+		JVM -Xuse-ir: 146 (90) ms
+------------------
+
+4. <kt27132.kt> : 	 Compilation: 42.0%	 Execution: 49.0%
+[Details]:
+		JVM : 127 (103) ms
+		JVM -Xuse-ir: 181 (154) ms
+------------------
+
+5. <constructor1.kt> : 	 Compilation: 39.0%	 Execution: 16.0%
+[Details]:
+		JVM : 100 (112) ms
+		JVM -Xuse-ir: 139 (131) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt17091_4.kt> : 	Execution: 82.0%	Compilation: 21.0%
+[Details]:
+		JVM : 131 (170) ms
+		JVM -Xuse-ir: 159 (93) ms
+------------------
+2. <kt27132.kt> : 	Execution: 49.0%	Compilation: 42.0%
+[Details]:
+		JVM : 127 (103) ms
+		JVM -Xuse-ir: 181 (154) ms
+------------------
+3. <assignmentOperations.kt> : 	Execution: 41.0%	Compilation: 17.0%
+[Details]:
+		JVM : 135 (92) ms
+		JVM -Xuse-ir: 158 (130) ms
+------------------
+4. <forInCustomCharSequence.kt> : 	Execution: 25.0%	Compilation: 25.0%
+[Details]:
+		JVM : 154 (118) ms
+		JVM -Xuse-ir: 193 (94) ms
+------------------
+5. <crossinline.kt> : 	Execution: 24.0%	Compilation: 0.0%
+[Details]:
+		JVM : 453 (133) ms
+		JVM -Xuse-ir: 450 (107) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <constructorFromTopLevelNoArgs.kt> : 	 Compilation: 105.0%	 Execution: 9.0%
+[Details]:
+		JVM : 100 (100) ms
+		JVM -Xuse-ir: 205 (91) ms
+------------------
+
+2. <simple32.kt> : 	 Compilation: 92.0%	 Execution: 1.0%
+[Details]:
+		JVM : 95 (123) ms
+		JVM -Xuse-ir: 183 (125) ms
+------------------
+
+3. <inlineOrdinaryOfCrossinlineSuspend1.kt> : 	 Compilation: 61.0%	 Execution: 1.0%
+[Details]:
+		JVM : 688 (117) ms
+		JVM -Xuse-ir: 427 (115) ms
+------------------
+
+4. <rangeExpression0.kt> : 	 Compilation: 52.0%	 Execution: 4.0%
+[Details]:
+		JVM : 112 (92) ms
+		JVM -Xuse-ir: 171 (96) ms
+------------------
+
+5. <inlineTryFinally.kt> : 	 Compilation: 50.0%	 Execution: 8.0%
+[Details]:
+		JVM : 195 (106) ms
+		JVM -Xuse-ir: 130 (98) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <simpleVoid.kt> : 	Execution: 54.0%	Compilation: 17.0%
+[Details]:
+		JVM : 116 (91) ms
+		JVM -Xuse-ir: 136 (141) ms
+------------------
+2. <stubForAbstractFun.kt> : 	Execution: 35.0%	Compilation: 19.0%
+[Details]:
+		JVM : 116 (111) ms
+		JVM -Xuse-ir: 139 (150) ms
+------------------
+3. <equalsHashCode0.kt> : 	Execution: 32.0%	Compilation: 22.0%
+[Details]:
+		JVM : 116 (98) ms
+		JVM -Xuse-ir: 142 (130) ms
+------------------
+4. <innerExtentionFunctionDoubleTwoArgs.kt> : 	Execution: 24.0%	Compilation: 31.0%
+[Details]:
+		JVM : 108 (91) ms
+		JVM -Xuse-ir: 142 (113) ms
+------------------
+5. <kt3613.kt> : 	Execution: 15.0%	Compilation: 8.0%
+[Details]:
+		JVM : 102 (92) ms
+		JVM -Xuse-ir: 111 (106) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inheritedFunctionWithDefaultParameters1.kt> : 	 Compilation: 254.0%	 Execution: 2.0%
+[Details]:
+		JVM : 91 (89) ms
+		JVM -Xuse-ir: 323 (91) ms
+------------------
+
+2. <constantFlag.kt> : 	 Compilation: 64.0%	 Execution: 8.0%
+[Details]:
+		JVM : 59 (122) ms
+		JVM -Xuse-ir: 97 (112) ms
+------------------
+
+3. <genericOverrideSpecialized.kt> : 	 Compilation: 54.0%	 Execution: 9.0%
+[Details]:
+		JVM : 209 (88) ms
+		JVM -Xuse-ir: 135 (96) ms
+------------------
+
+4. <kt3421.kt> : 	 Compilation: 40.0%	 Execution: 7.0%
+[Details]:
+		JVM : 89 (99) ms
+		JVM -Xuse-ir: 125 (106) ms
+------------------
+
+5. <postfixIncrementOnShortSmartCast.kt> : 	 Compilation: 39.0%	 Execution: 4.0%
+[Details]:
+		JVM : 98 (93) ms
+		JVM -Xuse-ir: 137 (89) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <isFunKBig.kt> : 	Execution: 28.0%	Compilation: 23.0%
+[Details]:
+		JVM : 357 (145) ms
+		JVM -Xuse-ir: 442 (113) ms
+------------------
+2. <iteratorLongArrayNextLong.kt> : 	Execution: 25.0%	Compilation: 19.0%
+[Details]:
+		JVM : 108 (94) ms
+		JVM -Xuse-ir: 129 (118) ms
+------------------
+3. <propertyAccessors4.kt> : 	Execution: 21.0%	Compilation: 15.0%
+[Details]:
+		JVM : 118 (111) ms
+		JVM -Xuse-ir: 136 (91) ms
+------------------
+4. <functionReference0.kt> : 	Execution: 20.0%	Compilation: 4.0%
+[Details]:
+		JVM : 362 (102) ms
+		JVM -Xuse-ir: 345 (123) ms
+------------------
+5. <kt3132.kt> : 	Execution: 20.0%	Compilation: 17.0%
+[Details]:
+		JVM : 101 (94) ms
+		JVM -Xuse-ir: 119 (113) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <charConstant.kt> : 	 Compilation: 91.0%	 Execution: 7.0%
+[Details]:
+		JVM : 49 (122) ms
+		JVM -Xuse-ir: 94 (114) ms
+------------------
+
+2. <missedArgument.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 147 (0) ms
+		JVM -Xuse-ir: 86 (0) ms
+------------------
+
+3. <simple51.kt> : 	 Compilation: 67.0%	 Execution: 2.0%
+[Details]:
+		JVM : 56 (112) ms
+		JVM -Xuse-ir: 94 (115) ms
+------------------
+
+4. <defaultParametersAndLastVarargWithCorrectOrder.kt> : 	 Compilation: 56.0%	 Execution: 7.0%
+[Details]:
+		JVM : 400 (115) ms
+		JVM -Xuse-ir: 256 (107) ms
+------------------
+
+5. <forIntArray.kt> : 	 Compilation: 55.0%	 Execution: 1.0%
+[Details]:
+		JVM : 114 (92) ms
+		JVM -Xuse-ir: 177 (93) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <differentTypesComparison.kt> : 	Execution: 38.0%	Compilation: 12.0%
+[Details]:
+		JVM : 190 (126) ms
+		JVM -Xuse-ir: 213 (91) ms
+------------------
+2. <kt3905.kt> : 	Execution: 27.0%	Compilation: 23.0%
+[Details]:
+		JVM : 97 (93) ms
+		JVM -Xuse-ir: 120 (119) ms
+------------------
+3. <covariantOverrideSuspendFunSameJvmType0.kt> : 	Execution: 26.0%	Compilation: 25.0%
+[Details]:
+		JVM : 314 (130) ms
+		JVM -Xuse-ir: 394 (103) ms
+------------------
+4. <redundantValInitializerInObject.kt> : 	Execution: 22.0%	Compilation: 17.0%
+[Details]:
+		JVM : 121 (114) ms
+		JVM -Xuse-ir: 142 (140) ms
+------------------
+5. <MultiDeclForComponentMemberExtensions1.kt> : 	Execution: 22.0%	Compilation: 6.0%
+[Details]:
+		JVM : 138 (116) ms
+		JVM -Xuse-ir: 147 (95) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <constructorWithInlineClassParameters2.kt> : 	 Compilation: 77.0%	 Execution: 16.0%
+[Details]:
+		JVM : 121 (154) ms
+		JVM -Xuse-ir: 215 (132) ms
+------------------
+
+2. <tableSwitchWithSubjectVal.kt> : 	 Compilation: 75.0%	 Execution: 1.0%
+[Details]:
+		JVM : 58 (112) ms
+		JVM -Xuse-ir: 102 (114) ms
+------------------
+
+3. <nopInlineFuns.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 64 (111) ms
+		JVM -Xuse-ir: 109 (112) ms
+------------------
+
+4. <nestedConcat1.kt> : 	 Compilation: 68.0%	 Execution: 2.0%
+[Details]:
+		JVM : 67 (112) ms
+		JVM -Xuse-ir: 113 (109) ms
+------------------
+
+5. <mixedParams1.kt> : 	 Compilation: 54.0%	 Execution: 4.0%
+[Details]:
+		JVM : 100 (98) ms
+		JVM -Xuse-ir: 154 (94) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <boundFunctionReference2.kt> : 	Execution: 44.0%	Compilation: 17.0%
+[Details]:
+		JVM : 165 (98) ms
+		JVM -Xuse-ir: 194 (142) ms
+------------------
+2. <accessPrivateInlineClassMethodFromLambda2.kt> : 	Execution: 38.0%	Compilation: 11.0%
+[Details]:
+		JVM : 115 (91) ms
+		JVM -Xuse-ir: 128 (126) ms
+------------------
+3. <defaultargs4.kt> : 	Execution: 30.0%	Compilation: 27.0%
+[Details]:
+		JVM : 115 (91) ms
+		JVM -Xuse-ir: 147 (119) ms
+------------------
+4. <doubleDiamond.kt> : 	Execution: 28.0%	Compilation: 18.0%
+[Details]:
+		JVM : 109 (123) ms
+		JVM -Xuse-ir: 129 (96) ms
+------------------
+5. <inlineLambdaInNoInlineDefault.kt> : 	Execution: 25.0%	Compilation: 35.0%
+[Details]:
+		JVM : 103 (118) ms
+		JVM -Xuse-ir: 140 (94) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <defaultMethodInClass.kt> : 	 Compilation: 71.0%	 Execution: 0.0%
+[Details]:
+		JVM : 138 (91) ms
+		JVM -Xuse-ir: 237 (91) ms
+------------------
+
+2. <illegalStepNegative10.kt> : 	 Compilation: 56.0%	 Execution: 2.0%
+[Details]:
+		JVM : 125 (140) ms
+		JVM -Xuse-ir: 196 (136) ms
+------------------
+
+3. <noPrivateNoAccessorsInMultiFileFacade2.kt> : 	 Compilation: 44.0%	 Execution: 1.0%
+[Details]:
+		JVM : 242 (130) ms
+		JVM -Xuse-ir: 168 (128) ms
+------------------
+
+4. <constructorWithTypeParams.kt> : 	 Compilation: 39.0%	 Execution: 6.0%
+[Details]:
+		JVM : 97 (91) ms
+		JVM -Xuse-ir: 135 (97) ms
+------------------
+
+5. <classWithVararg.kt> : 	 Compilation: 38.0%	 Execution: 8.0%
+[Details]:
+		JVM : 93 (112) ms
+		JVM -Xuse-ir: 129 (121) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <returnValue.kt> : 	Execution: 32.0%	Compilation: 12.0%
+[Details]:
+		JVM : 316 (100) ms
+		JVM -Xuse-ir: 354 (132) ms
+------------------
+2. <platformName.kt> : 	Execution: 24.0%	Compilation: 26.0%
+[Details]:
+		JVM : 99 (93) ms
+		JVM -Xuse-ir: 125 (116) ms
+------------------
+3. <kt14597_full1.kt> : 	Execution: 22.0%	Compilation: 10.0%
+[Details]:
+		JVM : 131 (115) ms
+		JVM -Xuse-ir: 145 (94) ms
+------------------
+4. <nonConstValHasNoDefaultValue_after.kt> : 	Execution: 20.0%	Compilation: 20.0%
+[Details]:
+		JVM : 103 (114) ms
+		JVM -Xuse-ir: 124 (137) ms
+------------------
+5. <forInGenericArrayOfIntsWithIndex.kt> : 	Execution: 20.0%	Compilation: 17.0%
+[Details]:
+		JVM : 128 (113) ms
+		JVM -Xuse-ir: 151 (94) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <nameClashClassAndCompanion.kt> : 	 Compilation: 115.0%	 Execution: 0.0%
+[Details]:
+		JVM : 126 (415) ms
+		JVM -Xuse-ir: 272 (415) ms
+------------------
+
+2. <noBoxingForBoxedEqPrimitive.kt> : 	 Compilation: 102.0%	 Execution: 3.0%
+[Details]:
+		JVM : 71 (108) ms
+		JVM -Xuse-ir: 144 (112) ms
+------------------
+
+3. <deprecatedLateinitVar.kt> : 	 Compilation: 95.0%	 Execution: 4.0%
+[Details]:
+		JVM : 48 (122) ms
+		JVM -Xuse-ir: 94 (117) ms
+------------------
+
+4. <createMangling2.kt> : 	 Compilation: 94.0%	 Execution: 12.0%
+[Details]:
+		JVM : 308 (115) ms
+		JVM -Xuse-ir: 158 (102) ms
+------------------
+
+5. <12.kt> : 	 Compilation: 93.0%	 Execution: 7.0%
+[Details]:
+		JVM : 48 (113) ms
+		JVM -Xuse-ir: 93 (122) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <builders.kt> : 	Execution: 36.0%	Compilation: 17.0%
+[Details]:
+		JVM : 511 (135) ms
+		JVM -Xuse-ir: 434 (99) ms
+------------------
+2. <genericOverrideSuspendFun_NullableInt0.kt> : 	Execution: 31.0%	Compilation: 15.0%
+[Details]:
+		JVM : 313 (103) ms
+		JVM -Xuse-ir: 362 (135) ms
+------------------
+3. <oneElementDownTo2.kt> : 	Execution: 30.0%	Compilation: 30.0%
+[Details]:
+		JVM : 162 (142) ms
+		JVM -Xuse-ir: 211 (109) ms
+------------------
+4. <kt3556.kt> : 	Execution: 21.0%	Compilation: 20.0%
+[Details]:
+		JVM : 105 (94) ms
+		JVM -Xuse-ir: 126 (114) ms
+------------------
+5. <callFunViaVararg.kt> : 	Execution: 21.0%	Compilation: 22.0%
+[Details]:
+		JVM : 110 (108) ms
+		JVM -Xuse-ir: 135 (89) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <boundPropertyReferenceOnInt.kt> : 	 Compilation: 275.0%	 Execution: 24.0%
+[Details]:
+		JVM : 111 (109) ms
+		JVM -Xuse-ir: 417 (136) ms
+------------------
+
+2. <privateVar1.kt> : 	 Compilation: 93.0%	 Execution: 0.0%
+[Details]:
+		JVM : 107 (143) ms
+		JVM -Xuse-ir: 207 (142) ms
+------------------
+
+3. <constructorWithDefaultArguments1.kt> : 	 Compilation: 76.0%	 Execution: 0.0%
+[Details]:
+		JVM : 75 (122) ms
+		JVM -Xuse-ir: 132 (123) ms
+------------------
+
+4. <listOfStringsMapLength.kt> : 	 Compilation: 58.0%	 Execution: 3.0%
+[Details]:
+		JVM : 220 (107) ms
+		JVM -Xuse-ir: 139 (111) ms
+------------------
+
+5. <manyWhensWithinClass1.kt> : 	 Compilation: 49.0%	 Execution: 2.0%
+[Details]:
+		JVM : 118 (115) ms
+		JVM -Xuse-ir: 176 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <boxUnboxInlineClassesWithOperatorsGetSet.kt> : 	Execution: 79.0%	Compilation: 16.0%
+[Details]:
+		JVM : 131 (92) ms
+		JVM -Xuse-ir: 153 (165) ms
+------------------
+2. <toPrivateCompanionFun.kt> : 	Execution: 36.0%	Compilation: 12.0%
+[Details]:
+		JVM : 104 (93) ms
+		JVM -Xuse-ir: 117 (127) ms
+------------------
+3. <boundPropertyReferenceOnInt.kt> : 	Execution: 24.0%	Compilation: 275.0%
+[Details]:
+		JVM : 111 (109) ms
+		JVM -Xuse-ir: 417 (136) ms
+------------------
+4. <evaluationOrderForRangeLiteralReversed.kt> : 	Execution: 23.0%	Compilation: 0.0%
+[Details]:
+		JVM : 305 (132) ms
+		JVM -Xuse-ir: 305 (163) ms
+------------------
+5. <createMangling0.kt> : 	Execution: 19.0%	Compilation: 13.0%
+[Details]:
+		JVM : 310 (106) ms
+		JVM -Xuse-ir: 353 (127) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <iteratingOverHashMap.kt> : 	 Compilation: 138.0%	 Execution: 1.0%
+[Details]:
+		JVM : 125 (93) ms
+		JVM -Xuse-ir: 298 (92) ms
+------------------
+
+2. <source.kt> : 	 Compilation: 92.0%	 Execution: 0.0%
+[Details]:
+		JVM : 50 (114) ms
+		JVM -Xuse-ir: 96 (114) ms
+------------------
+
+3. <primitiveToString.kt> : 	 Compilation: 58.0%	 Execution: 1.0%
+[Details]:
+		JVM : 70 (113) ms
+		JVM -Xuse-ir: 111 (111) ms
+------------------
+
+4. <nullabilityAssertionOnDispatchReceiver.kt> : 	 Compilation: 56.0%	 Execution: 6.0%
+[Details]:
+		JVM : 119 (159) ms
+		JVM -Xuse-ir: 186 (170) ms
+------------------
+
+5. <constructorWithReordering.kt> : 	 Compilation: 55.0%	 Execution: 0.0%
+[Details]:
+		JVM : 193 (89) ms
+		JVM -Xuse-ir: 124 (89) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <intReturnComplex3.kt> : 	Execution: 22.0%	Compilation: 3.0%
+[Details]:
+		JVM : 213 (114) ms
+		JVM -Xuse-ir: 220 (93) ms
+------------------
+2. <accessPrivateStaticInlineClassCompanionMethod.kt> : 	Execution: 19.0%	Compilation: 26.0%
+[Details]:
+		JVM : 103 (94) ms
+		JVM -Xuse-ir: 130 (112) ms
+------------------
+3. <dataClass0.kt> : 	Execution: 19.0%	Compilation: 47.0%
+[Details]:
+		JVM : 94 (102) ms
+		JVM -Xuse-ir: 139 (122) ms
+------------------
+4. <resultApiDoesntCallSpecializedEquals.kt> : 	Execution: 17.0%	Compilation: 24.0%
+[Details]:
+		JVM : 99 (112) ms
+		JVM -Xuse-ir: 123 (132) ms
+------------------
+5. <genericOverrideSuspendFun2.kt> : 	Execution: 16.0%	Compilation: 21.0%
+[Details]:
+		JVM : 314 (102) ms
+		JVM -Xuse-ir: 383 (119) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt2532.kt> : 	 Compilation: 105.0%	 Execution: 16.0%
+[Details]:
+		JVM : 102 (108) ms
+		JVM -Xuse-ir: 210 (93) ms
+------------------
+
+2. <interfaceDelegation.kt> : 	 Compilation: 79.0%	 Execution: 2.0%
+[Details]:
+		JVM : 286 (151) ms
+		JVM -Xuse-ir: 513 (147) ms
+------------------
+
+3. <negateVar.kt> : 	 Compilation: 71.0%	 Execution: 2.0%
+[Details]:
+		JVM : 60 (110) ms
+		JVM -Xuse-ir: 103 (113) ms
+------------------
+
+4. <forInSequenceWithIndex1.kt> : 	 Compilation: 62.0%	 Execution: 5.0%
+[Details]:
+		JVM : 122 (105) ms
+		JVM -Xuse-ir: 198 (111) ms
+------------------
+
+5. <forNullableCharInString.kt> : 	 Compilation: 54.0%	 Execution: 7.0%
+[Details]:
+		JVM : 104 (103) ms
+		JVM -Xuse-ir: 161 (111) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt628.kt> : 	Execution: 32.0%	Compilation: 7.0%
+[Details]:
+		JVM : 134 (99) ms
+		JVM -Xuse-ir: 144 (131) ms
+------------------
+2. <with.kt> : 	Execution: 32.0%	Compilation: 15.0%
+[Details]:
+		JVM : 145 (127) ms
+		JVM -Xuse-ir: 167 (96) ms
+------------------
+3. <kt446.kt> : 	Execution: 27.0%	Compilation: 16.0%
+[Details]:
+		JVM : 106 (124) ms
+		JVM -Xuse-ir: 123 (97) ms
+------------------
+4. <superCallToNonGenericImplThroughGenericDefaultImpls.kt> : 	Execution: 22.0%	Compilation: 12.0%
+[Details]:
+		JVM : 111 (115) ms
+		JVM -Xuse-ir: 125 (94) ms
+------------------
+5. <kt21258_indirect.kt> : 	Execution: 22.0%	Compilation: 18.0%
+[Details]:
+		JVM : 106 (93) ms
+		JVM -Xuse-ir: 126 (114) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <privateAccessor.kt> : 	 Compilation: 109.0%	 Execution: 2.0%
+[Details]:
+		JVM : 52 (115) ms
+		JVM -Xuse-ir: 109 (112) ms
+------------------
+
+2. <conjunctionInDoWhile.kt> : 	 Compilation: 84.0%	 Execution: 1.0%
+[Details]:
+		JVM : 53 (89) ms
+		JVM -Xuse-ir: 98 (90) ms
+------------------
+
+3. <unitAsAny.kt> : 	 Compilation: 82.0%	 Execution: 1.0%
+[Details]:
+		JVM : 50 (99) ms
+		JVM -Xuse-ir: 91 (98) ms
+------------------
+
+4. <inlineClassesAsInlineFunParameters.kt> : 	 Compilation: 76.0%	 Execution: 1.0%
+[Details]:
+		JVM : 319 (93) ms
+		JVM -Xuse-ir: 181 (94) ms
+------------------
+
+5. <remappedLocalVar.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 57 (91) ms
+		JVM -Xuse-ir: 100 (91) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <stepToSmallerLast6.kt> : 	Execution: 17.0%	Compilation: 46.0%
+[Details]:
+		JVM : 129 (147) ms
+		JVM -Xuse-ir: 189 (172) ms
+------------------
+2. <accessArrayOfUnsigned.kt> : 	Execution: 16.0%	Compilation: 39.0%
+[Details]:
+		JVM : 99 (108) ms
+		JVM -Xuse-ir: 138 (93) ms
+------------------
+3. <any5.kt> : 	Execution: 15.0%	Compilation: 18.0%
+[Details]:
+		JVM : 132 (93) ms
+		JVM -Xuse-ir: 157 (107) ms
+------------------
+4. <javaBox.kt> : 	Execution: 14.0%	Compilation: 17.0%
+[Details]:
+		JVM : 106 (91) ms
+		JVM -Xuse-ir: 125 (104) ms
+------------------
+5. <inlineFunInConstructorCallWithEnabledNormalization.kt> : 	Execution: 14.0%	Compilation: 12.0%
+[Details]:
+		JVM : 135 (108) ms
+		JVM -Xuse-ir: 152 (94) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <functionImportedFromObject.kt> : 	 Compilation: 74.0%	 Execution: 3.0%
+[Details]:
+		JVM : 99 (94) ms
+		JVM -Xuse-ir: 173 (97) ms
+------------------
+
+2. <kt2887.kt> : 	 Compilation: 60.0%	 Execution: 0.0%
+[Details]:
+		JVM : 164 (113) ms
+		JVM -Xuse-ir: 102 (113) ms
+------------------
+
+3. <illegalStepZero10.kt> : 	 Compilation: 56.0%	 Execution: 0.0%
+[Details]:
+		JVM : 130 (138) ms
+		JVM -Xuse-ir: 203 (139) ms
+------------------
+
+4. <stepThenSameStep4.kt> : 	 Compilation: 46.0%	 Execution: 3.0%
+[Details]:
+		JVM : 141 (142) ms
+		JVM -Xuse-ir: 206 (147) ms
+------------------
+
+5. <forInStringWithIndexNoElementVar0.kt> : 	 Compilation: 36.0%	 Execution: 0.0%
+[Details]:
+		JVM : 128 (91) ms
+		JVM -Xuse-ir: 175 (91) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <hashMap0.kt> : 	Execution: 24.0%	Compilation: 17.0%
+[Details]:
+		JVM : 115 (90) ms
+		JVM -Xuse-ir: 135 (112) ms
+------------------
+2. <lambdaChain0.kt> : 	Execution: 23.0%	Compilation: 24.0%
+[Details]:
+		JVM : 119 (116) ms
+		JVM -Xuse-ir: 148 (94) ms
+------------------
+3. <reifiedAsCheckWithNullable.kt> : 	Execution: 22.0%	Compilation: 10.0%
+[Details]:
+		JVM : 94 (140) ms
+		JVM -Xuse-ir: 104 (114) ms
+------------------
+4. <kt6804.kt> : 	Execution: 19.0%	Compilation: 13.0%
+[Details]:
+		JVM : 106 (102) ms
+		JVM -Xuse-ir: 120 (122) ms
+------------------
+5. <illegalStepNegative2.kt> : 	Execution: 18.0%	Compilation: 26.0%
+[Details]:
+		JVM : 147 (160) ms
+		JVM -Xuse-ir: 186 (135) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <expectActualTypealiasLink.kt> : 	 Compilation: 112.0%	 Execution: 23.0%
+[Details]:
+		JVM : 121 (92) ms
+		JVM -Xuse-ir: 257 (114) ms
+------------------
+
+2. <15.kt> : 	 Compilation: 84.0%	 Execution: 0.0%
+[Details]:
+		JVM : 51 (112) ms
+		JVM -Xuse-ir: 94 (111) ms
+------------------
+
+3. <nonZeroCompareInWhile.kt> : 	 Compilation: 76.0%	 Execution: 0.0%
+[Details]:
+		JVM : 63 (5007) ms
+		JVM -Xuse-ir: 111 (5006) ms
+------------------
+
+4. <memberFunDelegatedToInlineClassInt.kt> : 	 Compilation: 52.0%	 Execution: 0.0%
+[Details]:
+		JVM : 114 (131) ms
+		JVM -Xuse-ir: 174 (130) ms
+------------------
+
+5. <defaultArgs2.kt> : 	 Compilation: 52.0%	 Execution: 19.0%
+[Details]:
+		JVM : 108 (99) ms
+		JVM -Xuse-ir: 165 (118) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <map0.kt> : 	Execution: 44.0%	Compilation: 25.0%
+[Details]:
+		JVM : 113 (165) ms
+		JVM -Xuse-ir: 142 (114) ms
+------------------
+2. <inlineClassEqualityShouldUseTotalOrderForFloatingPointData.kt> : 	Execution: 30.0%	Compilation: 20.0%
+[Details]:
+		JVM : 109 (91) ms
+		JVM -Xuse-ir: 131 (119) ms
+------------------
+3. <expectActualTypealiasLink.kt> : 	Execution: 23.0%	Compilation: 112.0%
+[Details]:
+		JVM : 121 (92) ms
+		JVM -Xuse-ir: 257 (114) ms
+------------------
+4. <defaultArgs2.kt> : 	Execution: 19.0%	Compilation: 52.0%
+[Details]:
+		JVM : 108 (99) ms
+		JVM -Xuse-ir: 165 (118) ms
+------------------
+5. <illegalStepNonConst5.kt> : 	Execution: 19.0%	Compilation: 24.0%
+[Details]:
+		JVM : 141 (155) ms
+		JVM -Xuse-ir: 175 (130) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <stepOneThenStepOne10.kt> : 	 Compilation: 173.0%	 Execution: 2.0%
+[Details]:
+		JVM : 127 (142) ms
+		JVM -Xuse-ir: 347 (145) ms
+------------------
+
+2. <noBoxingForPrimitiveEqBoxed.kt> : 	 Compilation: 144.0%	 Execution: 8.0%
+[Details]:
+		JVM : 69 (116) ms
+		JVM -Xuse-ir: 169 (107) ms
+------------------
+
+3. <negatedConjuction.kt> : 	 Compilation: 84.0%	 Execution: 3.0%
+[Details]:
+		JVM : 53 (107) ms
+		JVM -Xuse-ir: 98 (103) ms
+------------------
+
+4. <progressionMaxValueToMaxValue2.kt> : 	 Compilation: 60.0%	 Execution: 16.0%
+[Details]:
+		JVM : 134 (119) ms
+		JVM -Xuse-ir: 215 (102) ms
+------------------
+
+5. <progressionToNonConst3.kt> : 	 Compilation: 54.0%	 Execution: 0.0%
+[Details]:
+		JVM : 133 (148) ms
+		JVM -Xuse-ir: 205 (147) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <noOverrideWithJava.kt> : 	Execution: 22.0%	Compilation: 17.0%
+[Details]:
+		JVM : 109 (94) ms
+		JVM -Xuse-ir: 128 (115) ms
+------------------
+2. <covariantOverrideErasedToInterface.kt> : 	Execution: 22.0%	Compilation: 11.0%
+[Details]:
+		JVM : 113 (118) ms
+		JVM -Xuse-ir: 126 (96) ms
+------------------
+3. <overrideSuspendFun1.kt> : 	Execution: 19.0%	Compilation: 6.0%
+[Details]:
+		JVM : 353 (127) ms
+		JVM -Xuse-ir: 375 (106) ms
+------------------
+4. <inlineSuspendOfCrossinlineOrdinary1.kt> : 	Execution: 19.0%	Compilation: 7.0%
+[Details]:
+		JVM : 396 (104) ms
+		JVM -Xuse-ir: 424 (124) ms
+------------------
+5. <progressionMaxValueToMaxValue2.kt> : 	Execution: 16.0%	Compilation: 60.0%
+[Details]:
+		JVM : 134 (119) ms
+		JVM -Xuse-ir: 215 (102) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <propertySetterWithInlineClassTypeArgument0.kt> : 	 Compilation: 196.0%	 Execution: 4.0%
+[Details]:
+		JVM : 96 (87) ms
+		JVM -Xuse-ir: 285 (91) ms
+------------------
+
+2. <emptyVariableRange1.kt> : 	 Compilation: 86.0%	 Execution: 0.0%
+[Details]:
+		JVM : 50 (112) ms
+		JVM -Xuse-ir: 93 (111) ms
+------------------
+
+3. <maxValueToOneStepMaxValue2.kt> : 	 Compilation: 85.0%	 Execution: 24.0%
+[Details]:
+		JVM : 148 (174) ms
+		JVM -Xuse-ir: 275 (140) ms
+------------------
+
+4. <nullableByteAndShort.kt> : 	 Compilation: 81.0%	 Execution: 0.0%
+[Details]:
+		JVM : 54 (113) ms
+		JVM -Xuse-ir: 98 (113) ms
+------------------
+
+5. <resultRunCatchingOrElse.kt> : 	 Compilation: 77.0%	 Execution: 13.0%
+[Details]:
+		JVM : 124 (107) ms
+		JVM -Xuse-ir: 220 (94) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <entryClassConstructorWithDefaultArguments.kt> : 	Execution: 27.0%	Compilation: 34.0%
+[Details]:
+		JVM : 118 (117) ms
+		JVM -Xuse-ir: 159 (92) ms
+------------------
+2. <maxValueToOneStepMaxValue2.kt> : 	Execution: 24.0%	Compilation: 85.0%
+[Details]:
+		JVM : 148 (174) ms
+		JVM -Xuse-ir: 275 (140) ms
+------------------
+3. <boxUnboxInsideCoroutine_InlineInt1.kt> : 	Execution: 18.0%	Compilation: 19.0%
+[Details]:
+		JVM : 351 (106) ms
+		JVM -Xuse-ir: 421 (126) ms
+------------------
+4. <noReflectionForAdaptedCallableReferences.kt> : 	Execution: 18.0%	Compilation: 30.0%
+[Details]:
+		JVM : 143 (98) ms
+		JVM -Xuse-ir: 186 (116) ms
+------------------
+5. <javaLambda.kt> : 	Execution: 17.0%	Compilation: 14.0%
+[Details]:
+		JVM : 123 (110) ms
+		JVM -Xuse-ir: 141 (94) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <genericPropertyWithItself.kt> : 	 Compilation: 124.0%	 Execution: 10.0%
+[Details]:
+		JVM : 91 (103) ms
+		JVM -Xuse-ir: 204 (93) ms
+------------------
+
+2. <genericarray.kt> : 	 Compilation: 93.0%	 Execution: 2.0%
+[Details]:
+		JVM : 103 (93) ms
+		JVM -Xuse-ir: 199 (91) ms
+------------------
+
+3. <kt15411.kt> : 	 Compilation: 90.0%	 Execution: 0.0%
+[Details]:
+		JVM : 50 (113) ms
+		JVM -Xuse-ir: 95 (114) ms
+------------------
+
+4. <conjunction.kt> : 	 Compilation: 85.0%	 Execution: 2.0%
+[Details]:
+		JVM : 49 (91) ms
+		JVM -Xuse-ir: 91 (89) ms
+------------------
+
+5. <nullCompareInWhile.kt> : 	 Compilation: 78.0%	 Execution: 1.0%
+[Details]:
+		JVM : 52 (113) ms
+		JVM -Xuse-ir: 93 (115) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <oneImplementation1.kt> : 	Execution: 31.0%	Compilation: 21.0%
+[Details]:
+		JVM : 99 (94) ms
+		JVM -Xuse-ir: 120 (124) ms
+------------------
+2. <crossinlineSuspendContinuation_1_3.kt> : 	Execution: 26.0%	Compilation: 20.0%
+[Details]:
+		JVM : 284 (126) ms
+		JVM -Xuse-ir: 343 (100) ms
+------------------
+3. <removeClashWithGenerics.kt> : 	Execution: 23.0%	Compilation: 12.0%
+[Details]:
+		JVM : 188 (98) ms
+		JVM -Xuse-ir: 212 (121) ms
+------------------
+4. <interfaceCompanion3.kt> : 	Execution: 23.0%	Compilation: 7.0%
+[Details]:
+		JVM : 114 (115) ms
+		JVM -Xuse-ir: 123 (93) ms
+------------------
+5. <untilProgressionToNonConst.kt> : 	Execution: 18.0%	Compilation: 16.0%
+[Details]:
+		JVM : 114 (113) ms
+		JVM -Xuse-ir: 133 (95) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <genericCollection.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 94 (108) ms
+		JVM -Xuse-ir: 165 (108) ms
+------------------
+
+2. <statement1.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 60 (115) ms
+		JVM -Xuse-ir: 102 (114) ms
+------------------
+
+3. <inlinePrimaryDefaults.kt> : 	 Compilation: 56.0%	 Execution: 3.0%
+[Details]:
+		JVM : 69 (116) ms
+		JVM -Xuse-ir: 108 (112) ms
+------------------
+
+4. <casts1.kt> : 	 Compilation: 55.0%	 Execution: 0.0%
+[Details]:
+		JVM : 80 (111) ms
+		JVM -Xuse-ir: 124 (110) ms
+------------------
+
+5. <new.kt> : 	 Compilation: 53.0%	 Execution: 2.0%
+[Details]:
+		JVM : 71 (118) ms
+		JVM -Xuse-ir: 109 (115) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <referenceAsArg.kt> : 	Execution: 28.0%	Compilation: 37.0%
+[Details]:
+		JVM : 95 (92) ms
+		JVM -Xuse-ir: 131 (118) ms
+------------------
+2. <kt633.kt> : 	Execution: 16.0%	Compilation: 24.0%
+[Details]:
+		JVM : 128 (91) ms
+		JVM -Xuse-ir: 159 (106) ms
+------------------
+3. <forInStringWithIndexNoIndexVar1.kt> : 	Execution: 13.0%	Compilation: 36.0%
+[Details]:
+		JVM : 128 (91) ms
+		JVM -Xuse-ir: 175 (103) ms
+------------------
+4. <rawTypeArgument.kt> : 	Execution: 12.0%	Compilation: 15.0%
+[Details]:
+		JVM : 132 (101) ms
+		JVM -Xuse-ir: 152 (114) ms
+------------------
+5. <kt42028.kt> : 	Execution: 12.0%	Compilation: 13.0%
+[Details]:
+		JVM : 309 (118) ms
+		JVM -Xuse-ir: 351 (105) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt2997.kt> : 	 Compilation: 146.0%	 Execution: 7.0%
+[Details]:
+		JVM : 134 (102) ms
+		JVM -Xuse-ir: 330 (95) ms
+------------------
+
+2. <noSyntheticParameters.kt> : 	 Compilation: 122.0%	 Execution: 3.0%
+[Details]:
+		JVM : 53 (116) ms
+		JVM -Xuse-ir: 118 (112) ms
+------------------
+
+3. <useAppendCharForOneCharStringUsingPlus.kt> : 	 Compilation: 76.0%	 Execution: 0.0%
+[Details]:
+		JVM : 56 (113) ms
+		JVM -Xuse-ir: 99 (112) ms
+------------------
+
+4. <capturedInNoInlineOnly.kt> : 	 Compilation: 72.0%	 Execution: 7.0%
+[Details]:
+		JVM : 55 (112) ms
+		JVM -Xuse-ir: 95 (120) ms
+------------------
+
+5. <privateSuspendFun.kt> : 	 Compilation: 53.0%	 Execution: 26.0%
+[Details]:
+		JVM : 71 (114) ms
+		JVM -Xuse-ir: 109 (144) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <privateSuspendFun.kt> : 	Execution: 26.0%	Compilation: 53.0%
+[Details]:
+		JVM : 71 (114) ms
+		JVM -Xuse-ir: 109 (144) ms
+------------------
+2. <kt5956.kt> : 	Execution: 26.0%	Compilation: 14.0%
+[Details]:
+		JVM : 114 (115) ms
+		JVM -Xuse-ir: 131 (91) ms
+------------------
+3. <safeCallOnTwoReceiversLong.kt> : 	Execution: 19.0%	Compilation: 11.0%
+[Details]:
+		JVM : 300 (103) ms
+		JVM -Xuse-ir: 335 (123) ms
+------------------
+4. <kt36972_companion.kt> : 	Execution: 18.0%	Compilation: 39.0%
+[Details]:
+		JVM : 99 (93) ms
+		JVM -Xuse-ir: 138 (110) ms
+------------------
+5. <MultiDeclForComponentMemberExtensionsInExtensionFunction4.kt> : 	Execution: 17.0%	Compilation: 3.0%
+[Details]:
+		JVM : 151 (96) ms
+		JVM -Xuse-ir: 156 (113) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <noInlineJavaProtectedConstants.kt> : 	 Compilation: 100.0%	 Execution: 0.0%
+[Details]:
+		JVM : 2 (0) ms
+		JVM -Xuse-ir: 1 (0) ms
+------------------
+
+2. <fromInlineLambdaInNestedClass.kt> : 	 Compilation: 53.0%	 Execution: 18.0%
+[Details]:
+		JVM : 209 (111) ms
+		JVM -Xuse-ir: 136 (94) ms
+------------------
+
+3. <simpleNamed0.kt> : 	 Compilation: 40.0%	 Execution: 2.0%
+[Details]:
+		JVM : 96 (115) ms
+		JVM -Xuse-ir: 135 (118) ms
+------------------
+
+4. <illegalStepNonConst0.kt> : 	 Compilation: 40.0%	 Execution: 1.0%
+[Details]:
+		JVM : 142 (136) ms
+		JVM -Xuse-ir: 199 (134) ms
+------------------
+
+5. <defaultArgs0.kt> : 	 Compilation: 38.0%	 Execution: 0.0%
+[Details]:
+		JVM : 91 (115) ms
+		JVM -Xuse-ir: 126 (114) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inexactToMaxValue0.kt> : 	Execution: 41.0%	Compilation: 25.0%
+[Details]:
+		JVM : 193 (161) ms
+		JVM -Xuse-ir: 242 (114) ms
+------------------
+2. <noSuspensionPoints.kt> : 	Execution: 32.0%	Compilation: 17.0%
+[Details]:
+		JVM : 292 (103) ms
+		JVM -Xuse-ir: 343 (136) ms
+------------------
+3. <reversedThenStep11.kt> : 	Execution: 31.0%	Compilation: 28.0%
+[Details]:
+		JVM : 152 (145) ms
+		JVM -Xuse-ir: 196 (191) ms
+------------------
+4. <kt10044.kt> : 	Execution: 30.0%	Compilation: 22.0%
+[Details]:
+		JVM : 125 (124) ms
+		JVM -Xuse-ir: 153 (95) ms
+------------------
+5. <genericOverrideSuspendFun_Any_NullableInlineClassUpperBound2.kt> : 	Execution: 29.0%	Compilation: 9.0%
+[Details]:
+		JVM : 306 (128) ms
+		JVM -Xuse-ir: 335 (99) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <buildersAndLambdaCapturing.kt> : 	 Compilation: 96.0%	 Execution: 17.0%
+[Details]:
+		JVM : 1140 (123) ms
+		JVM -Xuse-ir: 579 (105) ms
+------------------
+
+2. <intConstantSafeCall.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 57 (111) ms
+		JVM -Xuse-ir: 100 (111) ms
+------------------
+
+3. <constructorVisibilityInLambda.kt> : 	 Compilation: 53.0%	 Execution: 2.0%
+[Details]:
+		JVM : 94 (95) ms
+		JVM -Xuse-ir: 144 (97) ms
+------------------
+
+4. <internalPrimaryDefaults.kt> : 	 Compilation: 52.0%	 Execution: 0.0%
+[Details]:
+		JVM : 75 (114) ms
+		JVM -Xuse-ir: 114 (113) ms
+------------------
+
+5. <forInCharSequenceLengthDecreasedInLoopBody.kt> : 	 Compilation: 49.0%	 Execution: 5.0%
+[Details]:
+		JVM : 122 (128) ms
+		JVM -Xuse-ir: 182 (135) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <covariantOverrideSuspendFun_Int2.kt> : 	Execution: 45.0%	Compilation: 17.0%
+[Details]:
+		JVM : 327 (106) ms
+		JVM -Xuse-ir: 383 (154) ms
+------------------
+2. <forInFinally.kt> : 	Execution: 32.0%	Compilation: 10.0%
+[Details]:
+		JVM : 156 (121) ms
+		JVM -Xuse-ir: 172 (91) ms
+------------------
+3. <kt38337.kt> : 	Execution: 21.0%	Compilation: 19.0%
+[Details]:
+		JVM : 127 (97) ms
+		JVM -Xuse-ir: 152 (118) ms
+------------------
+4. <internalGenericToArray.kt> : 	Execution: 21.0%	Compilation: 24.0%
+[Details]:
+		JVM : 104 (111) ms
+		JVM -Xuse-ir: 129 (135) ms
+------------------
+5. <objectInFinally.kt> : 	Execution: 17.0%	Compilation: 18.0%
+[Details]:
+		JVM : 104 (108) ms
+		JVM -Xuse-ir: 123 (92) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <javaCollectionWithRemovePrimitiveInt.kt> : 	 Compilation: 89.0%	 Execution: 6.0%
+[Details]:
+		JVM : 119 (96) ms
+		JVM -Xuse-ir: 226 (90) ms
+------------------
+
+2. <labeled1.kt> : 	 Compilation: 86.0%	 Execution: 2.0%
+[Details]:
+		JVM : 52 (90) ms
+		JVM -Xuse-ir: 97 (92) ms
+------------------
+
+3. <redundantSafeCall.kt> : 	 Compilation: 85.0%	 Execution: 3.0%
+[Details]:
+		JVM : 48 (117) ms
+		JVM -Xuse-ir: 89 (113) ms
+------------------
+
+4. <charSmartCast.kt> : 	 Compilation: 61.0%	 Execution: 9.0%
+[Details]:
+		JVM : 72 (111) ms
+		JVM -Xuse-ir: 116 (121) ms
+------------------
+
+5. <localReturnWithAutolabel.kt> : 	 Compilation: 57.0%	 Execution: 2.0%
+[Details]:
+		JVM : 105 (95) ms
+		JVM -Xuse-ir: 165 (93) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <lambdaTransformation.kt> : 	Execution: 40.0%	Compilation: 3.0%
+[Details]:
+		JVM : 311 (136) ms
+		JVM -Xuse-ir: 322 (97) ms
+------------------
+2. <whenByNullableEnum.kt> : 	Execution: 38.0%	Compilation: 21.0%
+[Details]:
+		JVM : 129 (179) ms
+		JVM -Xuse-ir: 157 (129) ms
+------------------
+3. <inlineClassesCheckCast.kt> : 	Execution: 27.0%	Compilation: 25.0%
+[Details]:
+		JVM : 131 (119) ms
+		JVM -Xuse-ir: 164 (93) ms
+------------------
+4. <jvmStaticExternalPrivate.kt> : 	Execution: 25.0%	Compilation: 19.0%
+[Details]:
+		JVM : 113 (115) ms
+		JVM -Xuse-ir: 135 (92) ms
+------------------
+5. <statementsComposition.kt> : 	Execution: 23.0%	Compilation: 28.0%
+[Details]:
+		JVM : 117 (113) ms
+		JVM -Xuse-ir: 150 (139) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ifConsts0.kt> : 	 Compilation: 108.0%	 Execution: 9.0%
+[Details]:
+		JVM : 49 (124) ms
+		JVM -Xuse-ir: 102 (113) ms
+------------------
+
+2. <reifiedNullIs.kt> : 	 Compilation: 91.0%	 Execution: 0.0%
+[Details]:
+		JVM : 45 (113) ms
+		JVM -Xuse-ir: 86 (114) ms
+------------------
+
+3. <noUnitInstanceOnVoidFunctionCall.kt> : 	 Compilation: 86.0%	 Execution: 3.0%
+[Details]:
+		JVM : 46 (113) ms
+		JVM -Xuse-ir: 86 (117) ms
+------------------
+
+4. <duplicatingItems2.kt> : 	 Compilation: 75.0%	 Execution: 1.0%
+[Details]:
+		JVM : 58 (114) ms
+		JVM -Xuse-ir: 102 (112) ms
+------------------
+
+5. <negatedNullCompareInDoWhile.kt> : 	 Compilation: 62.0%	 Execution: 6.0%
+[Details]:
+		JVM : 64 (123) ms
+		JVM -Xuse-ir: 104 (115) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <constructorWithDefaultParameters.kt> : 	Execution: 36.0%	Compilation: 37.0%
+[Details]:
+		JVM : 99 (92) ms
+		JVM -Xuse-ir: 136 (126) ms
+------------------
+2. <javaToStringNPE.kt> : 	Execution: 26.0%	Compilation: 33.0%
+[Details]:
+		JVM : 109 (116) ms
+		JVM -Xuse-ir: 145 (92) ms
+------------------
+3. <privateDefaultImpls.kt> : 	Execution: 16.0%	Compilation: 13.0%
+[Details]:
+		JVM : 84 (129) ms
+		JVM -Xuse-ir: 95 (111) ms
+------------------
+4. <forInUntilReversedStepReversed.kt> : 	Execution: 15.0%	Compilation: 28.0%
+[Details]:
+		JVM : 135 (133) ms
+		JVM -Xuse-ir: 173 (153) ms
+------------------
+5. <nonCapturingObjectInLambda.kt> : 	Execution: 14.0%	Compilation: 14.0%
+[Details]:
+		JVM : 112 (91) ms
+		JVM -Xuse-ir: 128 (104) ms
+------------------
+PROJECTS FAILED TO COMPILE
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <maxStackAfterOptimizations.kt> : 	 Compilation: 89.0%	 Execution: 0.0%
+[Details]:
+		JVM : 49 (111) ms
+		JVM -Xuse-ir: 93 (112) ms
+------------------
+
+2. <intEqualsNullableInt.kt> : 	 Compilation: 71.0%	 Execution: 0.0%
+[Details]:
+		JVM : 97 (94) ms
+		JVM -Xuse-ir: 166 (94) ms
+------------------
+
+3. <denseHashCode.kt> : 	 Compilation: 66.0%	 Execution: 12.0%
+[Details]:
+		JVM : 62 (125) ms
+		JVM -Xuse-ir: 103 (111) ms
+------------------
+
+4. <boxedNotNumberTypeOnUnboxing.kt> : 	 Compilation: 56.0%	 Execution: 0.0%
+[Details]:
+		JVM : 73 (113) ms
+		JVM -Xuse-ir: 114 (113) ms
+------------------
+
+5. <MultiDeclForComponentMemberExtensionsInExtensionFunction11.kt> : 	 Compilation: 55.0%	 Execution: 6.0%
+[Details]:
+		JVM : 129 (97) ms
+		JVM -Xuse-ir: 201 (91) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <javaIteratorOfNotNullWithIndexFailFast.kt> : 	Execution: 63.0%	Compilation: 17.0%
+[Details]:
+		JVM : 127 (167) ms
+		JVM -Xuse-ir: 149 (102) ms
+------------------
+2. <nonTrivialRunnable.kt> : 	Execution: 18.0%	Compilation: 7.0%
+[Details]:
+		JVM : 106 (110) ms
+		JVM -Xuse-ir: 114 (93) ms
+------------------
+3. <toArrayShouldBePublic.kt> : 	Execution: 16.0%	Compilation: 8.0%
+[Details]:
+		JVM : 169 (106) ms
+		JVM -Xuse-ir: 183 (91) ms
+------------------
+4. <kt3874.kt> : 	Execution: 15.0%	Compilation: 23.0%
+[Details]:
+		JVM : 134 (104) ms
+		JVM -Xuse-ir: 166 (90) ms
+------------------
+5. <privateCompanionObjectAccessors_before.kt> : 	Execution: 15.0%	Compilation: 10.0%
+[Details]:
+		JVM : 95 (131) ms
+		JVM -Xuse-ir: 105 (113) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inheritedFromCommonClass.kt> : 	 Compilation: 91.0%	 Execution: 7.0%
+[Details]:
+		JVM : 105 (144) ms
+		JVM -Xuse-ir: 201 (134) ms
+------------------
+
+2. <inNestedCall.kt> : 	 Compilation: 56.0%	 Execution: 5.0%
+[Details]:
+		JVM : 96 (98) ms
+		JVM -Xuse-ir: 150 (93) ms
+------------------
+
+3. <severalSamParameters.kt> : 	 Compilation: 46.0%	 Execution: 1.0%
+[Details]:
+		JVM : 113 (97) ms
+		JVM -Xuse-ir: 165 (96) ms
+------------------
+
+4. <delegationGenericLongArg.kt> : 	 Compilation: 44.0%	 Execution: 2.0%
+[Details]:
+		JVM : 116 (95) ms
+		JVM -Xuse-ir: 168 (93) ms
+------------------
+
+5. <illegalStepNonConst8.kt> : 	 Compilation: 41.0%	 Execution: 22.0%
+[Details]:
+		JVM : 136 (164) ms
+		JVM -Xuse-ir: 193 (134) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <varargsOfUnsignedTypes.kt> : 	Execution: 35.0%	Compilation: 25.0%
+[Details]:
+		JVM : 136 (110) ms
+		JVM -Xuse-ir: 170 (149) ms
+------------------
+2. <withVariables.kt> : 	Execution: 31.0%	Compilation: 0.0%
+[Details]:
+		JVM : 309 (134) ms
+		JVM -Xuse-ir: 311 (102) ms
+------------------
+3. <illegalStepNonConst8.kt> : 	Execution: 22.0%	Compilation: 41.0%
+[Details]:
+		JVM : 136 (164) ms
+		JVM -Xuse-ir: 193 (134) ms
+------------------
+4. <emptyProgressionToMinValue2.kt> : 	Execution: 18.0%	Compilation: 20.0%
+[Details]:
+		JVM : 148 (157) ms
+		JVM -Xuse-ir: 178 (133) ms
+------------------
+5. <localCapturedInLambdaInInnerClassInLocalClass.kt> : 	Execution: 17.0%	Compilation: 19.0%
+[Details]:
+		JVM : 97 (93) ms
+		JVM -Xuse-ir: 116 (109) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <smartCastToDifferentTypes.kt> : 	 Compilation: 100.0%	 Execution: 3.0%
+[Details]:
+		JVM : 93 (89) ms
+		JVM -Xuse-ir: 186 (86) ms
+------------------
+
+2. <stepOne1.kt> : 	 Compilation: 89.0%	 Execution: 3.0%
+[Details]:
+		JVM : 132 (140) ms
+		JVM -Xuse-ir: 250 (145) ms
+------------------
+
+3. <singleBlock.kt> : 	 Compilation: 75.0%	 Execution: 2.0%
+[Details]:
+		JVM : 57 (110) ms
+		JVM -Xuse-ir: 100 (113) ms
+------------------
+
+4. <noSuperCheckInDefaultConstuctor.kt> : 	 Compilation: 57.0%	 Execution: 8.0%
+[Details]:
+		JVM : 69 (121) ms
+		JVM -Xuse-ir: 109 (112) ms
+------------------
+
+5. <intrinsicArrayConstructorsUseCounterLoop.kt> : 	 Compilation: 52.0%	 Execution: 1.0%
+[Details]:
+		JVM : 91 (111) ms
+		JVM -Xuse-ir: 139 (113) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <signatureOfDeepInner.kt> : 	Execution: 20.0%	Compilation: 16.0%
+[Details]:
+		JVM : 120 (149) ms
+		JVM -Xuse-ir: 140 (179) ms
+------------------
+2. <throwable1.kt> : 	Execution: 20.0%	Compilation: 7.0%
+[Details]:
+		JVM : 102 (111) ms
+		JVM -Xuse-ir: 110 (92) ms
+------------------
+3. <exhaustiveWhenUnitStatement.kt> : 	Execution: 20.0%	Compilation: 9.0%
+[Details]:
+		JVM : 133 (137) ms
+		JVM -Xuse-ir: 122 (114) ms
+------------------
+4. <whenZero.kt> : 	Execution: 20.0%	Compilation: 23.0%
+[Details]:
+		JVM : 101 (135) ms
+		JVM -Xuse-ir: 125 (112) ms
+------------------
+5. <inLocalFunctionWithExpressionBody.kt> : 	Execution: 19.0%	Compilation: 27.0%
+[Details]:
+		JVM : 164 (109) ms
+		JVM -Xuse-ir: 129 (91) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <nullability2.kt> : 	 Compilation: 86.0%	 Execution: 7.0%
+[Details]:
+		JVM : 61 (122) ms
+		JVM -Xuse-ir: 114 (114) ms
+------------------
+
+2. <nopsInDoWhile.kt> : 	 Compilation: 79.0%	 Execution: 1.0%
+[Details]:
+		JVM : 59 (113) ms
+		JVM -Xuse-ir: 106 (111) ms
+------------------
+
+3. <ifSingleBranch.kt> : 	 Compilation: 75.0%	 Execution: 0.0%
+[Details]:
+		JVM : 58 (111) ms
+		JVM -Xuse-ir: 102 (112) ms
+------------------
+
+4. <concatDynamicDataClass.kt> : 	 Compilation: 59.0%	 Execution: 0.0%
+[Details]:
+		JVM : 82 (117) ms
+		JVM -Xuse-ir: 131 (116) ms
+------------------
+
+5. <noBoxingForPrimitiveEqObject.kt> : 	 Compilation: 54.0%	 Execution: 0.0%
+[Details]:
+		JVM : 72 (113) ms
+		JVM -Xuse-ir: 111 (113) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <stringPlus1.kt> : 	Execution: 26.0%	Compilation: 12.0%
+[Details]:
+		JVM : 112 (155) ms
+		JVM -Xuse-ir: 126 (123) ms
+------------------
+2. <forInRangeLiteralStepStep.kt> : 	Execution: 25.0%	Compilation: 19.0%
+[Details]:
+		JVM : 142 (132) ms
+		JVM -Xuse-ir: 170 (166) ms
+------------------
+3. <sideEffect1.kt> : 	Execution: 20.0%	Compilation: 7.0%
+[Details]:
+		JVM : 128 (113) ms
+		JVM -Xuse-ir: 138 (94) ms
+------------------
+4. <genericOverrideSuspendFun_NullableAny_null1.kt> : 	Execution: 19.0%	Compilation: 11.0%
+[Details]:
+		JVM : 289 (125) ms
+		JVM -Xuse-ir: 322 (105) ms
+------------------
+5. <kt9717DifferentPackages.kt> : 	Execution: 19.0%	Compilation: 16.0%
+[Details]:
+		JVM : 105 (93) ms
+		JVM -Xuse-ir: 122 (111) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <assertionForNotNullTypeParam.kt> : 	 Compilation: 89.0%	 Execution: 1.0%
+[Details]:
+		JVM : 46 (111) ms
+		JVM -Xuse-ir: 87 (113) ms
+------------------
+
+2. <objectExtendsInner1.kt> : 	 Compilation: 73.0%	 Execution: 4.0%
+[Details]:
+		JVM : 107 (96) ms
+		JVM -Xuse-ir: 186 (92) ms
+------------------
+
+3. <whenStatement.kt> : 	 Compilation: 59.0%	 Execution: 0.0%
+[Details]:
+		JVM : 67 (111) ms
+		JVM -Xuse-ir: 107 (111) ms
+------------------
+
+4. <delegationGenericArgUpperBound.kt> : 	 Compilation: 58.0%	 Execution: 1.0%
+[Details]:
+		JVM : 207 (94) ms
+		JVM -Xuse-ir: 131 (95) ms
+------------------
+
+5. <doNotReassignContinuation_1_2.kt> : 	 Compilation: 57.0%	 Execution: 0.0%
+[Details]:
+		JVM : 205 (0) ms
+		JVM -Xuse-ir: 322 (114) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt27096_innerClass.kt> : 	Execution: 34.0%	Compilation: 36.0%
+[Details]:
+		JVM : 160 (129) ms
+		JVM -Xuse-ir: 218 (96) ms
+------------------
+2. <emptyProgression1.kt> : 	Execution: 32.0%	Compilation: 31.0%
+[Details]:
+		JVM : 135 (177) ms
+		JVM -Xuse-ir: 177 (134) ms
+------------------
+3. <refinedIntTypesAnalysis.kt> : 	Execution: 25.0%	Compilation: 31.0%
+[Details]:
+		JVM : 116 (101) ms
+		JVM -Xuse-ir: 152 (127) ms
+------------------
+4. <progressionExpression0.kt> : 	Execution: 25.0%	Compilation: 20.0%
+[Details]:
+		JVM : 112 (118) ms
+		JVM -Xuse-ir: 135 (94) ms
+------------------
+5. <accessorForOverridenVal.kt> : 	Execution: 23.0%	Compilation: 38.0%
+[Details]:
+		JVM : 75 (111) ms
+		JVM -Xuse-ir: 104 (137) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <deleteClassOnTransfromation.kt> : 	 Compilation: 85.0%	 Execution: 4.0%
+[Details]:
+		JVM : 56 (111) ms
+		JVM -Xuse-ir: 104 (116) ms
+------------------
+
+2. <subjectValHasLocalVariableSlot.kt> : 	 Compilation: 78.0%	 Execution: 1.0%
+[Details]:
+		JVM : 56 (114) ms
+		JVM -Xuse-ir: 100 (112) ms
+------------------
+
+3. <primitivesAsStringTemplates.kt> : 	 Compilation: 69.0%	 Execution: 8.0%
+[Details]:
+		JVM : 56 (118) ms
+		JVM -Xuse-ir: 95 (109) ms
+------------------
+
+4. <stubForAbstractFunInAbstractClassWithCovariantOverride.kt> : 	 Compilation: 64.0%	 Execution: 2.0%
+[Details]:
+		JVM : 95 (113) ms
+		JVM -Xuse-ir: 156 (116) ms
+------------------
+
+5. <kt16650.kt> : 	 Compilation: 63.0%	 Execution: 0.0%
+[Details]:
+		JVM : 66 (112) ms
+		JVM -Xuse-ir: 108 (111) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt13381.kt> : 	Execution: 31.0%	Compilation: 14.0%
+[Details]:
+		JVM : 110 (92) ms
+		JVM -Xuse-ir: 126 (121) ms
+------------------
+2. <transitiveChainStatic.kt> : 	Execution: 29.0%	Compilation: 35.0%
+[Details]:
+		JVM : 109 (95) ms
+		JVM -Xuse-ir: 148 (123) ms
+------------------
+3. <boxUnboxInsideCoroutine_Long2.kt> : 	Execution: 21.0%	Compilation: 11.0%
+[Details]:
+		JVM : 375 (130) ms
+		JVM -Xuse-ir: 419 (107) ms
+------------------
+4. <anonymousObjectInGenericFun0.kt> : 	Execution: 17.0%	Compilation: 42.0%
+[Details]:
+		JVM : 158 (132) ms
+		JVM -Xuse-ir: 111 (112) ms
+------------------
+5. <tailCallInParentheses0.kt> : 	Execution: 17.0%	Compilation: 19.0%
+[Details]:
+		JVM : 289 (130) ms
+		JVM -Xuse-ir: 344 (111) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inlineSuspend.kt> : 	 Compilation: 178.0%	 Execution: 4.0%
+[Details]:
+		JVM : 51 (118) ms
+		JVM -Xuse-ir: 142 (113) ms
+------------------
+
+2. <suspendMain.kt> : 	 Compilation: 120.0%	 Execution: 3.0%
+[Details]:
+		JVM : 53 (97) ms
+		JVM -Xuse-ir: 117 (100) ms
+------------------
+
+3. <implicitReceiver1.kt> : 	 Compilation: 85.0%	 Execution: 49.0%
+[Details]:
+		JVM : 224 (169) ms
+		JVM -Xuse-ir: 121 (113) ms
+------------------
+
+4. <kt1168.kt> : 	 Compilation: 53.0%	 Execution: 5.0%
+[Details]:
+		JVM : 102 (96) ms
+		JVM -Xuse-ir: 157 (91) ms
+------------------
+
+5. <inlineClassBoxingInSuspendFunReturn_Primitive.kt> : 	 Compilation: 51.0%	 Execution: 4.0%
+[Details]:
+		JVM : 84 (119) ms
+		JVM -Xuse-ir: 127 (124) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <implicitReceiver1.kt> : 	Execution: 49.0%	Compilation: 85.0%
+[Details]:
+		JVM : 224 (169) ms
+		JVM -Xuse-ir: 121 (113) ms
+------------------
+2. <noUnnecessaryClassInitialization.kt> : 	Execution: 35.0%	Compilation: 18.0%
+[Details]:
+		JVM : 106 (122) ms
+		JVM -Xuse-ir: 126 (90) ms
+------------------
+3. <stepOneThenStepOne4.kt> : 	Execution: 26.0%	Compilation: 13.0%
+[Details]:
+		JVM : 161 (184) ms
+		JVM -Xuse-ir: 183 (146) ms
+------------------
+4. <unboundFieldReferenceInInline.kt> : 	Execution: 19.0%	Compilation: 20.0%
+[Details]:
+		JVM : 108 (96) ms
+		JVM -Xuse-ir: 130 (115) ms
+------------------
+5. <any2.kt> : 	Execution: 19.0%	Compilation: 16.0%
+[Details]:
+		JVM : 128 (112) ms
+		JVM -Xuse-ir: 149 (94) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <suspendMain0.kt> : 	 Compilation: 166.0%	 Execution: 0.0%
+[Details]:
+		JVM : 51 (102) ms
+		JVM -Xuse-ir: 136 (102) ms
+------------------
+
+2. <floatingPointCompanionAccess.kt> : 	 Compilation: 111.0%	 Execution: 1.0%
+[Details]:
+		JVM : 53 (89) ms
+		JVM -Xuse-ir: 112 (90) ms
+------------------
+
+3. <javaBeanConvention.kt> : 	 Compilation: 75.0%	 Execution: 5.0%
+[Details]:
+		JVM : 101 (102) ms
+		JVM -Xuse-ir: 177 (108) ms
+------------------
+
+4. <negateObjectCompChaing.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 57 (113) ms
+		JVM -Xuse-ir: 97 (112) ms
+------------------
+
+5. <suspendOverride.kt> : 	 Compilation: 57.0%	 Execution: 1.0%
+[Details]:
+		JVM : 75 (112) ms
+		JVM -Xuse-ir: 118 (114) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <forInStepWithIndex0.kt> : 	Execution: 31.0%	Compilation: 6.0%
+[Details]:
+		JVM : 165 (186) ms
+		JVM -Xuse-ir: 155 (141) ms
+------------------
+2. <illegalStepZero7.kt> : 	Execution: 28.0%	Compilation: 34.0%
+[Details]:
+		JVM : 127 (138) ms
+		JVM -Xuse-ir: 171 (178) ms
+------------------
+3. <kt882.kt> : 	Execution: 19.0%	Compilation: 20.0%
+[Details]:
+		JVM : 93 (91) ms
+		JVM -Xuse-ir: 112 (109) ms
+------------------
+4. <funClassObject.kt> : 	Execution: 16.0%	Compilation: 16.0%
+[Details]:
+		JVM : 106 (99) ms
+		JVM -Xuse-ir: 124 (115) ms
+------------------
+5. <covariantOverrideSuspendFunWithNullableInlineClass2.kt> : 	Execution: 16.0%	Compilation: 9.0%
+[Details]:
+		JVM : 349 (122) ms
+		JVM -Xuse-ir: 382 (105) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt9532_lv10.kt> : 	 Compilation: 100.0%	 Execution: 0.0%
+[Details]:
+		JVM : 1 (0) ms
+		JVM -Xuse-ir: 2 (0) ms
+------------------
+
+2. <stepThenReversedThenStepThenReversed8.kt> : 	 Compilation: 88.0%	 Execution: 3.0%
+[Details]:
+		JVM : 145 (150) ms
+		JVM -Xuse-ir: 273 (145) ms
+------------------
+
+3. <illegalStepNonConst9.kt> : 	 Compilation: 52.0%	 Execution: 6.0%
+[Details]:
+		JVM : 131 (138) ms
+		JVM -Xuse-ir: 200 (130) ms
+------------------
+
+4. <propertyOfNestedClassAndArrayType.kt> : 	 Compilation: 49.0%	 Execution: 2.0%
+[Details]:
+		JVM : 147 (454) ms
+		JVM -Xuse-ir: 220 (445) ms
+------------------
+
+5. <javaArrayOfInheritedNotNullFailFast.kt> : 	 Compilation: 46.0%	 Execution: 7.0%
+[Details]:
+		JVM : 108 (98) ms
+		JVM -Xuse-ir: 158 (91) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <overrideSuspendFun_Any_this0.kt> : 	Execution: 29.0%	Compilation: 4.0%
+[Details]:
+		JVM : 319 (137) ms
+		JVM -Xuse-ir: 334 (106) ms
+------------------
+2. <kt33054.kt> : 	Execution: 27.0%	Compilation: 16.0%
+[Details]:
+		JVM : 113 (91) ms
+		JVM -Xuse-ir: 132 (116) ms
+------------------
+3. <checkCast.kt> : 	Execution: 23.0%	Compilation: 18.0%
+[Details]:
+		JVM : 109 (92) ms
+		JVM -Xuse-ir: 129 (114) ms
+------------------
+4. <arrayConstructor0.kt> : 	Execution: 22.0%	Compilation: 22.0%
+[Details]:
+		JVM : 104 (113) ms
+		JVM -Xuse-ir: 127 (92) ms
+------------------
+5. <checkBasicUnsignedLiterals.kt> : 	Execution: 22.0%	Compilation: 14.0%
+[Details]:
+		JVM : 123 (113) ms
+		JVM -Xuse-ir: 141 (92) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <lastReturn.kt> : 	 Compilation: 138.0%	 Execution: 0.0%
+[Details]:
+		JVM : 88 (125) ms
+		JVM -Xuse-ir: 210 (124) ms
+------------------
+
+2. <maxValueToMinValue0.kt> : 	 Compilation: 88.0%	 Execution: 3.0%
+[Details]:
+		JVM : 163 (107) ms
+		JVM -Xuse-ir: 308 (111) ms
+------------------
+
+3. <singleConcat.kt> : 	 Compilation: 88.0%	 Execution: 3.0%
+[Details]:
+		JVM : 51 (111) ms
+		JVM -Xuse-ir: 96 (115) ms
+------------------
+
+4. <kt14963.kt> : 	 Compilation: 81.0%	 Execution: 6.0%
+[Details]:
+		JVM : 48 (122) ms
+		JVM -Xuse-ir: 87 (115) ms
+------------------
+
+5. <kt16528.kt> : 	 Compilation: 50.0%	 Execution: 1.0%
+[Details]:
+		JVM : 104 (118) ms
+		JVM -Xuse-ir: 156 (116) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <unsignedLongToString.kt> : 	Execution: 38.0%	Compilation: 10.0%
+[Details]:
+		JVM : 108 (129) ms
+		JVM -Xuse-ir: 119 (93) ms
+------------------
+2. <capturedInCrossinline.kt> : 	Execution: 37.0%	Compilation: 19.0%
+[Details]:
+		JVM : 98 (93) ms
+		JVM -Xuse-ir: 117 (128) ms
+------------------
+3. <coercionToUnit0.kt> : 	Execution: 29.0%	Compilation: 14.0%
+[Details]:
+		JVM : 335 (135) ms
+		JVM -Xuse-ir: 382 (104) ms
+------------------
+4. <stepThenReversedThenStep7.kt> : 	Execution: 17.0%	Compilation: 23.0%
+[Details]:
+		JVM : 155 (172) ms
+		JVM -Xuse-ir: 192 (147) ms
+------------------
+5. <kt9022Or.kt> : 	Execution: 13.0%	Compilation: 19.0%
+[Details]:
+		JVM : 87 (91) ms
+		JVM -Xuse-ir: 104 (103) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <dontGenerateOnMain.kt> : 	 Compilation: 88.0%	 Execution: 14.0%
+[Details]:
+		JVM : 50 (92) ms
+		JVM -Xuse-ir: 94 (105) ms
+------------------
+
+2. <noNumberCheckCast.kt> : 	 Compilation: 71.0%	 Execution: 2.0%
+[Details]:
+		JVM : 60 (114) ms
+		JVM -Xuse-ir: 103 (111) ms
+------------------
+
+3. <subjectValInStringWhenHasLocalVariableSlot.kt> : 	 Compilation: 70.0%	 Execution: 12.0%
+[Details]:
+		JVM : 61 (112) ms
+		JVM -Xuse-ir: 104 (126) ms
+------------------
+
+4. <privateValParams.kt> : 	 Compilation: 64.0%	 Execution: 3.0%
+[Details]:
+		JVM : 105 (96) ms
+		JVM -Xuse-ir: 173 (93) ms
+------------------
+
+5. <defaultArgsViaAnonymousObject3.kt> : 	 Compilation: 64.0%	 Execution: 2.0%
+[Details]:
+		JVM : 101 (91) ms
+		JVM -Xuse-ir: 166 (93) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ListWithAllImplementations.kt> : 	Execution: 33.0%	Compilation: 7.0%
+[Details]:
+		JVM : 168 (124) ms
+		JVM -Xuse-ir: 181 (93) ms
+------------------
+2. <kt752.kt> : 	Execution: 23.0%	Compilation: 32.0%
+[Details]:
+		JVM : 116 (95) ms
+		JVM -Xuse-ir: 154 (117) ms
+------------------
+3. <reifiedIsCheckWithNullable.kt> : 	Execution: 17.0%	Compilation: 17.0%
+[Details]:
+		JVM : 97 (130) ms
+		JVM -Xuse-ir: 114 (111) ms
+------------------
+4. <objects0.kt> : 	Execution: 17.0%	Compilation: 25.0%
+[Details]:
+		JVM : 104 (113) ms
+		JVM -Xuse-ir: 130 (96) ms
+------------------
+5. <exhaustiveWhenUnit.kt> : 	Execution: 15.0%	Compilation: 31.0%
+[Details]:
+		JVM : 114 (92) ms
+		JVM -Xuse-ir: 150 (106) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ifTrueElse.kt> : 	 Compilation: 89.0%	 Execution: 0.0%
+[Details]:
+		JVM : 47 (113) ms
+		JVM -Xuse-ir: 89 (112) ms
+------------------
+
+2. <notNullAsNotNullable.kt> : 	 Compilation: 86.0%	 Execution: 0.0%
+[Details]:
+		JVM : 51 (112) ms
+		JVM -Xuse-ir: 95 (112) ms
+------------------
+
+3. <safeCall0.kt> : 	 Compilation: 58.0%	 Execution: 1.0%
+[Details]:
+		JVM : 104 (91) ms
+		JVM -Xuse-ir: 165 (92) ms
+------------------
+
+4. <kt2399.kt> : 	 Compilation: 52.0%	 Execution: 0.0%
+[Details]:
+		JVM : 125 (93) ms
+		JVM -Xuse-ir: 190 (93) ms
+------------------
+
+5. <forInStringWithIndexNoIndexOrElementVar.kt> : 	 Compilation: 52.0%	 Execution: 12.0%
+[Details]:
+		JVM : 121 (106) ms
+		JVM -Xuse-ir: 185 (94) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <toStringNoReflect.kt> : 	Execution: 164.0%	Compilation: 33.0%
+[Details]:
+		JVM : 120 (420) ms
+		JVM -Xuse-ir: 160 (159) ms
+------------------
+2. <splitTryCorner1.kt> : 	Execution: 26.0%	Compilation: 19.0%
+[Details]:
+		JVM : 88 (120) ms
+		JVM -Xuse-ir: 105 (95) ms
+------------------
+3. <noConflictOnKotlinGetterAndJavaField.kt> : 	Execution: 23.0%	Compilation: 19.0%
+[Details]:
+		JVM : 118 (96) ms
+		JVM -Xuse-ir: 141 (119) ms
+------------------
+4. <capturedValInLambdaInitializedInside.kt> : 	Execution: 20.0%	Compilation: 20.0%
+[Details]:
+		JVM : 97 (95) ms
+		JVM -Xuse-ir: 117 (114) ms
+------------------
+5. <differentFqNames.kt> : 	Execution: 15.0%	Compilation: 6.0%
+[Details]:
+		JVM : 118 (109) ms
+		JVM -Xuse-ir: 126 (94) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <smap.kt> : 	 Compilation: 130.0%	 Execution: 0.0%
+[Details]:
+		JVM : 46 (0) ms
+		JVM -Xuse-ir: 20 (0) ms
+------------------
+
+2. <kt19037.kt> : 	 Compilation: 83.0%	 Execution: 3.0%
+[Details]:
+		JVM : 53 (115) ms
+		JVM -Xuse-ir: 97 (111) ms
+------------------
+
+3. <ifStatementWithoutBlock.kt> : 	 Compilation: 83.0%	 Execution: 8.0%
+[Details]:
+		JVM : 55 (122) ms
+		JVM -Xuse-ir: 101 (112) ms
+------------------
+
+4. <switchOptimizationDuplicates1.kt> : 	 Compilation: 77.0%	 Execution: 0.0%
+[Details]:
+		JVM : 54 (112) ms
+		JVM -Xuse-ir: 96 (113) ms
+------------------
+
+5. <noInlineNonStaticJavaField.kt> : 	 Compilation: 72.0%	 Execution: 10.0%
+[Details]:
+		JVM : 59 (113) ms
+		JVM -Xuse-ir: 102 (125) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ordinaryMethodIsInvokedWhenNoDefaultValuesAreUsed.kt> : 	Execution: 41.0%	Compilation: 18.0%
+[Details]:
+		JVM : 166 (629) ms
+		JVM -Xuse-ir: 196 (446) ms
+------------------
+2. <suspendImpl.kt> : 	Execution: 25.0%	Compilation: 36.0%
+[Details]:
+		JVM : 154 (140) ms
+		JVM -Xuse-ir: 113 (112) ms
+------------------
+3. <whenWithIs1.kt> : 	Execution: 23.0%	Compilation: 26.0%
+[Details]:
+		JVM : 102 (117) ms
+		JVM -Xuse-ir: 129 (95) ms
+------------------
+4. <incInClassObject.kt> : 	Execution: 22.0%	Compilation: 3.0%
+[Details]:
+		JVM : 159 (113) ms
+		JVM -Xuse-ir: 164 (92) ms
+------------------
+5. <boxReturnValueOfSuspendFunctionReference0.kt> : 	Execution: 17.0%	Compilation: 16.0%
+[Details]:
+		JVM : 311 (108) ms
+		JVM -Xuse-ir: 363 (127) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <dataClassEqualsHashCodeToString.kt> : 	 Compilation: 100.0%	 Execution: 0.0%
+[Details]:
+		JVM : 2 (0) ms
+		JVM -Xuse-ir: 1 (0) ms
+------------------
+
+2. <noUnusedLabel.kt> : 	 Compilation: 100.0%	 Execution: 8.0%
+[Details]:
+		JVM : 52 (113) ms
+		JVM -Xuse-ir: 104 (123) ms
+------------------
+
+3. <kt3098.kt> : 	 Compilation: 80.0%	 Execution: 3.0%
+[Details]:
+		JVM : 56 (115) ms
+		JVM -Xuse-ir: 101 (111) ms
+------------------
+
+4. <fieldPropertyAccess.kt> : 	 Compilation: 73.0%	 Execution: 0.0%
+[Details]:
+		JVM : 57 (112) ms
+		JVM -Xuse-ir: 99 (113) ms
+------------------
+
+5. <prefixIntVarIncrement.kt> : 	 Compilation: 73.0%	 Execution: 9.0%
+[Details]:
+		JVM : 57 (91) ms
+		JVM -Xuse-ir: 99 (100) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inLambdaInInline.kt>(bug) : 	Execution: 344.0%	Compilation: 18.0%
+[Details]:
+		JVM : 122 (95) ms
+		JVM -Xuse-ir: 144 (422) ms
+------------------
+2. <rawStringsWithManyQuotes.kt> : 	Execution: 47.0%	Compilation: 5.0%
+[Details]:
+		JVM : 139 (140) ms
+		JVM -Xuse-ir: 147 (95) ms
+------------------
+3. <typeParameterOfMethod.kt> : 	Execution: 22.0%	Compilation: 20.0%
+[Details]:
+		JVM : 132 (114) ms
+		JVM -Xuse-ir: 159 (93) ms
+------------------
+4. <unaryPlus1.kt> : 	Execution: 17.0%	Compilation: 68.0%
+[Details]:
+		JVM : 221 (110) ms
+		JVM -Xuse-ir: 131 (94) ms
+------------------
+5. <bridge3.kt> : 	Execution: 15.0%	Compilation: 17.0%
+[Details]:
+		JVM : 113 (105) ms
+		JVM -Xuse-ir: 133 (91) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <stringSwitchWithSubjectVal.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 55 (111) ms
+		JVM -Xuse-ir: 94 (111) ms
+------------------
+
+2. <anonymousObjectInParameterInitializer.kt> : 	 Compilation: 68.0%	 Execution: 2.0%
+[Details]:
+		JVM : 101 (95) ms
+		JVM -Xuse-ir: 170 (97) ms
+------------------
+
+3. <nameWithWhitespace.kt> : 	 Compilation: 52.0%	 Execution: 3.0%
+[Details]:
+		JVM : 92 (96) ms
+		JVM -Xuse-ir: 140 (93) ms
+------------------
+
+4. <annotationsOnTypeAliases.kt> : 	 Compilation: 45.0%	 Execution: 31.0%
+[Details]:
+		JVM : 145 (124) ms
+		JVM -Xuse-ir: 211 (94) ms
+------------------
+
+5. <unsignedLongCompare.kt> : 	 Compilation: 45.0%	 Execution: 11.0%
+[Details]:
+		JVM : 107 (94) ms
+		JVM -Xuse-ir: 156 (105) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <annotationsOnTypeAliases.kt> : 	Execution: 31.0%	Compilation: 45.0%
+[Details]:
+		JVM : 145 (124) ms
+		JVM -Xuse-ir: 211 (94) ms
+------------------
+2. <javaCollectionOfExplicitNullable.kt> : 	Execution: 16.0%	Compilation: 8.0%
+[Details]:
+		JVM : 139 (108) ms
+		JVM -Xuse-ir: 151 (93) ms
+------------------
+3. <kt684.kt> : 	Execution: 13.0%	Compilation: 29.0%
+[Details]:
+		JVM : 130 (113) ms
+		JVM -Xuse-ir: 168 (128) ms
+------------------
+4. <kt4152.kt> : 	Execution: 13.0%	Compilation: 16.0%
+[Details]:
+		JVM : 113 (103) ms
+		JVM -Xuse-ir: 132 (91) ms
+------------------
+5. <bridgeInInterfaceWithProperties20.kt> : 	Execution: 12.0%	Compilation: 12.0%
+[Details]:
+		JVM : 157 (133) ms
+		JVM -Xuse-ir: 177 (118) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <localFun.kt> : 	 Compilation: 224.0%	 Execution: 0.0%
+[Details]:
+		JVM : 49 (116) ms
+		JVM -Xuse-ir: 159 (117) ms
+------------------
+
+2. <noJumpInSingleBranch.kt> : 	 Compilation: 84.0%	 Execution: 2.0%
+[Details]:
+		JVM : 53 (112) ms
+		JVM -Xuse-ir: 98 (115) ms
+------------------
+
+3. <methodHandlerElimination.kt> : 	 Compilation: 56.0%	 Execution: 2.0%
+[Details]:
+		JVM : 98 (93) ms
+		JVM -Xuse-ir: 153 (91) ms
+------------------
+
+4. <noInlineLambdaChainWithCapturedInline.kt> : 	 Compilation: 54.0%	 Execution: 5.0%
+[Details]:
+		JVM : 403 (120) ms
+		JVM -Xuse-ir: 261 (114) ms
+------------------
+
+5. <stepToSmallerLastThenStepToSmallerLast7.kt> : 	 Compilation: 54.0%	 Execution: 2.0%
+[Details]:
+		JVM : 132 (142) ms
+		JVM -Xuse-ir: 204 (145) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <receiverEvaluatedOnce2.kt> : 	Execution: 49.0%	Compilation: 16.0%
+[Details]:
+		JVM : 118 (155) ms
+		JVM -Xuse-ir: 138 (104) ms
+------------------
+2. <ValCapturedInObjectLiteral.kt> : 	Execution: 31.0%	Compilation: 33.0%
+[Details]:
+		JVM : 102 (122) ms
+		JVM -Xuse-ir: 136 (93) ms
+------------------
+3. <boundPropertyReferenceInInline.kt> : 	Execution: 28.0%	Compilation: 5.0%
+[Details]:
+		JVM : 135 (95) ms
+		JVM -Xuse-ir: 128 (122) ms
+------------------
+4. <privateCompanionObjectAccessedFromInitBlock.kt> : 	Execution: 22.0%	Compilation: 17.0%
+[Details]:
+		JVM : 101 (114) ms
+		JVM -Xuse-ir: 119 (93) ms
+------------------
+5. <kt16417.kt> : 	Execution: 17.0%	Compilation: 25.0%
+[Details]:
+		JVM : 127 (94) ms
+		JVM -Xuse-ir: 159 (110) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <suspend1.kt> : 	 Compilation: 121.0%	 Execution: 1.0%
+[Details]:
+		JVM : 51 (112) ms
+		JVM -Xuse-ir: 113 (114) ms
+------------------
+
+2. <kt3634.kt> : 	 Compilation: 114.0%	 Execution: 4.0%
+[Details]:
+		JVM : 87 (94) ms
+		JVM -Xuse-ir: 187 (90) ms
+------------------
+
+3. <negatedNonZeroCompareInDoWhile.kt> : 	 Compilation: 100.0%	 Execution: 0.0%
+[Details]:
+		JVM : 61 (5016) ms
+		JVM -Xuse-ir: 122 (5017) ms
+------------------
+
+4. <returnsUnit.kt> : 	 Compilation: 97.0%	 Execution: 3.0%
+[Details]:
+		JVM : 47 (118) ms
+		JVM -Xuse-ir: 93 (114) ms
+------------------
+
+5. <useAppendCharForOneCharStringInTemplate.kt> : 	 Compilation: 84.0%	 Execution: 3.0%
+[Details]:
+		JVM : 52 (116) ms
+		JVM -Xuse-ir: 96 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inlineClassValueCapturedInInlineLambda.kt> : 	Execution: 42.0%	Compilation: 21.0%
+[Details]:
+		JVM : 135 (92) ms
+		JVM -Xuse-ir: 164 (131) ms
+------------------
+2. <kt9958Interface.kt> : 	Execution: 20.0%	Compilation: 18.0%
+[Details]:
+		JVM : 106 (93) ms
+		JVM -Xuse-ir: 126 (112) ms
+------------------
+3. <objectExtendsLocal_kt16858.kt> : 	Execution: 15.0%	Compilation: 18.0%
+[Details]:
+		JVM : 93 (110) ms
+		JVM -Xuse-ir: 110 (95) ms
+------------------
+4. <equalsHashCodeToString3.kt> : 	Execution: 11.0%	Compilation: 28.0%
+[Details]:
+		JVM : 135 (511) ms
+		JVM -Xuse-ir: 174 (460) ms
+------------------
+5. <listAppend.kt> : 	Execution: 10.0%	Compilation: 3.0%
+[Details]:
+		JVM : 130 (118) ms
+		JVM -Xuse-ir: 134 (107) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <topLevelFunWithDefaultArgs.kt> : 	 Compilation: 124.0%	 Execution: 1.0%
+[Details]:
+		JVM : 50 (114) ms
+		JVM -Xuse-ir: 112 (112) ms
+------------------
+
+2. <11.kt> : 	 Compilation: 92.0%	 Execution: 2.0%
+[Details]:
+		JVM : 50 (114) ms
+		JVM -Xuse-ir: 96 (117) ms
+------------------
+
+3. <ifFalseElse.kt> : 	 Compilation: 87.0%	 Execution: 8.0%
+[Details]:
+		JVM : 47 (123) ms
+		JVM -Xuse-ir: 88 (113) ms
+------------------
+
+4. <continuationInLvt.kt> : 	 Compilation: 61.0%	 Execution: 39.0%
+[Details]:
+		JVM : 73 (115) ms
+		JVM -Xuse-ir: 118 (160) ms
+------------------
+
+5. <null1.kt> : 	 Compilation: 56.0%	 Execution: 11.0%
+[Details]:
+		JVM : 99 (99) ms
+		JVM -Xuse-ir: 155 (89) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <property0.kt> : 	Execution: 59.0%	Compilation: 37.0%
+[Details]:
+		JVM : 137 (292) ms
+		JVM -Xuse-ir: 188 (183) ms
+------------------
+2. <continuationInLvt.kt> : 	Execution: 39.0%	Compilation: 61.0%
+[Details]:
+		JVM : 73 (115) ms
+		JVM -Xuse-ir: 118 (160) ms
+------------------
+3. <defaultTargets.kt> : 	Execution: 34.0%	Compilation: 15.0%
+[Details]:
+		JVM : 119 (112) ms
+		JVM -Xuse-ir: 138 (151) ms
+------------------
+4. <noElseExhaustiveUnitExpected.kt> : 	Execution: 24.0%	Compilation: 10.0%
+[Details]:
+		JVM : 113 (116) ms
+		JVM -Xuse-ir: 125 (93) ms
+------------------
+5. <nullableFloatNotEquals0.kt> : 	Execution: 23.0%	Compilation: 11.0%
+[Details]:
+		JVM : 141 (101) ms
+		JVM -Xuse-ir: 126 (125) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt581.kt> : 	 Compilation: 89.0%	 Execution: 5.0%
+[Details]:
+		JVM : 116 (106) ms
+		JVM -Xuse-ir: 220 (112) ms
+------------------
+
+2. <ifStatementVar.kt> : 	 Compilation: 78.0%	 Execution: 9.0%
+[Details]:
+		JVM : 57 (125) ms
+		JVM -Xuse-ir: 102 (114) ms
+------------------
+
+3. <covariantOverrideSuspendFunWithNullableInlineClass_Any0.kt> : 	 Compilation: 54.0%	 Execution: 0.0%
+[Details]:
+		JVM : 304 (104) ms
+		JVM -Xuse-ir: 469 (104) ms
+------------------
+
+4. <jvmOverloadsExternal.kt> : 	 Compilation: 52.0%	 Execution: 33.0%
+[Details]:
+		JVM : 90 (155) ms
+		JVM -Xuse-ir: 137 (116) ms
+------------------
+
+5. <nullableDoubleEquals100.kt> : 	 Compilation: 52.0%	 Execution: 25.0%
+[Details]:
+		JVM : 116 (93) ms
+		JVM -Xuse-ir: 177 (117) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <superCall1.kt> : 	Execution: 80.0%	Compilation: 11.0%
+[Details]:
+		JVM : 122 (238) ms
+		JVM -Xuse-ir: 136 (132) ms
+------------------
+2. <kt1417.kt> : 	Execution: 56.0%	Compilation: 13.0%
+[Details]:
+		JVM : 115 (149) ms
+		JVM -Xuse-ir: 130 (95) ms
+------------------
+3. <boundFunctionReference1.kt> : 	Execution: 56.0%	Compilation: 20.0%
+[Details]:
+		JVM : 170 (150) ms
+		JVM -Xuse-ir: 204 (96) ms
+------------------
+4. <inlineIntoTwoConstructors.kt> : 	Execution: 49.0%	Compilation: 4.0%
+[Details]:
+		JVM : 145 (221) ms
+		JVM -Xuse-ir: 139 (148) ms
+------------------
+5. <kt1845.kt> : 	Execution: 48.0%	Compilation: 11.0%
+[Details]:
+		JVM : 106 (135) ms
+		JVM -Xuse-ir: 118 (91) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ifStatementWithoutBlockVar.kt> : 	 Compilation: 122.0%	 Execution: 11.0%
+[Details]:
+		JVM : 49 (124) ms
+		JVM -Xuse-ir: 109 (111) ms
+------------------
+
+2. <kt14258_5.kt> : 	 Compilation: 76.0%	 Execution: 4.0%
+[Details]:
+		JVM : 97 (273) ms
+		JVM -Xuse-ir: 171 (262) ms
+------------------
+
+3. <anySuperCall.kt> : 	 Compilation: 64.0%	 Execution: 0.0%
+[Details]:
+		JVM : 98 (0) ms
+		JVM -Xuse-ir: 161 (119) ms
+------------------
+
+4. <byteSmartCast_after.kt> : 	 Compilation: 62.0%	 Execution: 2.0%
+[Details]:
+		JVM : 75 (114) ms
+		JVM -Xuse-ir: 122 (111) ms
+------------------
+
+5. <stepOne7.kt> : 	 Compilation: 57.0%	 Execution: 21.0%
+[Details]:
+		JVM : 152 (298) ms
+		JVM -Xuse-ir: 239 (362) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <whenNullableSmartCast1.kt> : 	Execution: 100.0%	Compilation: 55.0%
+[Details]:
+		JVM : 105 (270) ms
+		JVM -Xuse-ir: 163 (135) ms
+------------------
+2. <ordinary.kt> : 	Execution: 85.0%	Compilation: 31.0%
+[Details]:
+		JVM : 172 (204) ms
+		JVM -Xuse-ir: 227 (110) ms
+------------------
+3. <javaCollectionOfNotNullToTypedArray.kt> : 	Execution: 52.0%	Compilation: 25.0%
+[Details]:
+		JVM : 147 (198) ms
+		JVM -Xuse-ir: 185 (130) ms
+------------------
+4. <arrayAsVarargAfterSamArgument.kt> : 	Execution: 46.0%	Compilation: 13.0%
+[Details]:
+		JVM : 175 (179) ms
+		JVM -Xuse-ir: 199 (122) ms
+------------------
+5. <iteratorByteArrayNextByte.kt> : 	Execution: 40.0%	Compilation: 20.0%
+[Details]:
+		JVM : 116 (138) ms
+		JVM -Xuse-ir: 140 (194) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <privateDefaultSetter.kt> : 	 Compilation: 125.0%	 Execution: 6.0%
+[Details]:
+		JVM : 82 (113) ms
+		JVM -Xuse-ir: 185 (120) ms
+------------------
+
+2. <13.kt> : 	 Compilation: 101.0%	 Execution: 11.0%
+[Details]:
+		JVM : 51 (129) ms
+		JVM -Xuse-ir: 103 (116) ms
+------------------
+
+3. <accessorFromCompanion1.kt> : 	 Compilation: 65.0%	 Execution: 1.0%
+[Details]:
+		JVM : 105 (93) ms
+		JVM -Xuse-ir: 174 (92) ms
+------------------
+
+4. <asComparableToDouble.kt> : 	 Compilation: 44.0%	 Execution: 38.0%
+[Details]:
+		JVM : 107 (89) ms
+		JVM -Xuse-ir: 155 (123) ms
+------------------
+
+5. <genericParam0.kt> : 	 Compilation: 41.0%	 Execution: 1.0%
+[Details]:
+		JVM : 109 (92) ms
+		JVM -Xuse-ir: 154 (93) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <asComparableToDouble.kt> : 	Execution: 38.0%	Compilation: 44.0%
+[Details]:
+		JVM : 107 (89) ms
+		JVM -Xuse-ir: 155 (123) ms
+------------------
+2. <conformToComparableAndCallInterfaceMethod.kt> : 	Execution: 36.0%	Compilation: 21.0%
+[Details]:
+		JVM : 100 (92) ms
+		JVM -Xuse-ir: 121 (126) ms
+------------------
+3. <generics3.kt> : 	Execution: 35.0%	Compilation: 17.0%
+[Details]:
+		JVM : 98 (169) ms
+		JVM -Xuse-ir: 115 (125) ms
+------------------
+4. <objectInInlineFun.kt> : 	Execution: 30.0%	Compilation: 19.0%
+[Details]:
+		JVM : 128 (93) ms
+		JVM -Xuse-ir: 153 (121) ms
+------------------
+5. <overloadedLocalFunction3.kt> : 	Execution: 29.0%	Compilation: 14.0%
+[Details]:
+		JVM : 121 (94) ms
+		JVM -Xuse-ir: 139 (122) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <intConstantNotNull.kt> : 	 Compilation: 66.0%	 Execution: 7.0%
+[Details]:
+		JVM : 54 (106) ms
+		JVM -Xuse-ir: 90 (114) ms
+------------------
+
+2. <kt14330_2.kt> : 	 Compilation: 56.0%	 Execution: 15.0%
+[Details]:
+		JVM : 101 (114) ms
+		JVM -Xuse-ir: 158 (99) ms
+------------------
+
+3. <enum4.kt> : 	 Compilation: 47.0%	 Execution: 1.0%
+[Details]:
+		JVM : 91 (114) ms
+		JVM -Xuse-ir: 134 (112) ms
+------------------
+
+4. <bridgeWithJava1.kt> : 	 Compilation: 45.0%	 Execution: 3.0%
+[Details]:
+		JVM : 133 (97) ms
+		JVM -Xuse-ir: 193 (94) ms
+------------------
+
+5. <publicInnerClassInPrivateClass.kt> : 	 Compilation: 45.0%	 Execution: 0.0%
+[Details]:
+		JVM : 79 (111) ms
+		JVM -Xuse-ir: 115 (112) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <localExtensionOnNullableParameter.kt> : 	Execution: 22.0%	Compilation: 5.0%
+[Details]:
+		JVM : 118 (115) ms
+		JVM -Xuse-ir: 124 (94) ms
+------------------
+2. <kt14330_2.kt> : 	Execution: 15.0%	Compilation: 56.0%
+[Details]:
+		JVM : 101 (114) ms
+		JVM -Xuse-ir: 158 (99) ms
+------------------
+3. <kt18911.kt> : 	Execution: 12.0%	Compilation: 23.0%
+[Details]:
+		JVM : 121 (109) ms
+		JVM -Xuse-ir: 150 (97) ms
+------------------
+4. <useImportedMember0.kt> : 	Execution: 12.0%	Compilation: 14.0%
+[Details]:
+		JVM : 121 (93) ms
+		JVM -Xuse-ir: 139 (105) ms
+------------------
+5. <strListContains.kt> : 	Execution: 9.0%	Compilation: 12.0%
+[Details]:
+		JVM : 170 (100) ms
+		JVM -Xuse-ir: 191 (91) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ifFalse.kt> : 	 Compilation: 82.0%	 Execution: 0.0%
+[Details]:
+		JVM : 52 (113) ms
+		JVM -Xuse-ir: 95 (112) ms
+------------------
+
+2. <noJumpInLastBranch.kt> : 	 Compilation: 71.0%	 Execution: 4.0%
+[Details]:
+		JVM : 59 (115) ms
+		JVM -Xuse-ir: 101 (120) ms
+------------------
+
+3. <primitive4.kt> : 	 Compilation: 50.0%	 Execution: 6.0%
+[Details]:
+		JVM : 92 (92) ms
+		JVM -Xuse-ir: 138 (98) ms
+------------------
+
+4. <superCallFromMultipleSubclasses1.kt> : 	 Compilation: 49.0%	 Execution: 1.0%
+[Details]:
+		JVM : 111 (93) ms
+		JVM -Xuse-ir: 166 (94) ms
+------------------
+
+5. <dispatchReceiverValue0.kt> : 	 Compilation: 46.0%	 Execution: 7.0%
+[Details]:
+		JVM : 92 (101) ms
+		JVM -Xuse-ir: 135 (94) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <loadFromByteArray1.kt> : 	Execution: 51.0%	Compilation: 14.0%
+[Details]:
+		JVM : 281 (103) ms
+		JVM -Xuse-ir: 321 (156) ms
+------------------
+2. <noNullCheckOnCollectionContains.kt> : 	Execution: 28.0%	Compilation: 13.0%
+[Details]:
+		JVM : 106 (125) ms
+		JVM -Xuse-ir: 120 (97) ms
+------------------
+3. <multifileClassWithPrivate.kt> : 	Execution: 25.0%	Compilation: 7.0%
+[Details]:
+		JVM : 110 (117) ms
+		JVM -Xuse-ir: 118 (93) ms
+------------------
+4. <MultiDeclForComponentExtensionsValCaptured1.kt> : 	Execution: 24.0%	Compilation: 14.0%
+[Details]:
+		JVM : 130 (122) ms
+		JVM -Xuse-ir: 149 (98) ms
+------------------
+5. <genericNull2.kt> : 	Execution: 16.0%	Compilation: 42.0%
+[Details]:
+		JVM : 97 (107) ms
+		JVM -Xuse-ir: 138 (92) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <effectivelyInlineOnly.kt> : 	 Compilation: 81.0%	 Execution: 0.0%
+[Details]:
+		JVM : 55 (111) ms
+		JVM -Xuse-ir: 100 (111) ms
+------------------
+
+2. <localFunctions.kt> : 	 Compilation: 69.0%	 Execution: 3.0%
+[Details]:
+		JVM : 53 (115) ms
+		JVM -Xuse-ir: 90 (111) ms
+------------------
+
+3. <forInDownToUIntMinValue.kt> : 	 Compilation: 50.0%	 Execution: 5.0%
+[Details]:
+		JVM : 102 (119) ms
+		JVM -Xuse-ir: 154 (113) ms
+------------------
+
+4. <kt18689_3.kt> : 	 Compilation: 39.0%	 Execution: 0.0%
+[Details]:
+		JVM : 101 (94) ms
+		JVM -Xuse-ir: 141 (94) ms
+------------------
+
+5. <nullableTypeParameter.kt> : 	 Compilation: 38.0%	 Execution: 2.0%
+[Details]:
+		JVM : 93 (94) ms
+		JVM -Xuse-ir: 129 (92) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <inlineFromOptimizedMultifileClass.kt> : 	Execution: 44.0%	Compilation: 9.0%
+[Details]:
+		JVM : 116 (92) ms
+		JVM -Xuse-ir: 127 (133) ms
+------------------
+2. <local1.kt> : 	Execution: 43.0%	Compilation: 12.0%
+[Details]:
+		JVM : 112 (95) ms
+		JVM -Xuse-ir: 126 (136) ms
+------------------
+3. <defaultMethod.kt> : 	Execution: 36.0%	Compilation: 28.0%
+[Details]:
+		JVM : 123 (91) ms
+		JVM -Xuse-ir: 158 (124) ms
+------------------
+4. <collectionByDelegation.kt> : 	Execution: 34.0%	Compilation: 12.0%
+[Details]:
+		JVM : 227 (113) ms
+		JVM -Xuse-ir: 256 (152) ms
+------------------
+5. <privateVar0.kt> : 	Execution: 22.0%	Compilation: 12.0%
+[Details]:
+		JVM : 80 (138) ms
+		JVM -Xuse-ir: 90 (113) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <dataClass2.kt> : 	 Compilation: 65.0%	 Execution: 1.0%
+[Details]:
+		JVM : 85 (118) ms
+		JVM -Xuse-ir: 141 (116) ms
+------------------
+
+2. <object2.kt> : 	 Compilation: 54.0%	 Execution: 7.0%
+[Details]:
+		JVM : 92 (98) ms
+		JVM -Xuse-ir: 142 (91) ms
+------------------
+
+3. <illegalStepNonConst7.kt> : 	 Compilation: 48.0%	 Execution: 2.0%
+[Details]:
+		JVM : 137 (138) ms
+		JVM -Xuse-ir: 204 (134) ms
+------------------
+
+4. <objectInstance.kt> : 	 Compilation: 47.0%	 Execution: 0.0%
+[Details]:
+		JVM : 106 (395) ms
+		JVM -Xuse-ir: 156 (395) ms
+------------------
+
+5. <intSmartCast_after.kt> : 	 Compilation: 47.0%	 Execution: 2.0%
+[Details]:
+		JVM : 76 (112) ms
+		JVM -Xuse-ir: 112 (115) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <postfixIncrementOnClass.kt> : 	Execution: 31.0%	Compilation: 15.0%
+[Details]:
+		JVM : 160 (128) ms
+		JVM -Xuse-ir: 185 (97) ms
+------------------
+2. <smartCastThis.kt> : 	Execution: 18.0%	Compilation: 17.0%
+[Details]:
+		JVM : 102 (92) ms
+		JVM -Xuse-ir: 120 (109) ms
+------------------
+3. <progressionMaxValueToMinValue0.kt> : 	Execution: 17.0%	Compilation: 28.0%
+[Details]:
+		JVM : 183 (123) ms
+		JVM -Xuse-ir: 235 (105) ms
+------------------
+4. <typeParameterInExtensionReceiver.kt> : 	Execution: 16.0%	Compilation: 13.0%
+[Details]:
+		JVM : 103 (107) ms
+		JVM -Xuse-ir: 117 (92) ms
+------------------
+5. <propertyGetter1.kt> : 	Execution: 15.0%	Compilation: 24.0%
+[Details]:
+		JVM : 114 (106) ms
+		JVM -Xuse-ir: 142 (92) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <useAppendCharForOneCharStringInTemplate_2.kt> : 	 Compilation: 95.0%	 Execution: 0.0%
+[Details]:
+		JVM : 47 (115) ms
+		JVM -Xuse-ir: 92 (116) ms
+------------------
+
+2. <constValConcat.kt> : 	 Compilation: 82.0%	 Execution: 0.0%
+[Details]:
+		JVM : 56 (119) ms
+		JVM -Xuse-ir: 102 (118) ms
+------------------
+
+3. <negatedDisjunction.kt> : 	 Compilation: 79.0%	 Execution: 8.0%
+[Details]:
+		JVM : 58 (91) ms
+		JVM -Xuse-ir: 104 (99) ms
+------------------
+
+4. <negatedNullCompareInIf.kt> : 	 Compilation: 79.0%	 Execution: 1.0%
+[Details]:
+		JVM : 62 (112) ms
+		JVM -Xuse-ir: 111 (114) ms
+------------------
+
+5. <cmpIntWith0.kt> : 	 Compilation: 65.0%	 Execution: 7.0%
+[Details]:
+		JVM : 69 (113) ms
+		JVM -Xuse-ir: 114 (122) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt36446.kt> : 	Execution: 58.0%	Compilation: 6.0%
+[Details]:
+		JVM : 177 (154) ms
+		JVM -Xuse-ir: 188 (97) ms
+------------------
+2. <innerObject.kt> : 	Execution: 50.0%	Compilation: 11.0%
+[Details]:
+		JVM : 326 (106) ms
+		JVM -Xuse-ir: 365 (159) ms
+------------------
+3. <kt8047_2.kt> : 	Execution: 15.0%	Compilation: 21.0%
+[Details]:
+		JVM : 106 (105) ms
+		JVM -Xuse-ir: 129 (91) ms
+------------------
+4. <topLevelLateinit.kt> : 	Execution: 14.0%	Compilation: 7.0%
+[Details]:
+		JVM : 100 (105) ms
+		JVM -Xuse-ir: 107 (92) ms
+------------------
+5. <kt12908_2.kt> : 	Execution: 13.0%	Compilation: 24.0%
+[Details]:
+		JVM : 107 (92) ms
+		JVM -Xuse-ir: 133 (104) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <nonZeroCompareInDoWhile.kt> : 	 Compilation: 72.0%	 Execution: 0.0%
+[Details]:
+		JVM : 68 (5006) ms
+		JVM -Xuse-ir: 117 (5016) ms
+------------------
+
+2. <multipleNestedConcat.kt> : 	 Compilation: 66.0%	 Execution: 0.0%
+[Details]:
+		JVM : 63 (111) ms
+		JVM -Xuse-ir: 105 (111) ms
+------------------
+
+3. <boundFieldReferenceInInline.kt> : 	 Compilation: 44.0%	 Execution: 10.0%
+[Details]:
+		JVM : 110 (95) ms
+		JVM -Xuse-ir: 159 (105) ms
+------------------
+
+4. <constructorWithInlineClassParameters1.kt> : 	 Compilation: 40.0%	 Execution: 1.0%
+[Details]:
+		JVM : 133 (383) ms
+		JVM -Xuse-ir: 187 (389) ms
+------------------
+
+5. <mixedTypeStep3.kt> : 	 Compilation: 38.0%	 Execution: 2.0%
+[Details]:
+		JVM : 139 (142) ms
+		JVM -Xuse-ir: 192 (139) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <noAnnotationsInSyntheticAccessors.kt> : 	Execution: 35.0%	Compilation: 14.0%
+[Details]:
+		JVM : 101 (153) ms
+		JVM -Xuse-ir: 116 (113) ms
+------------------
+2. <infixCall0.kt> : 	Execution: 26.0%	Compilation: 17.0%
+[Details]:
+		JVM : 291 (133) ms
+		JVM -Xuse-ir: 341 (105) ms
+------------------
+3. <suspendConversion.kt> : 	Execution: 18.0%	Compilation: 28.0%
+[Details]:
+		JVM : 167 (120) ms
+		JVM -Xuse-ir: 215 (101) ms
+------------------
+4. <forInByteArrayWithIndexWithSmartCast.kt> : 	Execution: 15.0%	Compilation: 13.0%
+[Details]:
+		JVM : 148 (91) ms
+		JVM -Xuse-ir: 168 (105) ms
+------------------
+5. <privateFakeOverrides1.kt> : 	Execution: 13.0%	Compilation: 24.0%
+[Details]:
+		JVM : 230 (151) ms
+		JVM -Xuse-ir: 185 (133) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <ifStatement1.kt> : 	 Compilation: 88.0%	 Execution: 5.0%
+[Details]:
+		JVM : 51 (118) ms
+		JVM -Xuse-ir: 96 (112) ms
+------------------
+
+2. <inplaceClosure.kt> : 	 Compilation: 80.0%	 Execution: 27.0%
+[Details]:
+		JVM : 56 (114) ms
+		JVM -Xuse-ir: 101 (145) ms
+------------------
+
+3. <kt725.kt> : 	 Compilation: 44.0%	 Execution: 2.0%
+[Details]:
+		JVM : 105 (95) ms
+		JVM -Xuse-ir: 152 (93) ms
+------------------
+
+4. <stepToSmallerLastThenStepToSameLast8.kt> : 	 Compilation: 42.0%	 Execution: 0.0%
+[Details]:
+		JVM : 132 (150) ms
+		JVM -Xuse-ir: 188 (149) ms
+------------------
+
+5. <illegalStepNonConst1.kt> : 	 Compilation: 42.0%	 Execution: 2.0%
+[Details]:
+		JVM : 145 (135) ms
+		JVM -Xuse-ir: 206 (139) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <noDelegationToDefaultMethodInInterface2.kt> : 	Execution: 51.0%	Compilation: 20.0%
+[Details]:
+		JVM : 121 (141) ms
+		JVM -Xuse-ir: 146 (93) ms
+------------------
+2. <inplaceClosure.kt> : 	Execution: 27.0%	Compilation: 80.0%
+[Details]:
+		JVM : 56 (114) ms
+		JVM -Xuse-ir: 101 (145) ms
+------------------
+3. <singleConcatNullable.kt> : 	Execution: 25.0%	Compilation: 11.0%
+[Details]:
+		JVM : 103 (118) ms
+		JVM -Xuse-ir: 115 (94) ms
+------------------
+4. <inlineVarargAndDefault.kt> : 	Execution: 20.0%	Compilation: 30.0%
+[Details]:
+		JVM : 108 (100) ms
+		JVM -Xuse-ir: 141 (120) ms
+------------------
+5. <MultiDeclForComponentMemberExtensionsInExtensionFunction2.kt> : 	Execution: 20.0%	Compilation: 2.0%
+[Details]:
+		JVM : 150 (114) ms
+		JVM -Xuse-ir: 147 (95) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <lookupSwitch.kt> : 	 Compilation: 70.0%	 Execution: 0.0%
+[Details]:
+		JVM : 55 (114) ms
+		JVM -Xuse-ir: 94 (114) ms
+------------------
+
+2. <longSmartCast.kt> : 	 Compilation: 59.0%	 Execution: 4.0%
+[Details]:
+		JVM : 71 (117) ms
+		JVM -Xuse-ir: 113 (112) ms
+------------------
+
+3. <javaMultipleSubstitutions.kt> : 	 Compilation: 57.0%	 Execution: 1.0%
+[Details]:
+		JVM : 75 (115) ms
+		JVM -Xuse-ir: 118 (113) ms
+------------------
+
+4. <nullNotSpill.kt> : 	 Compilation: 52.0%	 Execution: 1.0%
+[Details]:
+		JVM : 84 (111) ms
+		JVM -Xuse-ir: 128 (113) ms
+------------------
+
+5. <dontGenerateOnJvmOverloads.kt> : 	 Compilation: 46.0%	 Execution: 0.0%
+[Details]:
+		JVM : 89 (0) ms
+		JVM -Xuse-ir: 130 (91) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <defaultArgs6.kt> : 	Execution: 36.0%	Compilation: 41.0%
+[Details]:
+		JVM : 94 (126) ms
+		JVM -Xuse-ir: 133 (92) ms
+------------------
+2. <SimpleVals.kt> : 	Execution: 35.0%	Compilation: 7.0%
+[Details]:
+		JVM : 107 (137) ms
+		JVM -Xuse-ir: 115 (101) ms
+------------------
+3. <simpleException.kt> : 	Execution: 25.0%	Compilation: 17.0%
+[Details]:
+		JVM : 298 (100) ms
+		JVM -Xuse-ir: 350 (125) ms
+------------------
+4. <progressionToNonConst1.kt> : 	Execution: 20.0%	Compilation: 4.0%
+[Details]:
+		JVM : 219 (174) ms
+		JVM -Xuse-ir: 229 (144) ms
+------------------
+5. <multipleInvokeCallsInsideInlineLambda2.kt> : 	Execution: 17.0%	Compilation: 4.0%
+[Details]:
+		JVM : 332 (120) ms
+		JVM -Xuse-ir: 348 (102) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <byte1.kt> : 	 Compilation: 86.0%	 Execution: 0.0%
+[Details]:
+		JVM : 52 (113) ms
+		JVM -Xuse-ir: 97 (112) ms
+------------------
+
+2. <nullCheck1.kt> : 	 Compilation: 85.0%	 Execution: 4.0%
+[Details]:
+		JVM : 61 (108) ms
+		JVM -Xuse-ir: 113 (113) ms
+------------------
+
+3. <typeEqualsHashCode.kt> : 	 Compilation: 53.0%	 Execution: 1.0%
+[Details]:
+		JVM : 255 (477) ms
+		JVM -Xuse-ir: 166 (468) ms
+------------------
+
+4. <classInObject.kt> : 	 Compilation: 48.0%	 Execution: 0.0%
+[Details]:
+		JVM : 78 (111) ms
+		JVM -Xuse-ir: 116 (110) ms
+------------------
+
+5. <propertyAsDefault.kt> : 	 Compilation: 39.0%	 Execution: 7.0%
+[Details]:
+		JVM : 99 (94) ms
+		JVM -Xuse-ir: 138 (101) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <kt11833_2.kt> : 	Execution: 50.0%	Compilation: 13.0%
+[Details]:
+		JVM : 112 (140) ms
+		JVM -Xuse-ir: 127 (93) ms
+------------------
+2. <inheritedProtectedCompanionsReferencedByName.kt> : 	Execution: 26.0%	Compilation: 21.0%
+[Details]:
+		JVM : 115 (94) ms
+		JVM -Xuse-ir: 140 (119) ms
+------------------
+3. <constructorParameterAndLocalCapturedInLambdaInLocalClass.kt> : 	Execution: 25.0%	Compilation: 21.0%
+[Details]:
+		JVM : 102 (119) ms
+		JVM -Xuse-ir: 124 (95) ms
+------------------
+4. <filter.kt> : 	Execution: 22.0%	Compilation: 12.0%
+[Details]:
+		JVM : 147 (121) ms
+		JVM -Xuse-ir: 165 (99) ms
+------------------
+5. <companionObject3.kt> : 	Execution: 18.0%	Compilation: 23.0%
+[Details]:
+		JVM : 122 (121) ms
+		JVM -Xuse-ir: 151 (102) ms
+------------------
+
+
+
+ Another report list
+SORT BY COMPILATION PERFORMANCE:
+ ---------------------------------------------------------
+1. <lookupSwitchWithSubjectVal.kt> : 	 Compilation: 92.0%	 Execution: 2.0%
+[Details]:
+		JVM : 55 (110) ms
+		JVM -Xuse-ir: 106 (113) ms
+------------------
+
+2. <overridingGenericMethodWithInlineClassParameterType.kt> : 	 Compilation: 89.0%	 Execution: 1.0%
+[Details]:
+		JVM : 79 (111) ms
+		JVM -Xuse-ir: 150 (113) ms
+------------------
+
+3. <parameterlessMain.kt> : 	 Compilation: 86.0%	 Execution: 1.0%
+[Details]:
+		JVM : 51 (88) ms
+		JVM -Xuse-ir: 95 (87) ms
+------------------
+
+4. <nonZeroCompareInIf.kt> : 	 Compilation: 68.0%	 Execution: 5.0%
+[Details]:
+		JVM : 66 (92) ms
+		JVM -Xuse-ir: 111 (87) ms
+------------------
+
+5. <forInArrayWithIndexNoIndexOrElementVar.kt> : 	 Compilation: 54.0%	 Execution: 5.0%
+[Details]:
+		JVM : 114 (107) ms
+		JVM -Xuse-ir: 176 (101) ms
+------------------
+
+SORT BY EXECUTION PERFORMANCE:
+ ---------------------------------------------------------
+1. <callComputablePropertyInsideInlineClass.kt> : 	Execution: 38.0%	Compilation: 23.0%
+[Details]:
+		JVM : 103 (95) ms
+		JVM -Xuse-ir: 127 (132) ms
+------------------
+2. <controlFlowWhen.kt> : 	Execution: 23.0%	Compilation: 15.0%
+[Details]:
+		JVM : 316 (143) ms
+		JVM -Xuse-ir: 365 (116) ms
+------------------
+3. <companionObjectPropertiesFromJava.kt> : 	Execution: 23.0%	Compilation: 9.0%
+[Details]:
+		JVM : 124 (114) ms
+		JVM -Xuse-ir: 136 (92) ms
+------------------
+4. <oneElementDownTo1.kt> : 	Execution: 18.0%	Compilation: 34.0%
+[Details]:
+		JVM : 170 (115) ms
+		JVM -Xuse-ir: 229 (97) ms
+------------------
+5. <genericClassWithGetSet.kt> : 	Execution: 13.0%	Compilation: 12.0%
+[Details]:
+		JVM : 178 (106) ms
+		JVM -Xuse-ir: 200 (93) ms
+------------------

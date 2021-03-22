@@ -1,5 +1,6 @@
 package com.stepanov.bbf.bugfinder
 
+import com.stepanov.bbf.bugfinder.executor.Checker
 import com.stepanov.bbf.bugfinder.executor.CompilerArgs
 import com.stepanov.bbf.bugfinder.executor.checkers.MutationChecker
 import com.stepanov.bbf.bugfinder.executor.checkers.TracesChecker
@@ -16,9 +17,15 @@ import kotlin.system.exitProcess
 
 class SingleFileBugFinder(dir: String) : BugFinder(dir) {
 
+    fun testPerformanceBugCheck(files : List<String>) {
+        println("Let's go")
+
+        val checker = Checker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")))
+        checker.checkForPerformanceBug(files)
+    }
     fun findBugsInFile() {
         try {
-            println("Let's go")
+
             ++counter
             log.debug("Name = $dir")
             val project = Project.createFromCode(File(dir).readText())
@@ -43,6 +50,23 @@ class SingleFileBugFinder(dir: String) : BugFinder(dir) {
                 log.debug("Can not compile $dir")
                 return
             }
+
+/*
+            for (f in File("tmp/arrays").listFiles().filter { it.absolutePath.endsWith(".kt") }) {
+                val project = Project.createFromCode(f.readText())
+                if (project.language != LANGUAGE.KOTLIN) continue
+                val checker = MutationChecker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")), project)
+                //Проверка компиляции
+                val check = checker.checkCompiling()
+                println(f)
+                println("checkCompiling done = $check")
+                //Запуск программы
+                checker.checkTraces(project)
+                println("checkTraces done")
+            }
+            exitProcess(0)
+*/
+
             log.debug("Start to mutate")
             log.debug("BEFORE = ${project.files.first().text}")
             //ProjectPreprocessor.preprocess(project, null)
@@ -51,7 +75,7 @@ class SingleFileBugFinder(dir: String) : BugFinder(dir) {
                 log.debug("=(")
                 exitProcess(0)
             }
-            mutate(project, project.files.first(), listOf(/*::noBoxFunModifying*/))
+            mutate(project, project.files.first(), listOf(/*::noBoxFunModifying*/)) //MUTATOR
 //            //Save mutated file
 //            if (CompilerArgs.shouldSaveMutatedFiles) {
 //                val pathToNewTests = CompilerArgs.dirForNewTests

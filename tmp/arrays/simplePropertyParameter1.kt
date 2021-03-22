@@ -1,4 +1,4 @@
-// !USE_EXPERIMENTAL: kotlin.ExperimentalStdlibApi
+f// !USE_EXPERIMENTAL: kotlin.ExperimentalStdlibApi
 // WITH_REFLECT
 // KJS_WITH_FULL_RUNTIME
 
