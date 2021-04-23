@@ -23,6 +23,7 @@ import com.stepanov.bbf.reduktor.util.getAllPSIChildrenOfType
 import org.apache.log4j.Logger
 import java.io.File
 import java.io.FileNotFoundException
+import kotlin.math.abs
 import kotlin.system.exitProcess
 
 //Project adaptation
@@ -30,6 +31,11 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
     CompilationChecker(compilers) {
 
     constructor(compiler: CommonCompiler) : this(listOf(compiler))
+
+    //private val differences = mutableListOf<Pair<Float, Float>>()
+    private val differences = mutableListOf<List<Float>>() //for a fitness function
+    private var name = ""
+    private var mutationsPath = ""
 
     //Back compatibility
     fun checkTextCompiling(text: String): Boolean = checkCompilingWithBugSaving(Project.createFromCode(text), null)
@@ -70,7 +76,7 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         }
     }
 
-    fun checkCompilingWithBugSaving(project: Project, curFile: BBFFile? = null): Boolean {
+    fun checkCompilingWithBugSaving(project: Project, curFile: BBFFile? = null ): Boolean {
         log.debug("Compilation checking started")
         val allTexts = project.files.map { it.psiFile.text }.joinToString()
         checkedConfigurations[allTexts]?.let { log.debug("Already checked"); return it }
@@ -104,6 +110,9 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
 //                }
                 StatisticCollector.incField("Correct programs")
                 checkedConfigurations[allTexts] = true
+                //println("Project is ok, mutating")
+                //mutateAndCheck(project)
+                //return fitnessFunction()
                 return true
             }
             statuses.all { it == COMPILE_STATUS.ERROR } -> {
@@ -115,83 +124,207 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         checkAndGetCompilerBugs(project).forEach { BugManager.saveBug(it) }
         checkedConfigurations[allTexts] = false
         StatisticCollector.incField("Correct programs")
+        //TODO/////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //println("Project is ok, mutating")
+        //mutateAndCheck(project)
+        //return fitnessFunction()
+        //TODO/////////////////////////////////////////////////////////////////////////////////////////////////////////
         return false
     }
+    fun setProjectName(name : String){
+        this.name = name
+    }
+    fun mutateAndCheck(project: Project, name: String){
+        var isValidMutation = true
 
+        val originalPcrList = checkForPerformance(project) //original PCR for original project
+        var currentProject : Project
 
-    fun compareAfterMutation(
+        val pc = PerformanceChecker(compilers)
+        val originalDifference = pc.findBiggestDifference(originalPcrList)
+        println("Project name: $name")
+        differences.add(originalDifference)
+        for (i in 0..3) {      //number of mutation histories
+            //var beforePcrList = originalPcrList
+            createNewMutationHistory(project)
+            currentProject = Project.createFromCode(readMutationCode())    // clear for the new mutation history
+            while (isValidMutation) {
+                println(mutationsPath)
+                val bugFinder = BugFinder(mutationsPath)
+                bugFinder.mutate(currentProject, currentProject.files.first(), listOf(/*::noBoxFunModifying*/))
+                val afterPcrList = this.checkForPerformance(currentProject)
+                //compareAfterMutation(beforePcrList, afterPcrList)
+
+                differences.add(pc.findBiggestDifference(afterPcrList))
+                println(differences)
+                isValidMutation = this.fitnessFunction()
+
+                if (isValidMutation) { //if TRUE - start from latest valid mutation
+                    println("CONTINUE")
+                } else {
+                    println("OVER")
+                    saveProject(currentProject)
+                    differences.clear()
+                    differences.add(originalDifference)
+                }
+            }
+        }
+    }
+
+    private fun compareAfterMutation(
         previousPCR : List<PerformanceCheckerResult>,
         currentPCR : List<PerformanceCheckerResult>,
-        compilers: List<CommonCompiler>
-    ) : Int {
-        for (n in compilers.indices) {
-            if (previousPCR[n].compilationTime != currentPCR[n].compilationTime) {
-                println("  Comparing ${previousPCR[n].name} and ${currentPCR[n].name}")
-                println("   which backends are ${previousPCR[n].compiler} and ${currentPCR[n].compiler} accordingly")
-                val b = maxOf(currentPCR[n].compilationTime, previousPCR[n].compilationTime)
-                val a = minOf(currentPCR[n].compilationTime, previousPCR[n].compilationTime)
-                println("\t Performance difference (COMPILATION):" +
-                        "\n \t Previous PCR = ${previousPCR[n].compilationTime}" +
-                        "\n \t Current PCR = ${currentPCR[n].compilationTime}" +
-                        "\n \t DIFFERENCE AFTER MUTATION (COMPILATION) ${(100 * (b - a) / a).toFloat()} %")
+        report: Boolean = false //to turn off prints
+    ) {
 
-                if (previousPCR[n].executionTime != 0L && currentPCR[n].executionTime != 0L){
-                    val exb = maxOf(currentPCR[n].executionTime, previousPCR[n].executionTime)
-                    val exa = minOf(currentPCR[n].executionTime, previousPCR[n].executionTime)
-                    println("\t Performance difference (EXECUTION):" +
-                            "\n \t Previous PCR = ${previousPCR[n].executionTime}" +
-                            "\n \t Current PCR = ${currentPCR[n].executionTime}" +
-                            "\n \t DIFFERENCE AFTER MUTATION (EXECUTION) ${(100 * (exb - exa) / exa).toFloat()} %")
+        for (n in compilers.indices) {
+            val previousC = previousPCR[n].compilationTime
+            val previousE = previousPCR[n].executionTime
+            val currentC = currentPCR[n].compilationTime
+            val currentE = currentPCR[n].executionTime
+            if (previousC != currentC) {
+                val b = maxOf(currentC, previousC)
+                val a = minOf(currentC, currentC)
+                if (report) {
+                    println("  Comparing ${previousPCR[n].name} and ${currentPCR[n].name}")
+                    println("   which backends are ${previousPCR[n].compiler} and ${currentPCR[n].compiler} accordingly")
+                    println("\t Performance difference (COMPILATION):" +
+                            "\n \t Previous PCR = $previousC" +
+                            "\n \t Current PCR = $currentC" +
+                            "\n \t DIFFERENCE AFTER MUTATION (COMPILATION) ${(100 * (b - a) / a).toFloat()} %")
                 }
-                else println("Execution time (${previousPCR[n].executionTime} ms) remains UNCHANGED after mutation")
-            } else println("Compilation time (${previousPCR[n].compilationTime} ms) remains UNCHANGED after mutation")
+                if (previousE != 0L && currentE != 0L){
+                    val exb = maxOf(currentE, previousE)
+                    val exa = minOf(currentE, previousE)
+
+
+                    //differences.add(Pair(currentC - previousC, currentE - previousE))
+                    if (report)
+                        println("\t Performance difference (EXECUTION):" +
+                            "\n \t Previous PCR = $previousE" +
+                            "\n \t Current PCR = $currentE" +
+                            "\n \t DIFFERENCE AFTER MUTATION (EXECUTION) ${(100 * (exb - exa) / exa).toFloat()} %")
+
+                }
+                //else differences.add(Pair(currentC - previousC, 0))
+            }
         }
-        return 0
     }
-    fun checkForPerformanceBug (paths: List<String>) {
+    private fun fitnessFunction() : Boolean{
+        /* TODO MORE INTELLIGENT STUFF
+        var deltaC = 0L
+        var bufC = mutableListOf<Long>()
+        var bufE = mutableListOf<Long>()
+        var deltaE = 0L
+        for (difference in differences){
+            bufC.add(difference.first)
+            bufE.add(difference.second)
+        }
+        return bufC.average() < differences.last().first || bufE.average() < differences.last().second
+        */
+        val prevDiff = differences[differences.size - 2]
+        val curDiff = differences.last()
+        val deltaC = abs(prevDiff.first() - curDiff.first())
+        val deltaE = abs(prevDiff.last() - curDiff.last())
+        println("Current delta: $deltaC and $deltaE")
+        return abs(prevDiff.first() - curDiff.first()) > 10 || abs(prevDiff.last() - curDiff.last()) > 10
+    }
+    fun checkForPerformance (paths: List<String>) {
         val compilers = listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir"))
         val pc = PerformanceChecker(paths, compilers)
         pc.checkPerformance(
             includeExecutionTime = true, enableBugReport = false, printReport = true, saveReport = true)
     }
-    fun checkForPerformanceBug (path: String, mutationPhases: Int) : List<Bug>? {
-        println("performance bug check")
-        println("Checking path: $path")
-        var phase = 0
-        val bugList = mutableListOf<Bug>()
+    fun checkForPerformance (project: Project) : List<PerformanceCheckerResult>{
+        val pc = PerformanceChecker(project, compilers)
+        return pc.checkPerformance(includeExecutionTime = true, enableBugReport = true, printReport = true)
+    }
+/*fun checkForPerformanceBug (path: String) : List<Bug>? {
+    println("performance bug check")
+    println("Checking path: $path")
+    var phase = 0
+    val bugList = mutableListOf<Bug>()
 
-        val compilers = listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir"))
-        val pc = PerformanceChecker(path, compilers)
-        var currentPCR = pc.checkPerformance(includeExecutionTime = true, enableBugReport = false, printReport = true)
+    val compilers = listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir"))
+    val pc = PerformanceChecker(path, compilers)
+    var currentPCR = pc.checkPerformance(includeExecutionTime = true, enableBugReport = false, printReport = true)
+    if (currentPCR == null) {
+        log.debug("got no PerformanceCheckerResult")
+        return null
+    }
+    if ( mutationPhases < 1 ) return null
+
+    whi (phase < mutationPhases){
+        phase++
+
+        val mutationChecker = MutationChecker(compilers, project, project.files.first())
+        if (!mutationChecker.checkCompiling()) {
+            log.debug("Can't compile")
+            exitProcess(0)
+        }
+
+        log.debug("Mutated = $project")
+        val previousPCR = currentPCR!!
+        currentPCR = pc.checkPerformance(includeExecutionTime = true, enableBugReport = false)
+
         if (currentPCR == null) {
-            log.debug("got no PerformanceCheckerResult")
+            log.debug("got no PerformanceCheckerResult on phase $phase")
             return null
         }
-        /*if ( mutationPhases < 1 ) return null
-
-        while (phase < mutationPhases){
-            phase++
-
-            val mutationChecker = MutationChecker(compilers, project, project.files.first())
-            if (!mutationChecker.checkCompiling()) {
-                log.debug("Can't compile")
-                exitProcess(0)
-            }
-
-            log.debug("Mutated = $project")
-            val previousPCR = currentPCR!!
-            currentPCR = pc.checkPerformance(includeExecutionTime = true, enableBugReport = false)
-
-            if (currentPCR == null) {
-                log.debug("got no PerformanceCheckerResult on phase $phase")
-                return null
-            }
-            compareAfterMutation(previousPCR, currentPCR, compilers)
-        }*/
-        return bugList
+        compareAfterMutation(previousPCR, currentPCR, compilers)
     }
-    val additionalConditions: MutableList<(PsiFile) -> Boolean> = mutableListOf()
+    return bugList
+}*/
 
-    private val checkedConfigurations = hashMapOf<String, Boolean>()
-    private val log = Logger.getLogger("mutatorLogger")
+    private fun createNewMutationHistory(project : Project){
+        //val name = currentProject.files.first().name
+        val name = this.name.replace(".","_")
+        val path = System.getProperty("user.dir")
+        var file = File("$path/tmp/mutations/${name}/0")
+        var i = 0
+        while (file.exists()) {
+            i++
+            file = File("$path/tmp/mutations/$name/$i")
+        }
+        file.mkdirs()
+        println(file.path)
+        mutationsPath = file.path
+        saveProject(project)
+    }
+
+    private fun saveProject(project : Project) {
+        if(mutationsPath.split("/").last() == "0"){
+            val textFile = File("$mutationsPath/original.kt")
+            textFile.createNewFile()
+            project.saveInOneFile("$mutationsPath/original.kt")
+        }
+        else {
+            var file = File("${mutationsPath}/modifiedProject0.kt")
+            var i = 0
+            while (file.exists()) {
+                i++
+                file = File("${mutationsPath}/modifiedProject$i.kt")
+            }
+            file.createNewFile()
+            project.saveInOneFile("${mutationsPath}/modifiedProject$i.kt")
+        }
+    }
+
+    //function for the other type of mutation
+    private fun readMutationCode() : String{ //try to read the most promising mutant
+        /*var file = File("$mutationsPath/project0")
+        var i = 0
+        while (file.exists()) {
+            i++
+            file = File("$mutationsPath/project$i")
+        }*/
+        val name = this.name.replace(".","_")
+        val path = System.getProperty("user.dir")
+        return File("$path/tmp/mutations/${name}/0/original.kt").readText()
+    }
+
+val additionalConditions: MutableList<(PsiFile) -> Boolean> = mutableListOf()
+
+private val checkedConfigurations = hashMapOf<String, Boolean>()
+private val log = Logger.getLogger("mutatorLogger")
 }

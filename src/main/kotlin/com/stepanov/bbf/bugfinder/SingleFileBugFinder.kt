@@ -21,7 +21,17 @@ class SingleFileBugFinder(dir: String) : BugFinder(dir) {
         println("Let's go")
 
         val checker = Checker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")))
-        checker.checkForPerformanceBug(files)
+        checker.checkForPerformance(files)
+    }
+    fun findPerformanceBugs(){
+        println("Find performance bug")
+        val project = Project.createFromCode(File(dir).readText())
+        val checker = MutationChecker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")), project, project.files.first())
+        val name = dir.split("/").last()
+        println(name)
+        checker.setProjectName(name)
+        //checker.checkCompilingWithBugSaving(project)
+        checker.mutateAndCheck(project, name)
     }
     fun findBugsInFile() {
         try {

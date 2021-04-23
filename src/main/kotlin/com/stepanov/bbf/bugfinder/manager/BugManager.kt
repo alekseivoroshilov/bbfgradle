@@ -14,7 +14,8 @@ enum class BugType {
     DIFFBEHAVIOR,
     UNKNOWN,
     DIFFCOMPILE,
-    DIFFABI
+    DIFFABI,
+    PERFORMANCE
 }
 
 data class Bug(val compilers: List<CommonCompiler>, val msg: String, val crashedProject: Project, val type: BugType) {
@@ -169,6 +170,7 @@ object BugManager {
             BugType.DIFFABI -> FilterDuplcatesCompilerErrors.haveSameDiffABIErrors(bug)
             BugType.DIFFBEHAVIOR -> false
             BugType.UNKNOWN -> false
+            BugType.PERFORMANCE -> false //TODO
         }
     }
 

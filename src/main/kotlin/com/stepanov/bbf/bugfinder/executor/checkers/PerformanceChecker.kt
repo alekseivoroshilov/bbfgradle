@@ -1,5 +1,6 @@
 package com.stepanov.bbf.bugfinder.executor.checkers;
 
+import com.stepanov.bbf.bugfinder.Reducer
 import com.stepanov.bbf.bugfinder.executor.Checker
 import com.stepanov.bbf.bugfinder.executor.project.Project
 import com.stepanov.bbf.bugfinder.executor.CommonCompiler
@@ -15,8 +16,7 @@ import kotlin.system.measureTimeMillis
 
 
 open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compilers) {
-    //var projects = listOf<Project>()
-    var pcrList = listOf<PerformanceCheckerResult>()
+    var pcrList = listOf<PerformanceCheckerResult>() // "as an object of result" See PerformanceCheckerResult class
 
     constructor(path: String, _compilers: List<CommonCompiler>) : this(_compilers) {
         val pcrList = mutableListOf<PerformanceCheckerResult>()
@@ -62,55 +62,25 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         }
         this.pcrList = pcrList
     }
-
+    //TODO
     constructor(project: Project, compiler: CommonCompiler) : this(listOf(compiler)) {
         val pcr = PerformanceCheckerResult(project, compiler)
         this.pcrList = listOf(pcr)
     }
-
+    constructor(project: Project, compilers: List<CommonCompiler>) : this(compilers) {
+        val pcr = mutableListOf<PerformanceCheckerResult>()
+        for (compiler in compilers){
+            pcr.add(PerformanceCheckerResult(project, compiler))
+        }
+        this.pcrList = pcr
+    }
     fun checkPerformance(
         includeExecutionTime: Boolean = false,
         enableBugReport: Boolean = false,
         printReport: Boolean = false,
         saveReport: Boolean = false
-    ): List<PerformanceCheckerResult>? {
-        val bugList = mutableListOf<Bug>()
-        if (this.compilers.equals(null)) return null
-
-        //var performanceCheckerResult: PerformanceCheckerResult
-        //val pcrList = mutableListOf<PerformanceCheckerResult>()
-        val listOfDifferences = mutableMapOf<String, List<Float>>()
-
-        /*
-            for (project in this.projects) {
-                println("Project: " + project.files.first().name)
-                if (project.language != LANGUAGE.KOTLIN) continue
-                //Проверка компиляции
-                for (compiler in compilers) {
-                    val compilationTime = measureTimeMillis {
-                        compiler.compile(project, false) //
-                    }
-                    performanceCheckerResult = PerformanceCheckerResult(project, compiler).apply {
-                        this.compilationTime = compilationTime
-                        //this.name = project.files.first().name
-                    }
-                    if (includeExecutionTime) {
-                        try {
-                            val executionTime = measureTimeMillis {
-                                Checker(compiler).checkTraces(project)
-                            }
-                            performanceCheckerResult.executionTime = executionTime
-                            pcrList.add(performanceCheckerResult)
-                        } catch (e: Exception) {
-                            println("Executing <$compiler , ${project.configuration}> has led to exception")
-                        }
-                    } else
-                        pcrList.add(performanceCheckerResult)
-                }
-
-            }*/
-
-        //this.projects = projects
+    ): List<PerformanceCheckerResult> {
+        val listOfDifferences = mutableMapOf<String, List<Float>>() // for findBiggestDifference()
 
         for (pcr in pcrList) {
             val compiler = pcr.compiler
@@ -139,33 +109,19 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         val resultBuf = mutableListOf<PerformanceCheckerResult>()
         var name = pcrList.first().name
 
-        var moreThen5x = 0 //difference bigger than 400%
-        var moreThen4x = 0 //difference bigger than 300%
-        var moreThen3x = 0 //difference bigger than 200%
-        var moreThen2x = 0 //difference bigger than 100%
-        var lessThen2x = 0 //difference less than 100%
-
         for (pcr in pcrList) {
             if (name != pcr.name || pcrList.last() == pcr) {
                 if (pcrList.last() == pcr) resultBuf.add(pcr)
                 val commonLocalCompilation = findBiggestDifference(resultBuf, executionTime = includeExecutionTime)
                 listOfDifferences[name] = commonLocalCompilation
-                when {
-                    (commonLocalCompilation[0] < 100.0) && (commonLocalCompilation[1] < 100.0) -> {
-                        lessThen2x++            // if the difference less than 100% (100% - 2 times bigger),
-                    }
-                    (commonLocalCompilation[0] > 400.0) || (commonLocalCompilation[1] > 400.0) -> { //TODO
-                        moreThen5x++
-                        val bug = Bug(
-                            compilers, "",
-                            resultBuf.first().project, BugType.BACKEND
-                        )
-                        bugList.add(bug)
-                    }
-                    (commonLocalCompilation[0] > 300.0) && (commonLocalCompilation[1] > 300.0) -> moreThen4x++
-                    (commonLocalCompilation[0] > 200.0) && (commonLocalCompilation[1] > 200.0) -> moreThen3x++
-                    else -> moreThen2x++
-                }
+
+                if (enableBugReport)
+                    checkPerformanceBug(
+                            commonLocalCompilation,
+                            resultBuf,
+                            resultBuf.minOf { it.compilationTime }
+                    )
+
                 //println("$name compilation time difference: ${commonLocalCompilation[0]} %")
                 compilationTimeDifferences.add(commonLocalCompilation[0])
 
@@ -174,20 +130,12 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                 resultBuf.clear()
             }
             name = pcr.name
-            resultBuf.add(pcr) //buffer holds <PerformanceCheckResult> value for difference operations
+            resultBuf.add(pcr) //buffer holds <PerformanceCheckResult> value for findBiggestDifference()
         }
 
         println("Average compilation difference: " + "${compilationTimeDifferences.average()}" + " %")
         println("Average execution difference: " + "${executionTimeDifferences.average()}" + " %")
-        /*
-        println(
-            "Difference overflows met:" +
-                    "\n 5x : $moreThen5x" +
-                    "\n 4x : $moreThen4x" +
-                    "\n 3x : $moreThen3x" +
-                    "\n 2x : $moreThen2x"
-        )
-        println("Normal differences met (below 100%): $lessThen2x")*/
+
         if (listOfDifferences.isNotEmpty() && printReport)
             printReport(
                     pcrList,
@@ -195,16 +143,10 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                     executionTime = includeExecutionTime,
                     saveReport = saveReport
             )
-
-        if (enableBugReport) {
-            for (bug in bugList) {
-                BugManager.saveBug(bug)
-            }
-        }
         return pcrList
     }
 
-    private fun findBiggestDifference(
+    fun findBiggestDifference(
         list: List<PerformanceCheckerResult>,
         executionTime: Boolean = false
     ): List<Float> {
@@ -234,6 +176,33 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         return listOf(compTime, 0.0F) //mode == false
     }
 
+    private fun checkPerformanceBug( //TODO
+        differences : List<Float>,
+        pcrList: List<PerformanceCheckerResult>,
+        minCompilationTime : Long
+    ) : Boolean {
+        if ((differences[0] > 500 || differences[1] > 500) && minCompilationTime > 5000L) {
+            val pcr = pcrList.maxByOrNull { it.compilationTime }
+            if (pcr != null) {
+                val reducedProject = Reducer.reduce(
+                    Bug(compilers, "", pcr.project, BugType.PERFORMANCE))
+                println("FOUND A BUG:")
+                println(reducedProject.files.first().name)
+                val bug = Bug(
+                    compilers,
+                    "Compilation time: ${pcr.compilationTime}(${differences[0]})\n " +
+                            "Execution time: ${pcr.executionTime}(${differences[1]})\n " +
+                            "Compiler info: ${pcr.compiler}",
+                    reducedProject, BugType.PERFORMANCE
+                )
+                if(!BugManager.haveDuplicates(bug))
+                    BugManager.saveBug(bug)
+                return true
+            }// bugmanager -> savebug
+        }
+        return false
+    }
+
     private fun printReport(
         pcrList: List<PerformanceCheckerResult>,
         pcrCompilationDifference: Map<String, List<Float>>,
@@ -254,7 +223,6 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
 
         val sortedMap: MutableMap<String, List<Float>> = LinkedHashMap()
         pcrCompilationDifference.entries.sortedByDescending { it.value[0] }.forEach { sortedMap[it.key] = it.value }
-        //var entry = sortedMap.entries.iterator().next()
 
         println( //TODO
                 "\n SORT BY COMPILATION PERFORMANCE:\n" +
@@ -295,7 +263,7 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                 if (saveReport) reportFile.appendText("\n------------------\n")
                 println("------------------\n")
                 i++
-                if (i >=  5) break
+                //if (i >=  5) break
             }
 
         }
@@ -334,7 +302,7 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                     println("------------------")
                 }
                 i++
-                if (i >=  5) break
+                //if (i >=  5) break
             }
         }
         val notCompiledList = pcrList.filter { it.compilationTime.toFloat() == 0.0F }

@@ -70,10 +70,10 @@ fun main(args: Array<String>) {
 
     //Full report analysis:
 
-    var files = File("tmp/arrays").listFiles()!!.filter {
+    /*val files = File("tmp/arrays").listFiles()!!.filter {
         it.absolutePath.endsWith(".kt") || it.absolutePath.endsWith(".java")
     }.map { it.absolutePath }
-    val reportFile = File("CheckPerformanceReport.txt")
+    val reportFile = File("CheckPerformanceFullReport.txt")
     if(reportFile.exists()) reportFile.delete()
 
     val count = files.size / 99 //0..99 , 100..199, 200..299..........
@@ -87,11 +87,13 @@ fun main(args: Array<String>) {
         }
         if (filesList.isEmpty()) break
         SingleFileBugFinder("tmp/arrays/").testPerformanceBugCheck(filesList)
-    }
+    }*/
 
     //Full report analysis block over
 
 
+    SingleFileBugFinder(file.absolutePath).findPerformanceBugs() //begin work
+    //println("file absolute path: ${file.absolutePath}")
     //SingleFileBugFinder(file.absolutePath).findBugsInFile() //begin work
     exitProcess(0)
 }
