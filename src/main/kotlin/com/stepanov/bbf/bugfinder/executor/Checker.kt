@@ -138,16 +138,17 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         var isValidMutation = true
 
         val originalPcrList = checkForPerformance(project) //original PCR for original project
-        var currentProject : Project
+        var currentProject = project.copy()
 
         val pc = PerformanceChecker(compilers)
-        val originalDifference = pc.findBiggestDifference(originalPcrList)
+        val originalDifference = pc.findBiggestDifference(originalPcrList, executionTime = true)
         println("Project name: $name")
         differences.add(originalDifference)
         for (i in 0..3) {      //number of mutation histories
-            //var beforePcrList = originalPcrList
-            createNewMutationHistory(project)
-            currentProject = Project.createFromCode(readMutationCode())    // clear for the new mutation history
+            createNewMutationHistory(currentProject, i) //new folder, new history
+            currentProject =
+                Project.createFromCode(readMutationCode(i - 1)) // read pre-last mutant from the previous stage
+            isValidMutation = true
             while (isValidMutation) {
                 println(mutationsPath)
                 val bugFinder = BugFinder(mutationsPath)
@@ -155,12 +156,13 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
                 val afterPcrList = this.checkForPerformance(currentProject)
                 //compareAfterMutation(beforePcrList, afterPcrList)
 
-                differences.add(pc.findBiggestDifference(afterPcrList))
+                differences.add(pc.findBiggestDifference(afterPcrList, executionTime = true))
                 println(differences)
                 isValidMutation = this.fitnessFunction()
 
                 if (isValidMutation) { //if TRUE - start from latest valid mutation
                     println("CONTINUE")
+                    saveProject(currentProject)
                 } else {
                     println("OVER")
                     saveProject(currentProject)
@@ -276,51 +278,60 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
     return bugList
 }*/
 
-    private fun createNewMutationHistory(project : Project){
+    private fun createNewMutationHistory(project : Project, stage : Int){
         //val name = currentProject.files.first().name
         val name = this.name.replace(".","_")
         val path = System.getProperty("user.dir")
-        var file = File("$path/tmp/mutations/${name}/0")
-        var i = 0
+        val file = File("$path/tmp/mutations/${name}/$stage")
+        /*var i = 0
         while (file.exists()) {
             i++
             file = File("$path/tmp/mutations/$name/$i")
-        }
+        }*/
         file.mkdirs()
         println(file.path)
         mutationsPath = file.path
-        saveProject(project)
-    }
-
-    private fun saveProject(project : Project) {
-        if(mutationsPath.split("/").last() == "0"){
+        if (stage == 0) {
             val textFile = File("$mutationsPath/original.kt")
             textFile.createNewFile()
             project.saveInOneFile("$mutationsPath/original.kt")
-        }
-        else {
-            var file = File("${mutationsPath}/modifiedProject0.kt")
-            var i = 0
-            while (file.exists()) {
-                i++
-                file = File("${mutationsPath}/modifiedProject$i.kt")
-            }
-            file.createNewFile()
-            project.saveInOneFile("${mutationsPath}/modifiedProject$i.kt")
-        }
+        } else
+            saveProject(project)
     }
 
-    //function for the other type of mutation
-    private fun readMutationCode() : String{ //try to read the most promising mutant
-        /*var file = File("$mutationsPath/project0")
+    private fun saveProject(project : Project) {
+        //if(mutationsPath.split("/").last() == "0"){
+        var file = File("${mutationsPath}/modifiedProject0.kt")
         var i = 0
         while (file.exists()) {
             i++
-            file = File("$mutationsPath/project$i")
-        }*/
-        val name = this.name.replace(".","_")
+            file = File("${mutationsPath}/modifiedProject$i.kt")
+
+        }
+        file.createNewFile()
+        project.saveInOneFile("${mutationsPath}/modifiedProject$i.kt")
+
+    }
+
+    //function for the other type of mutation
+    private fun readMutationCode(stage : Int) : String{ //try to read the most promising mutant
         val path = System.getProperty("user.dir")
-        return File("$path/tmp/mutations/${name}/0/original.kt").readText()
+        val name = this.name.replace(".","_")
+        val previousMutationPath = "$path/tmp/mutations/${name}/$stage"
+        var file = File("$previousMutationPath/modifiedProject0.kt")
+        var i = 0
+        while (file.exists()) {
+            i++
+            file = File("$previousMutationPath/modifiedProject$i.kt")
+        }
+
+        val startMutationFrom = File("$previousMutationPath/modifiedProject${i-2}.kt")
+
+        return if (startMutationFrom.exists())
+            startMutationFrom.readText()
+        else
+            File("$mutationsPath/original.kt").readText()
+
     }
 
 val additionalConditions: MutableList<(PsiFile) -> Boolean> = mutableListOf()

@@ -3,13 +3,10 @@ package com.stepanov.bbf.bugfinder.mutator
 import com.stepanov.bbf.bugfinder.executor.project.LANGUAGE
 import com.stepanov.bbf.bugfinder.executor.project.Project
 import com.stepanov.bbf.bugfinder.mutator.javaTransformations.*
-import com.stepanov.bbf.bugfinder.mutator.projectTransformations.ProjectSplitter
 import com.stepanov.bbf.bugfinder.mutator.transformations.*
-import com.stepanov.bbf.bugfinder.mutator.transformations.abi.AddRandomDS
 import com.stepanov.bbf.bugfinder.mutator.transformations.tce.AddNodesFromAnotherFiles
 import org.apache.log4j.Logger
 import kotlin.random.Random
-import kotlin.system.exitProcess
 
 class Mutator(val project: Project) {
 
@@ -65,9 +62,11 @@ class Mutator(val project: Project) {
 //        exitProcess(0)
 //        executeMutation(AddRandomAnnotation(), 100)
 //        exitProcess(0)
-        for (i in 0 until Random.nextInt(1, 3)) {
+        /*for (i in 0 until Random.nextInt(1, 3)) {
             mutations.shuffled().forEach { executeMutation(it.first, it.second) }
-        }
+        }*/
+        val randomMutation = mutations.random()
+        executeMutation(randomMutation.first, randomMutation.second)
 //        //Set of transformations over PSI
 //        executeMutation(AddNullabilityTransformer())
 //        executeMutation(AddPossibleModifiers())
