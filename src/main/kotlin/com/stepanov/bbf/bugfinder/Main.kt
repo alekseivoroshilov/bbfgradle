@@ -92,8 +92,10 @@ fun main(args: Array<String>) {
     //Full report analysis block over
 
 
-    SingleFileBugFinder(file.absolutePath).findPerformanceBugs() //begin work
-    //println("file absolute path: ${file.absolutePath}")
+    //SingleFileBugFinder(file.absolutePath).findPerformanceBugs() //begin work
+
+    SingleFileBugFinder(file.absolutePath).findPerformance()
+
     //SingleFileBugFinder(file.absolutePath).findBugsInFile() //begin work
     exitProcess(0)
 }

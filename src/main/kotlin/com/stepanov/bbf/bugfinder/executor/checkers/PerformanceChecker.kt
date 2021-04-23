@@ -2,22 +2,21 @@ package com.stepanov.bbf.bugfinder.executor.checkers;
 
 import com.stepanov.bbf.bugfinder.Reducer
 import com.stepanov.bbf.bugfinder.executor.Checker
-import com.stepanov.bbf.bugfinder.executor.project.Project
 import com.stepanov.bbf.bugfinder.executor.CommonCompiler
 import com.stepanov.bbf.bugfinder.executor.CompilingResult
-import com.stepanov.bbf.bugfinder.executor.project.LANGUAGE
+import com.stepanov.bbf.bugfinder.executor.project.Project
 import com.stepanov.bbf.bugfinder.manager.Bug
 import com.stepanov.bbf.bugfinder.manager.BugManager
 import com.stepanov.bbf.bugfinder.manager.BugType
 import java.io.File
 import java.io.FileNotFoundException
-import java.io.FileOutputStream
+import java.lang.management.ManagementFactory
 import kotlin.system.measureTimeMillis
 
 
 open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compilers) {
     var pcrList = listOf<PerformanceCheckerResult>() // "as an object of result" See PerformanceCheckerResult class
-
+    private val megabyte = 1024L * 1024L
     constructor(path: String, _compilers: List<CommonCompiler>) : this(_compilers) {
         val pcrList = mutableListOf<PerformanceCheckerResult>()
         if (!File(path).exists()) throw FileNotFoundException()
@@ -76,6 +75,7 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
     }
     fun checkPerformance(
         includeExecutionTime: Boolean = false,
+        includeMemoryUsage : Boolean = false,
         enableBugReport: Boolean = false,
         printReport: Boolean = false,
         saveReport: Boolean = false
@@ -89,12 +89,20 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
             val compilationTime = measureTimeMillis {
                 executableFile = compiler.compile(project, false) //
             }
+            System.gc()
             pcr.compilationTime = compilationTime
             if (includeExecutionTime) {
                 try {
+                    val mbean = ManagementFactory.getMemoryMXBean()
+                    val beforeHeapMemoryUsage = mbean.heapMemoryUsage
                     val executionTime = measureTimeMillis {
                         compiler.exec(executableFile.pathToCompiled)
                     }
+                    val afterHeapMemoryUsage = mbean.heapMemoryUsage
+                    val consumed = ((afterHeapMemoryUsage.used -
+                            beforeHeapMemoryUsage.used) / megabyte).toInt()
+                    println("${pcr.name} Total consumed Memory (${pcr.compiler}):${consumed} mb")
+                    pcr.memoryUsed = consumed
                     pcr.executionTime = executionTime
                 } catch (e: Exception) {
                     println("Can't execute <${pcr.name}> ($compiler, ${project.configuration})")
@@ -106,20 +114,22 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
 
         val compilationTimeDifferences = mutableListOf<Float>()
         val executionTimeDifferences = mutableListOf<Float>()
+        val memoryUsageDifferences = mutableListOf<Float>()
         val resultBuf = mutableListOf<PerformanceCheckerResult>()
         var name = pcrList.first().name
 
         for (pcr in pcrList) {
             if (name != pcr.name || pcrList.last() == pcr) {
                 if (pcrList.last() == pcr) resultBuf.add(pcr)
-                val commonLocalCompilation = findBiggestDifference(resultBuf, executionTime = includeExecutionTime)
+                val commonLocalCompilation = findBiggestDifference(resultBuf, executionTime = includeExecutionTime,
+                memoryUsage = includeMemoryUsage)
+                println(commonLocalCompilation)
                 listOfDifferences[name] = commonLocalCompilation
 
                 if (enableBugReport)
                     checkPerformanceBug(
                             commonLocalCompilation,
-                            resultBuf,
-                            resultBuf.minOf { it.compilationTime }
+                            resultBuf
                     )
 
                 //println("$name compilation time difference: ${commonLocalCompilation[0]} %")
@@ -127,14 +137,15 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
 
                 //println("$name execution time difference: ${commonLocalCompilation[1]} %")
                 executionTimeDifferences.add(commonLocalCompilation[1])
+                memoryUsageDifferences.add(commonLocalCompilation[2])
                 resultBuf.clear()
             }
             name = pcr.name
             resultBuf.add(pcr) //buffer holds <PerformanceCheckResult> value for findBiggestDifference()
         }
 
-        println("Average compilation difference: " + "${compilationTimeDifferences.average()}" + " %")
-        println("Average execution difference: " + "${executionTimeDifferences.average()}" + " %")
+        //println("Average compilation difference: " + "${compilationTimeDifferences.average()}" + " %")
+        //println("Average execution difference: " + "${executionTimeDifferences.average()}" + " %")
 
         if (listOfDifferences.isNotEmpty() && printReport)
             printReport(
@@ -148,7 +159,8 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
 
     fun findBiggestDifference(
         list: List<PerformanceCheckerResult>,
-        executionTime: Boolean = false
+        executionTime: Boolean = false,
+        memoryUsage : Boolean = false
     ): List<Float> {
         val bufList = mutableListOf<PerformanceCheckerResult>()
         bufList.addAll(list)
@@ -159,7 +171,7 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         //println("$b max CompilationTime    ")
         //println("$a min CompilationTime")
 
-        val compTime = (100 * (b - a) / a).toFloat()
+        val compilationDifference = (100 * (b - a) / a).toFloat()
 
         if (executionTime) {
             bufList.sortByDescending { it.executionTime }
@@ -168,37 +180,92 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
             //println("$d max ExecutionTime    ")
             //println("$c min ExecutionTime")
             if (d.toInt() == 0 || c.toInt() == 0) {
-                return listOf(compTime, 0.0F)
+                return listOf(compilationDifference, 0.0F, 0.0F)
             }
-            return listOf(compTime, (100 * (d - c) / c).toFloat()) //mode == true -> return (compTime, ExecTime)
+            val executionDifference = (100 * (d - c) / c).toFloat()
+            if (memoryUsage) {
+                bufList.sortByDescending { it.memoryUsed }
+                val e = bufList.first().memoryUsed
+                val f = bufList.last().memoryUsed
+                return if (e == 0 && f != 0)
+                    listOf(compilationDifference, executionDifference, (100 * (1 - f) / f).toFloat())
+                else if (e != 0 && f == 0)
+                    listOf(compilationDifference, executionDifference, (100 * (e - 1) / 1).toFloat())
+                else
+                    listOf(compilationDifference, executionDifference, (100 * (e - f) / f).toFloat())
+            }
+            return listOf(compilationDifference, executionDifference, 0.0F) //mode == true -> return (compTime, ExecTime)
         }
 
-        return listOf(compTime, 0.0F) //mode == false
+        return listOf(compilationDifference, 0.0F) //mode == false
     }
 
     private fun checkPerformanceBug( //TODO
         differences : List<Float>,
         pcrList: List<PerformanceCheckerResult>,
-        minCompilationTime : Long
     ) : Boolean {
-        if ((differences[0] > 500 || differences[1] > 500) && minCompilationTime > 5000L) {
-            val pcr = pcrList.maxByOrNull { it.compilationTime }
-            if (pcr != null) {
-                val reducedProject = Reducer.reduce(
-                    Bug(compilers, "", pcr.project, BugType.PERFORMANCE))
-                println("FOUND A BUG:")
-                println(reducedProject.files.first().name)
-                val bug = Bug(
-                    compilers,
-                    "Compilation time: ${pcr.compilationTime}(${differences[0]})\n " +
-                            "Execution time: ${pcr.executionTime}(${differences[1]})\n " +
-                            "Compiler info: ${pcr.compiler}",
-                    reducedProject, BugType.PERFORMANCE
-                )
-                if(!BugManager.haveDuplicates(bug))
-                    BugManager.saveBug(bug)
-                return true
-            }// bugmanager -> savebug
+        val minCompilationTime = pcrList.minOf { it.compilationTime }
+        val minExecutionTime = pcrList.minOf { it.executionTime }
+        val minMemoryUsage = pcrList.minOf { it.memoryUsed }
+        val differenceC = differences[0] > 500
+        val differenceE = differences[1] > 500
+        val differenceM = differences[2] > 800
+        //if ((differences[0] > 500 || differences[1] > 500 || differences[2] > 800) &&
+            //(minCompilationTime > 5000L || minExecutionTime > 5000L)) {
+        if (differenceC || differenceE || differenceM) {
+            when {
+                differenceC && minCompilationTime > 5000L -> {
+                    val pcr = pcrList.maxByOrNull { it.compilationTime }
+                    if (pcr != null) {
+                        println("FOUND A COMPILATION TIME BUG:")
+                        println(pcr.project.files.first().name)
+                        val bug = Bug(
+                            compilers,
+                            "Compilation time(bug): ${pcr.compilationTime}(${differences[0]})\n " +
+                                    "Execution time: ${pcr.executionTime}(${differences[1]})\n " +
+                                    "Compiler info: ${pcr.compiler}\n" +
+                                    "Memory usage: ${pcr.memoryUsed} Mb",
+                            pcr.project, BugType.PERFORMANCE
+                        )
+                        BugManager.saveBug(bug)
+                        return true
+                    }
+                }
+                differenceE && minExecutionTime > 5000L -> {
+                    val pcr = pcrList.maxByOrNull { it.executionTime }
+                    if (pcr != null) {
+                        println("FOUND AN EXECUTION TIME BUG:")
+                        println(pcr.project.files.first().name)
+                        val bug = Bug(
+                            compilers,
+                            "Execution time(bug): ${pcr.executionTime}(${differences[1]})\n " +
+                                    "Compilation time: ${pcr.compilationTime}(${differences[0]})\n " +
+                                    "Compiler info: ${pcr.compiler}\n" +
+                                    "Memory usage: ${pcr.memoryUsed} Mb",
+                            pcr.project, BugType.PERFORMANCE
+                        )
+                        BugManager.saveBug(bug)
+                        return true
+                    }
+                }
+                differenceM && minMemoryUsage > 4 -> {
+                    val pcr = pcrList.maxByOrNull { it.memoryUsed }
+                    if (pcr != null) {
+                        println("FOUND AN MEMORY USAGE BUG:")
+                        println(pcr.project.files.first().name)
+                        val bug = Bug(
+                            compilers,
+                            "Memory usage(bug): ${pcr.memoryUsed} Mb\n" +
+                                    "Execution time: ${pcr.executionTime}(${differences[1]})\n " +
+                                    "Compilation time: ${pcr.compilationTime}(${differences[0]})\n " +
+                                    "Compiler info: ${pcr.compiler}",
+                            pcr.project, BugType.PERFORMANCE
+                        )
+                        BugManager.saveBug(bug)
+                        return true
+                    }
+                }
+            }
         }
         return false
     }
@@ -215,7 +282,6 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         val reportFile = File("CheckPerformanceReport.txt")
 
         var reportFileExist = true
-        println("report file exists ${reportFile.exists()}")
         if (!reportFile.exists()) {
             reportFile.createNewFile()
             reportFileExist = false
@@ -224,7 +290,7 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         val sortedMap: MutableMap<String, List<Float>> = LinkedHashMap()
         pcrCompilationDifference.entries.sortedByDescending { it.value[0] }.forEach { sortedMap[it.key] = it.value }
 
-        println( //TODO
+        println(
                 "\n SORT BY COMPILATION PERFORMANCE:\n" +
                 "<Project> \tCompilation Difference \tExecution Difference \n" +
                 "[Details]:\n" +
@@ -249,13 +315,14 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                 val key = entry.key
                 val pcrDifference = entry.value
                 val selectedPcr = pcrList.filter { it.name == key }
-                val interestingTest = if (pcrDifference[0] > 300) "(bug)" else ""
+                val interestingTest = if (pcrDifference[0] > 500) "(bug)" else ""
                 val string = "${i + 1}. <$key>$interestingTest : \t Compilation: ${pcrDifference[0]}%" +
-                        "\t Execution: ${pcrDifference[1]}%" + "\n[Details]:"
+                        "\t Execution: ${pcrDifference[1]}%" + "\t Memory: ${pcrDifference[2]}%" + "\n[Details]:"
                 println(string)
                 if (saveReport) reportFile.appendText("\n$string")
                 for (pcr in selectedPcr){
-                    val string2 = "\t\t${pcr.compiler}: ${pcr.compilationTime} (${pcr.executionTime}) ms"
+                    val string2 = "\t\t(${pcr.memoryUsed} mb) ${pcr.compiler}: ${pcr.compilationTime} " +
+                            "(${pcr.executionTime}) ms"
                     println(string2)
                     if (saveReport) reportFile.appendText("\n$string2")
                 }
@@ -271,8 +338,8 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
         pcrCompilationDifference.entries.sortedByDescending { it.value[1] }
             .forEach { sortedMapExecution[it.key] = it.value }
         //entry = sortedMap.entries.iterator().next()
-
-        if (executionTime) {
+        val blockExecutionReport = true
+        if (executionTime && !blockExecutionReport) {
             println(
                 "\nSORT BY EXECUTION PERFORMANCE:" +
                 "\n ---------------------------------------------------------"

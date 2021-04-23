@@ -7,6 +7,7 @@ data class PerformanceCheckerResult(val project: Project, val compiler: CommonCo
     var compilationTime = 0L
     var executionTime = 0L
     var name = ""
+    var memoryUsed = 0 //megabytes
 /*
     val pcrComparator =  Comparator<PerformanceCheckerResult> { a, b ->
         when {

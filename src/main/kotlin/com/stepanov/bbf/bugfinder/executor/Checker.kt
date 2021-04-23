@@ -124,11 +124,6 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         checkAndGetCompilerBugs(project).forEach { BugManager.saveBug(it) }
         checkedConfigurations[allTexts] = false
         StatisticCollector.incField("Correct programs")
-        //TODO/////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //println("Project is ok, mutating")
-        //mutateAndCheck(project)
-        //return fitnessFunction()
-        //TODO/////////////////////////////////////////////////////////////////////////////////////////////////////////
         return false
     }
     fun setProjectName(name : String){
@@ -153,9 +148,8 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
                 println(mutationsPath)
                 val bugFinder = BugFinder(mutationsPath)
                 bugFinder.mutate(currentProject, currentProject.files.first(), listOf(/*::noBoxFunModifying*/))
-                val afterPcrList = this.checkForPerformance(currentProject)
-                //compareAfterMutation(beforePcrList, afterPcrList)
 
+                val afterPcrList = this.checkForPerformance(currentProject)
                 differences.add(pc.findBiggestDifference(afterPcrList, executionTime = true))
                 println(differences)
                 isValidMutation = this.fitnessFunction()
@@ -235,7 +229,8 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         val compilers = listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir"))
         val pc = PerformanceChecker(paths, compilers)
         pc.checkPerformance(
-            includeExecutionTime = true, enableBugReport = false, printReport = true, saveReport = true)
+            includeExecutionTime = true, enableBugReport = false, printReport = true,
+            saveReport = false, includeMemoryUsage = true)
     }
     fun checkForPerformance (project: Project) : List<PerformanceCheckerResult>{
         val pc = PerformanceChecker(project, compilers)

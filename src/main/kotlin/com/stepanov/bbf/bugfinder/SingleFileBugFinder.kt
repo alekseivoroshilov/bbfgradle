@@ -33,6 +33,12 @@ class SingleFileBugFinder(dir: String) : BugFinder(dir) {
         //checker.checkCompilingWithBugSaving(project)
         checker.mutateAndCheck(project, name)
     }
+    fun findPerformance(){
+        println("Check memory usage")
+        val checker = Checker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")))
+        val files = listOf(dir)
+        checker.checkForPerformance(files)
+    }
     fun findBugsInFile() {
         try {
 
