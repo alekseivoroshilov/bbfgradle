@@ -17,12 +17,11 @@ import kotlin.system.exitProcess
 
 class SingleFileBugFinder(dir: String) : BugFinder(dir) {
 
-    fun testPerformanceBugCheck(files : List<String>) {
-        println("Let's go")
+    fun testMutation(file: File) {
+        val project = Project.createFromCode(file.readText())
 
-        val checker = Checker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")))
-        checker.checkForPerformance(files)
     }
+
     fun findPerformanceBugs(){
         println("Find performance bug")
         val project = Project.createFromCode(File(dir).readText())
@@ -33,12 +32,7 @@ class SingleFileBugFinder(dir: String) : BugFinder(dir) {
         //checker.checkCompilingWithBugSaving(project)
         checker.mutateAndCheck(project, name)
     }
-    fun findPerformance(){
-        println("Check memory usage")
-        val checker = Checker(listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir")))
-        val files = listOf(dir)
-        checker.checkForPerformance(files)
-    }
+
     fun findBugsInFile() {
         try {
 

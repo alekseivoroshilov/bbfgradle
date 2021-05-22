@@ -65,8 +65,10 @@ class Mutator(val project: Project) {
         /*for (i in 0 until Random.nextInt(1, 3)) {
             mutations.shuffled().forEach { executeMutation(it.first, it.second) }
         }*/
-        val randomMutation = mutations.random()
-        executeMutation(randomMutation.first, randomMutation.second)
+        //val mutation = TransformVarToArg()
+        //executeMutation(mutation, 100)
+        val mutation = PropertyToLambda()
+        executeMutation(mutation, 100)
 //        //Set of transformations over PSI
 //        executeMutation(AddNullabilityTransformer())
 //        executeMutation(AddPossibleModifiers())
@@ -132,7 +134,8 @@ class Mutator(val project: Project) {
         ChangeRandomLines() to 50,
         ChangeRandomASTNodesFromAnotherTrees() to 100,
         AddTryExpression() to 50,
-        AddNodesFromAnotherFiles() to 50
+        AddNodesFromAnotherFiles() to 50,
+        TransformVarToArg() to 50
     )
     private val log = Logger.getLogger("bugFinderLogger")
     private val checker

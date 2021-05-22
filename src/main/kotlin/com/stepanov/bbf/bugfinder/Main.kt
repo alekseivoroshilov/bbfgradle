@@ -93,9 +93,10 @@ fun main(args: Array<String>) {
 
 
     //SingleFileBugFinder(file.absolutePath).findPerformanceBugs() //begin work
+    SingleFileBugFinder("/home/mermaider/IdeaProjects/bbfgradle/tmp/mutations/test3Original.kt")
+        .findPerformanceBugs()
 
-    SingleFileBugFinder(file.absolutePath).findPerformance()
 
-    //SingleFileBugFinder(file.absolutePath).findBugsInFile() //begin work
+
     exitProcess(0)
 }

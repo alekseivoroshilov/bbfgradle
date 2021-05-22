@@ -227,6 +227,12 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                                     "Memory usage: ${pcr.memoryUsed} Mb",
                             pcr.project, BugType.PERFORMANCE
                         )
+                        //TODO
+                        val newBug = bug//checkIfBugIsProject(bug)
+                        val reduced = Reducer.reduce(newBug)
+                        val reducedBug = Bug(newBug.compilers, newBug.msg, reduced, newBug.type)
+                        reducedBug.crashedProject
+                            .saveInOneFile("/home/mermaider/IdeaProjects/bbfgradle/tmp/bug")
                         BugManager.saveBug(bug)
                         return true
                     }
@@ -244,6 +250,11 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                                     "Memory usage: ${pcr.memoryUsed} Mb",
                             pcr.project, BugType.PERFORMANCE
                         )
+                        val newBug = bug//checkIfBugIsProject(bug)
+                        val reduced = Reducer.reduce(newBug)
+                        val reducedBug = Bug(newBug.compilers, newBug.msg, reduced, newBug.type)
+                        reducedBug.crashedProject
+                            .saveInOneFile("/home/mermaider/IdeaProjects/bbfgradle/tmp/bug")
                         BugManager.saveBug(bug)
                         return true
                     }
@@ -261,6 +272,11 @@ open class PerformanceChecker(compilers: List<CommonCompiler>) : Checker(compile
                                     "Compiler info: ${pcr.compiler}",
                             pcr.project, BugType.PERFORMANCE
                         )
+                        val newBug = bug//checkIfBugIsProject(bug)
+                        val reduced = Reducer.reduce(newBug)
+                        val reducedBug = Bug(newBug.compilers, newBug.msg, reduced, newBug.type)
+                        reducedBug.crashedProject
+                            .saveInOneFile("/home/mermaider/IdeaProjects/bbfgradle/tmp/bug")
                         BugManager.saveBug(bug)
                         return true
                     }

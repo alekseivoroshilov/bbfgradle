@@ -139,7 +139,7 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         val originalDifference = pc.findBiggestDifference(originalPcrList, executionTime = true)
         println("Project name: $name")
         differences.add(originalDifference)
-        for (i in 0..3) {      //number of mutation histories
+        for (i in 0..1) {      //number of mutation histories
             createNewMutationHistory(currentProject, i) //new folder, new history
             currentProject =
                 Project.createFromCode(readMutationCode(i - 1)) // read pre-last mutant from the previous stage
@@ -223,7 +223,7 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
         val deltaC = abs(prevDiff.first() - curDiff.first())
         val deltaE = abs(prevDiff.last() - curDiff.last())
         println("Current delta: $deltaC and $deltaE")
-        return abs(prevDiff.first() - curDiff.first()) > 10 || abs(prevDiff.last() - curDiff.last()) > 10
+        return abs(prevDiff.first() - curDiff.first()) > 300 || abs(prevDiff.last() - curDiff.last()) > 300
     }
     fun checkForPerformance (paths: List<String>) {
         val compilers = listOf(JVMCompiler(""), JVMCompiler("-Xuse-ir"))
@@ -232,9 +232,10 @@ open class Checker(compilers: List<CommonCompiler>, private val withTracesCheck:
             includeExecutionTime = true, enableBugReport = false, printReport = true,
             saveReport = false, includeMemoryUsage = true)
     }
-    fun checkForPerformance (project: Project) : List<PerformanceCheckerResult>{
+    private fun checkForPerformance (project: Project) : List<PerformanceCheckerResult>{
         val pc = PerformanceChecker(project, compilers)
-        return pc.checkPerformance(includeExecutionTime = true, enableBugReport = true, printReport = true)
+        return pc.checkPerformance(includeExecutionTime = true, enableBugReport = false, printReport = true,
+            saveReport = false, includeMemoryUsage = true)
     }
 /*fun checkForPerformanceBug (path: String) : List<Bug>? {
     println("performance bug check")
