@@ -20,9 +20,11 @@ class PropertyToLambda : Transformation() {
 
             val lambda = Factory.psiFactory.createProperty(assembledLambdaText)
             val newProperty = Factory.psiFactory.createProperty(assembledProp)
-
+            val parent = property.prevSibling
             //val checkCompiling = checker.addNodeIfPossible(property, property, before = true)
-            val additionDone = checker.addNodeIfPossible(property, lambda, before = true)
+            val lineBreak = Factory.psiFactory.createNewLine(1)
+            val lineBreakAdded = checker.addNodeIfPossible(property.nextSibling, lineBreak, before = false)
+            val additionDone = checker.addNodeIfPossible(property.nextSibling, lambda, before = false)
             val replaceDone = checker.replacePSINodeIfPossible(property, newProperty)
             if (replaceDone && additionDone)
                 property.delete()
@@ -35,7 +37,9 @@ class PropertyToLambda : Transformation() {
         var lambdaName = randomName
         if (argList.isNotEmpty()) {
             lambdaName += "_with"
-            argList.forEach { value -> lambdaName += "_${value.node.firstChildNode.text}" }
+            argList.forEach { value ->
+                lambdaName += "_${value.node.text}"
+            }
         }
         assembledLambdaName = lambdaName
         //  args assembling
@@ -44,24 +48,32 @@ class PropertyToLambda : Transformation() {
         return if (argList.isNotEmpty()){
             argList.forEach { value ->
                 if (value.node.elementType.toString() == "IDENTIFIER")
-                    args += "${value.node.firstChildNode.text}:${value.node.elementType}"
+                    args += "${value.node.text}:${
+                        when {
+                            //TODO add String
+                            value.node.text == "true" || value.node.text == "false" -> "Boolean"
+                            value.node.textContains('.') -> "Double"
+                            else -> "Int"
+                        }
+                        
+                    }"
                 if (value != argList.last())
                     args += ", "
             }
-            "val $lambdaName = {$args -> {\n$operationString\n}}"
+            " \nval $lambdaName = {$args -> {$operationString}} \n"
         } else {
-            "val $lambdaName = {\n$operationString\n}"
+            " \nval $lambdaName = {$operationString} \n"
         }
 
     }
     private fun assemblePropertyWithLambda(leftRefString : String, argList: List<PsiElement>) : String {
         var result = "val $leftRefString = $assembledLambdaName("
         argList.forEach { arg ->
-            result += arg.node.firstChildNode.text
+            result += arg.node.text
             if (arg != argList.last())
                 result += ", "
         }
-        return "$result)"
+        return "\n$result)\n"
     }
     private fun getRandomString(length: Int) : String {
         val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
